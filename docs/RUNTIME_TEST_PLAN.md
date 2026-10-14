@@ -1,0 +1,53 @@
+# Runtime test plan
+
+Date: 2026-10-09. Project version: ../VERSION. Status: **all scenarios NOT TESTED**. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. This document does not authorize launch, deployment, packaging or Phase 1.
+
+## Operator evidence contract
+
+The follow-up does not authorize test execution. Start with the independently verified clean 42.21 fixture in INSTALLATION_PROVENANCE.md; keep current patched compatibility separate. The additional scenarios below refine the original plan. Each requires separate SP/host/headless dedicated/two-client records where relevant, exact build/config/hashes and a clear failure model. A diagnostic failure can confirm a blocker; it does not justify a weaker production contract.
+
+| ID | Follow-up scenario | Required observation / fail-closed acceptance | Actual |
+|---|---|---|---|
+| F-R01 | Pan/zoom at each local slot, driving/controller/mouse, wide resolutions, custom zoom list and upper-floor views | Measured renderable footprint versus proposed server fence; unsupported/unbounded mode prevents commit. Local default limits never substituted for server enforcement. | NOT TESTED |
+| F-R02 | Loading connection with zero registered players, second local player joining, pending chunk requests during commit | Admission fence accounts for all slots/requests before mutations; joining client never receives partial chunk state. | NOT TESTED |
+| F-R03 | Admin/ghost/dead/follow/spectator view plus teleport into footprint before/during every mutation stage | All observer modes covered; stale positions/reports reject commit; no exempt observer based on alive/ghost status. | NOT TESTED |
+| F-R04 | Cached chunks outside relevance, out-of-range request delayed >5 seconds, in-flight download and unload/reload | No current relevance shortcut; client retained/pending versions never expose intermediate site. | NOT TESTED |
+| F-R05 | Forced network delay/reordering, per-object messages and chunk snapshot during single-tick and multi-tick mutation | Crash-wide publication barrier demonstrated; reliable ordering alone not marked PASS. Any partial render blocks contract. | NOT TESTED |
+| F-R06 | Future isolated startup/maintenance fence, admissions attempted and workers pending | Zero observers proven across admissions/stream workers; complete durable site/reconciliation before opening server. Operator authorization required. | NOT TESTED |
+| F-R07 | Straight bare N/W z=0 wall diagnostic, then corners and attachments separately | Exact target/edge, adjacent objects and preserved unstruck edge; collision/path/region/roof/cutaway/weather correctness on both clients. | NOT TESTED |
+| F-R08 | Door/garage/double door, smashed versus removed window, barricades/curtains/ropes | Every side effect is accounted for; no mismatched client indices, invisible collision or missing dependent destruction. | NOT TESTED |
+| F-R09 | Roof/upper floor/stairs, chunk-edge and all affected lower columns | No unsafe vertical transitions, wrong exposure, broken room/cutaway or missing region updates; unsupported geometry rejects. | NOT TESTED |
+| F-R10 | Furniture containers/components, trees/stumps/drops, farming registry, grass/erosion | Expanded deterministic footprint, correct lifecycle, no repeated native spill/drop on replay, no regrowth/registry corruption. | NOT TESTED |
+| F-R11 | Process stop before/after chunk snapshot capture, async write, registry temp/copy and player save | Matrix distinguishes every persisted-store combination; ambiguous state quarantines, never silently regenerates. | NOT TESTED |
+| F-R12 | Cargo created/transferred to player whose save leads/lagging chunk and registry; two-client repeated request | No duplicate initial issuance/transfer or refill; actual verified idempotency/durable mechanism recorded, not just deterministic contents. | NOT TESTED |
+| F-R13 | Removal before/after tombstone checkpoint, stale chunk surviving receipt, tombstone surviving object | Removed component never legitimately respawns; trusted receipt binding tested; ambiguity quarantines. | NOT TESTED |
+| F-R14 | Native ObjectModData packets attempt crash-ID/receipt/digest edits and clear; copied component metadata | Protected authority contract rejects before authoritative mutation; test on clean and patched fixtures separately. No user production exploit test authorized. | NOT TESTED |
+| F-R15 | Loot/move/sledge/dismantle/transfer concurrently with partial generation/reconciliation and lock recovery | All native interaction paths blocked until durable publication; source/destination locks and epochs respected after restart. | NOT TESTED |
+| F-R16 | Independently pinned clean client/server depots, launch class origins/agents and isolated profile | Build 42.21 origin verified, no inherited patches/mods; original hashes recorded for shipped JAR/loose/native/media files. | NOT TESTED |
+| F-R17 | Repeat approved scenarios in preserved patched fixture after clean results | Compatibility findings labeled patched; failures not hidden and PASS never replaces clean evidence. | NOT TESTED |
+
+Use disposable saves and a clean verified Build 42.21 baseline. Record project version, source/evidence hashes, PZ build, launcher classpath, every installed override/mod, sandbox settings, environment (SP / hosted / headless dedicated / dedicated with >=2 clients), player count, save identity, commands/actions, timestamps, expected/actual results, logs and screenshots/video. Linux dedicated resource path case must eventually be checked. Never substitute SP or hosted evidence for dedicated MP.
+
+Each row below needs separate environment results. Initially `actual=NOT TESTED`, `evidence=none`. A failure or missing observation is not PASS. Source candidates are not runtime evidence. Phase 0 review must first resolve the safe authority contract before a production prototype; later isolated diagnostic tests require explicit operator authorization.
+
+| ID | Scenario and procedure | Expected acceptance | Current actual |
+|---|---|---|---|
+| R01 | Load future minimal independent UH-60 components on headless server; two clients approach from different directions | Identical object count, IDs, coordinates, sprite directions/collision, no client-only class errors; no airborne rendering | NOT TESTED |
+| R02 | Save, unload/reload chunks, restart cleanly, reconnect and add a late client | Same persistent world objects and metadata, no reroll or duplicated inventories | NOT TESTED |
+| R03 | Legitimately remove/salvage one component; save/restart; repeat with abrupt stop between removal and receipt | Removed object stays removed; ambiguity quarantines rather than respawns | NOT TESTED |
+| R04 | Two clients loot the same cargo concurrently, with retries and forged IDs/distance/state | Native authoritative transaction permits no duplicated cargo; unauthorized request makes no change | NOT TESTED |
+| R05 | Interrupt after reservation, each spawn, cargo insertion, trail placement and structure removal, both before/after registry and chunk saves | No duplicate site/cargo, no restored walls or tombstoned components; immutable seed/manifests; ambiguous recovery fails closed | NOT TESTED |
+| R06 | Compare trails on grass, farmland, dirt, mud, forest floor, gravel and asphalt at multiple headings/severities | Directional relative geometry, no dirt furrows on asphalt, underlying terrain retained where intended; crop/tree/erosion lifecycle safe after restart | NOT TESTED |
+| R07 | Single-story vanilla sidewall corridor, north/west orientations, doors/windows, edge/corner and multi-square fixtures | Real openings, correct collision/zombie paths, natural cutaway/light/weather/room behavior; same result on all clients after reload | NOT TESTED |
+| R08 | Roof/floor tests on each supported level, including neighboring squares and stair/fall paths, only after R07 | Correct penetration, exposure/support/collision/cutaway; unsafe configuration rejected | NOT TESTED |
+| R09 | Max zoom/pan/viewport, upper floors, multiple remote players, split-screen, approach during batches, reconnect/join/teleport and stale/lying reports | Every footprint and expanded side effect stays outside every client's visible area throughout mutation; unknown state cancels/defers | NOT TESTED |
+| R10 | Claimed safehouse, unclaimed player construction and modified vanilla base; settings precedence and claim change during generation | Protected footprint never damaged; no heuristic false negative; unknown provenance rejects | NOT TESTED |
+| R11 | Two scheduled crashes contend for one region; simultaneous separate regions; missing/unloading chunks | Durable exclusive reservations, no overlap; bounded deferral and no dummy squares/full-map scan | NOT TESTED |
+| R12 | Pre-existing region revisits, exploration, restart, density change and region streaming | Same seed/outcome once; no explored-region reroll or visible materialization | NOT TESTED |
+| R13 | Normal custom flight, distress and crash audio; distant/inside/upper-floor players; reconnect/expiry | Direction and occlusion correct, no headless audio requirement, old events do not restart, zombie attraction separate and server-owned | NOT TESTED |
+| R14 | Concurrent vanilla helicopter event; vanilla frequency settings unchanged | Vanilla scheduler/packet behavior preserved, no takeover or accidental duplicate custom invocation | NOT TESTED |
+| R15 | Fire/smoke, bodies/infected crew and optional NPC integration absent/present | Bounded protected aftermath, mission-correct original supplies, no core NPC dependency or duplicate bodies/cargo | NOT TESTED |
+| R16 | Server sandbox change, malformed/out-of-range values and existing-save migration | Server settings authoritative, stable localized IDs, safe validation/defaults; no persisted-outcome reroll | NOT TESTED |
+| R17 | Long-running populated server, repeated chunk streaming and event lifecycle | Measured bounded tick work, memory/registry growth and bandwidth; no permanent per-wreck processing; no corrupt saves | NOT TESTED |
+
+No runtime GO until relevant rows pass with artifacts. G7 requires dedicated headless and >=2-client evidence, including join/reconnect, restart, contention, visibility and authoritative settings. G8 additionally requires approved packaging, source parity, synchronized versions and scripts/check_versions.py --release; none was performed here.

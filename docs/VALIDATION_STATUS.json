@@ -1,0 +1,9 @@
+{
+  "projectVersion": "0.1.0-dev.2",
+  "scope": "Phase 0 documentation; no runtime mod source",
+  "sourceEvidence": "Historical local game snapshots are excluded from the public repository",
+  "runtimeSP": "NOT TESTED",
+  "runtimeDedicatedMP": "BLOCKED / NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "stableReleaseG8": "BLOCKED"
+}

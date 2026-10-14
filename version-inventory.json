@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "canonical": "VERSION",
+  "mirrors": [
+    {"path": "README.md", "pattern": "^Project Version: (?P<version>\\S+)$"},
+    {"path": "docs/VALIDATION_STATUS.json", "pattern": "^  \"projectVersion\": \"(?P<version>[^\"]+)\",$"}
+  ],
+  "changelog": {"path": "docs/CHANGELOG.md", "pattern": "^## \\[(?P<version>[^\\]]+)\\][^\\n]*$"},
+  "packaging": {"artifacts": [{"glob": "dist/current/*.zip", "pattern": "B47ANCEDHelicopterEvents-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip"}]},
+  "other_versions": [
+    {"category": "pz", "reference": "docs/API_AUDIT.md: Build 42.21", "reason": "Observed game build, independent of project version"},
+    {"category": "dependency", "reference": "docs/evidence/environment.json", "reason": "Steam build ID and CFR tool version/hash are provenance, not project versions"},
+    {"category": "inventory-schema", "reference": "version-inventory.json: schema", "reason": "Version checker schema"},
+    {"category": "framework", "reference": "docs/VERSION_POLICY.md", "reason": "Copied framework policy, not project version"}
+  ],
+  "historical": [
+    {"reference": "docs/OFFLINE_VALIDATION.json and docs/evidence-followup/environment.json", "reason": "Actual earlier local validation/provenance, ignored and preserved rather than maintained as current public mirrors"},
+    {"reference": "docs/evidence/", "reason": "Immutable initial dated source inspection snapshots, never relabeled as runtime proof"},
+    {"reference": "docs/history/phase0-accepted/", "reason": "Accepted first audit and actual initial offline validation; preserve original observed checkpoint"},
+    {"reference": "docs/CHANGELOG.md: older entries", "reason": "Historical development checkpoints below newest entry"}
+  ]
+}

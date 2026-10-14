@@ -1,0 +1,28 @@
+# Local configuration and linked team configuration
+/.agents/
+/.codex/
+.env
+.env.*
+*.local.json
+# Installed-game source and private/local diagnostic snapshots remain on disk.
+/docs/evidence*/
+/docs/history/
+/docs/OFFLINE_VALIDATION.json
+/docs/FOLLOWUP_DIFF.patch
+# Historical machine-specific research collectors; never runtime mod dependencies.
+/scripts/finalize_evidence.py
+/scripts/inventory_followup.py
+/scripts/validate_audit.py
+# Generated outputs and credentials/logs
+/dist/
+/build/
+/.tmp*/
+__pycache__/
+*.pyc
+*.class
+*.jar
+*.log
+*.pem
+*.key
+*.zip
+local.settings.json
