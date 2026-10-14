@@ -1,5 +1,11 @@
 # Phase 0 validation records
 
+## Phase 1 contract preparation - 2026-10-14
+
+Documentation only, current root VERSION unchanged. Baseline 17454de4b3c75d70288932968a1217760101ca76 is the merged Phase 0 audio review. The earlier feature branch differed from main only by that merge commit and had the same tracked file tree; this contract branch starts from verified origin/main. No runtime source, assets, mod.info, implementation, game/server launch, package, deployment or Workshop publication.
+
+Commands: python -B scripts/check_versions.py --root .; python -B scripts/validate_phase0_docs.py; git diff --check. Use the existing bundled Python interpreter where the system alias is unavailable. Checks cover current documentation/version/links and unchanged NOT TESTED runtime gates; they are not execution of the new contract. Security review excludes private game snapshots, local settings and credentials before Git push. Results: version consistency PASS; portable documentation STATIC PASS (12 NOT TESTED audio cases, 102 private evidence links deliberately not validated); whitespace PASS; tracked public-surface audit found no prohibited artifacts or credential patterns. Freshness was REVIEW solely for these six intended documentation changes, with zero divergence from origin/main and no unfinished Git operation. Contract review remains PENDING; G6 NOT TESTED, G7 BLOCKED / NOT TESTED and stable-release G8 BLOCKED.
+
 ## Current documentation correction - 2026-10-14
 
 Project version: ../VERSION, unchanged. This is a correction/extension of the existing documentation checkpoint, not a gameplay/API/config/save change or a new version iteration. No Phase 1, game/server launch, mod assets, packaging, deployment or Workshop publication. The public Git repository was created with user approval; initial main baseline ec5b9e5a9d090e5b1264c34f772de425c022a32c was pushed and remote-SHA verified before this feature-branch edit.

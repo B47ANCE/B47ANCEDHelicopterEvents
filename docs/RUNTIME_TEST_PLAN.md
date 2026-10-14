@@ -2,6 +2,8 @@
 
 ## Dedicated MP audio plan - 2026-10-14
 
+The pending [Phase 1 contract](PHASE1_AUDIO_IMPLEMENTATION_CONTRACT.md) is narrower than this broader audio research plan: one rotor bed, three supported settings, no distress/intro seeking and no runtime implementation yet. Apply A-R01 through A-R12 to that actual slice; explicitly defer distress subcases and the unsupported SP path rather than marking the broader feature PASS. Do not change the NOT TESTED rows or claim G7 PASS from contract preparation.
+
 This plan is documentation only. It does not authorize implementation, game/server launch, deployment or Workshop publication. The audio scope is in [AUDIO_FEASIBILITY.md](AUDIO_FEASIBILITY.md); exact source evidence is in [AUDIO_API_EVIDENCE.md](AUDIO_API_EVIDENCE.md). Full-crash scenarios retained below remain separate and blocked.
 
 Prerequisites for later operator execution: a separately authorized implementation/test distribution, version/commit/package hashes, independently verified Build 42.21 client/server baseline, disposable save and isolated configuration, and headless dedicated server with at least two clients. One client should join late/reconnect. Keep patched compatibility results separate from clean results. Dedicated Linux path-case behavior needs its own environment record; a static require/path check is not Linux proof.
