@@ -1,5 +1,13 @@
 # Multiplayer authority proposal
 
+## Current Lua-only audio boundary - 2026-10-14
+
+[AUDIO_FEASIBILITY.md](AUDIO_FEASIBILITY.md) is the current audio research contract; it is not implementation or approval to replace the full-crash requirements. Server owns schedule, settings, flight descriptors and cancellation. Clients own local-only sound playback and may request only a rate-limited current-state snapshot. Ordinary native sound rebroadcast wrappers are excluded. No client may choose shared event outcomes or alter authoritative SandboxVars.
+
+The dedicated protocol candidate uses a server-session epoch, event/revision IDs, absolute server-time expiry, cancellation watermarks and ready-gated reconnect snapshots. Deduplicate across split-screen slots. Do not persist/replay active audio through server restart or reuse the MP zero-returning clock in SP. No world, cargo, salvage or zombie-attraction effects; therefore the audio design does not need the crash transaction as a prerequisite, but it still needs its own dedicated synchronization/cleanup evidence.
+
+Only Lua/exposed vanilla APIs may implement a future authorized slice. Java bridges, agents, JAR dependencies and injected classes are prohibited. The remaining full-crash authority/persistence designs and settings below are historical/pending research, not enabled audio behavior or an authorization to add them. See the twelve NOT TESTED dedicated audio scenarios in [RUNTIME_TEST_PLAN.md](RUNTIME_TEST_PLAN.md). G7 and stable-release G8 remain blocked.
+
 Date: 2026-10-09. Project version: ../VERSION. Status: architecture proposal for review; world materialization blocked by B01, identity trust by B11 and transaction guarantees by B05/B12. No implementation.
 
 ## Follow-up contract refinement

@@ -1,5 +1,7 @@
 # Structural destruction contract — follow-up
 
+Current-policy annotation, 2026-10-14: this is source reconnaissance only under Lua-only runtime rules. Native Java signatures are evidence, not shipped code or bridge approval. Structural destruction remains NO-GO and is excluded from the audio feasibility candidate.
+
 Date: 2026-10-09. Project version: ../VERSION. Build: installed JAR 42.21. **Overall building-impact verdict: NO-GO.** Native paths are source candidates only; clean/runtime fidelity, off-screen commit, base provenance and durable recovery remain blocked. No destructive action executed.
 
 Exact Java signatures/class exposure: [API_SIGNATURES.md](evidence-followup/API_SIGNATURES.md). Lua source snapshots: evidence-followup/installed/media/lua. Source links use decompiled snapshot line numbers; initial and follow-up decompilation line numbers can differ even for the same hashed class because CFR resolved different neighboring dependencies.

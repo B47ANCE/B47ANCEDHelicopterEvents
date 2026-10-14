@@ -1,5 +1,11 @@
 # API evidence
 
+## Current audio evidence - 2026-10-14
+
+[AUDIO_API_EVIDENCE.md](AUDIO_API_EVIDENCE.md) records exact exposed signatures, JAR member hashes, native instruction offsets and the source/runtime boundary. [AUDIO_FEASIBILITY.md](AUDIO_FEASIBILITY.md) specifies the candidate lifecycle, authoritative settings, expiry and reconnect contract. All audio runtime outcomes are NOT TESTED.
+
+This is Lua-only research. Historical Java implementation/bridge ideas are not authorization; reading vanilla Java does not authorize shipping it. Initial raw source bundles/signature indexes below remain private local evidence, excluded from public Git. The portable documentation checker does not claim to validate missing game sources. No earlier validation is relabeled current.
+
 ## Follow-up evidence — current decision context
 
 The accepted initial signature inventory below is preserved and still matches its original hashed snapshots. Current project version is ../VERSION. Additional research is separate in evidence-followup; initial decompiled line numbers must not be applied to the new snapshots.
