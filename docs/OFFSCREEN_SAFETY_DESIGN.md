@@ -1,5 +1,7 @@
 # Off-screen materialization contract — follow-up
 
+Current-policy annotation, 2026-10-14: runtime mods are Lua-only. All earlier engine/Java bridge speculation is historical and unavailable as a remedy. The [audio-only candidate](AUDIO_FEASIBILITY.md) creates no wreck/world mutations and does not meet or waive the crash-site contract below.
+
 Date: 2026-10-09 (America/Phoenix). Project version: ../VERSION. Installed JAR target: Build 42.21. Authorization: source investigation/design only. **Verdict: NO-GO for materialization with connected clients under the required strict guarantee.** No gameplay or runtime experiment performed.
 
 ## Required property
@@ -40,7 +42,7 @@ These are [INFERRED] failure traces from the source separation, not executed run
 
 ## Missing enforceable contract
 
-A connected-client commit would require a verified mechanism covering (a) all current/retained/pending footprint chunk versions, (b) all renderable view modes, (c) admission and teleport/movement changes, (d) streaming workers/requests/state responses, and (e) publication of a completed site revision to every client without intermediate states. No such dedicated-server/Lua contract was established. A hypothetical engine bridge would need its own source audit and permission scope; none is implemented or recommended as an approved workaround.
+A connected-client commit would require a verified mechanism covering (a) all current/retained/pending footprint chunk versions, (b) all renderable view modes, (c) admission and teleport/movement changes, (d) streaming workers/requests/state responses, and (e) publication of a completed site revision to every client without intermediate states. No such dedicated-server/Lua contract was established. The former hypothetical engine-bridge idea is historical only and prohibited under current Lua-only rules. There is no approved replacement for this missing exposed-API contract.
 
 ## Fail-closed alternatives only
 

@@ -19,4 +19,4 @@ python -B scripts/check_versions.py --root .
 python -B scripts/validate_phase0_docs.py
 ```
 
-The second validator is added with the audio documentation update; the initial baseline uses the version check and a staged-file security review. Packages are deferred. scripts/check_versions.py --release is only applicable after separately authorized artifacts and release gates. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+The audio documentation update supplies the second validator; the initial baseline used the version check and a staged-file security review. Packages are deferred. scripts/check_versions.py --release is only applicable after separately authorized artifacts and release gates. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.

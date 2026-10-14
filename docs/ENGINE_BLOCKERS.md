@@ -1,5 +1,20 @@
 # Engine blockers
 
+## Current Lua-only audio status - 2026-10-14
+
+Lua-only is mandatory. Former Java/bridge proposals are historical, not an exit route. The full-crash B01-B12 blockers below remain unchanged. A bounded audio-only candidate avoids world/cargo transactions but still has these separate runtime gates:
+
+| ID | Audio blocker | Exit evidence |
+|---|---|---|
+| A01 | Ordinary emitter play wrappers can rebroadcast client native sound; remote-event flag is not a transport guard | Dedicated packet/sound isolation test of the exposed local Impl overload; no zombie attraction or duplicated native sound. |
+| A02 | Owned emitter tick/stop/pool-return behavior, Lua nil overload and stop tails untested | A-R01 through A-R04, including silent start, reused emitter, pause and disconnect. |
+| A03 | Sandbox definitions/localization and server update interpretation unimplemented | A-R05/A-R06 verify bounded IDs, server authority, existing-save defaults and config revisions. |
+| A04 | Unsynchronized/zero time, paused updates and SP clock difference | A-R07/A-R08; expired or unsafe clock state must remain silent and never extend lifetime. |
+| A05 | Ready handshake, epoch/revision snapshots, late joins and split-screen duplicates untested | A-R09 through A-R12 on headless dedicated with at least two clients. |
+| A06 | Patched emitter/clock/event classes differ from JAR; acoustic behavior/vanilla event coexistence unproved | Clean/patched results separated; source fingerprints and actual runtime environment recorded. |
+
+See [audio design](AUDIO_FEASIBILITY.md) and [runtime tests](RUNTIME_TEST_PLAN.md). No newly verified Lua capability waives the strict off-screen or destruction contracts.
+
 Date: 2026-10-09. Project version: ../VERSION. All runtime outcomes UNKNOWN; no PZ/server was launched.
 
 | ID | Blocker | Affected scope | Required exit evidence |
@@ -21,4 +36,4 @@ Follow-up [design documents](../README.md) trace exact native paths and failure 
 
 B01 alone blocks production world generation. Turning building impacts off does not resolve B01. Settings cannot waive an engine safety gate. The broad intended mod remains NO-GO for implementation until affected blockers are resolved; source-backed isolated hypotheses are listed as CONDITIONAL, never release-ready.
 
-No Java bridge has been implemented or approved. If Lua exposure proves insufficient, read the workspace Java development policy and propose a narrow authority-preserving bridge for review; do not bypass these blockers with client authority.
+Historical policy note: earlier research suggested a Java bridge if Lua exposure proved insufficient. That suggestion is superseded by the 2026-10-12 Lua-only rule and is not current authorization. Do not implement/build/require custom Java, bridges, agents, injected classes, native extensions or JAR dependencies. Unsupported capabilities stay blocked; propose only Lua-only alternatives without weakening authority.

@@ -13,11 +13,13 @@ The handoff's proposed initial version is adopted for this new documentation-onl
 - [Engine blockers](docs/ENGINE_BLOCKERS.md)
 - [Multiplayer authority and sandbox design](docs/MP_AUTHORITY.md)
 - [Runtime test plan](docs/RUNTIME_TEST_PLAN.md)
+- [Lua-only audio feasibility](docs/AUDIO_FEASIBILITY.md)
+- [Audio API evidence](docs/AUDIO_API_EVIDENCE.md)
 - [Off-screen safety follow-up](docs/OFFSCREEN_SAFETY_DESIGN.md)
 - [Structural destruction follow-up](docs/STRUCTURAL_DESTRUCTION_AUDIT.md)
 - [Crash persistence follow-up](docs/CRASH_PERSISTENCE_DESIGN.md)
 - [Clean versus patched installation](docs/INSTALLATION_PROVENANCE.md)
 
-The second development checkpoint expands source reconnaissance and design only; no public API, gameplay, configuration or save compatibility changes. The accepted first audit and its offline validation remain historical in docs/history/phase0-accepted; initial source snapshots remain unchanged in docs/evidence. Follow-up snapshots are separate in docs/evidence-followup.
+The second development checkpoint expands source reconnaissance and design only; no public API, gameplay, configuration or save compatibility changes. The 2026-10-14 documentation correction adds a CONDITIONAL Lua-only audio candidate and dedicated MP tests without beginning Phase 1 or changing the version. Full crash-site requirements remain blocked. The accepted first audit and its offline validation remain historical in local docs/history/phase0-accepted; source snapshots remain unchanged and excluded from public Git.
 
-Canonical version: root VERSION. Current mirrors: this README and the newest changelog entry, declared in version-inventory.json. PZ version, Steam build ID, framework/tool provenance, and future save/protocol schemas are independent. Evidence snapshots retain the version actually inspected.
+Canonical version: root VERSION. Current mirrors: this README, newest changelog entry and docs/VALIDATION_STATUS.json, declared in version-inventory.json. PZ version, Steam build ID, framework/tool provenance, and future save/protocol schemas are independent. Earlier local validation/provenance snapshots retain the versions actually inspected.

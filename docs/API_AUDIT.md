@@ -1,5 +1,20 @@
 # Phase 0 API audit
 
+## Current Lua-only audio review - 2026-10-14
+
+Current policy allows only Lua runtime code and exposed vanilla APIs. Custom Java/bridges/agents/injected classes/native extensions/JAR dependencies are prohibited; dated engine-bridge proposals below/in related documents are historical only. This update is documentation at the existing root VERSION, not Phase 1 or runtime approval.
+
+| Audio surface | Current verdict | Evidence and remaining requirement |
+|---|---|---|
+| Owned client emitter lifecycle | CONDITIONAL | Exposed acquire/take/return, local playback, position/tick/stop exist. Test Lua overloads, queued starts, stop tails, pool reuse and disconnect cleanup. |
+| Server sandbox path | VERIFIED_SOURCE; runtime NOT TESTED | Custom options, server Lua load, connection serialization and client SandboxVars import traced. Verify actual definitions, bounds, localization and admin changes in dedicated MP. |
+| Expiry | CONDITIONAL | getServerTimeMills is synchronized in MP but returns zero before sync and in SP. Absolute expiry and a separate SP clock policy required. |
+| Reconnect/late join | CONDITIONAL | Lifecycle events/command APIs exist. Ready handshake, session epoch, current snapshots, cancellation revision and deduplication must be implemented/tested only in a later authorized slice. |
+
+See [AUDIO_FEASIBILITY.md](AUDIO_FEASIBILITY.md) and [AUDIO_API_EVIDENCE.md](AUDIO_API_EVIDENCE.md). Ordinary playSound/playSoundLooped may send client native sound packets despite setPlayRemoteEvents(false); use only the verified-local Impl candidate after Lua/runtime tests. No sound, asset or gameplay was implemented.
+
+The audio candidate excludes world mutation, cargo, salvage and zombie attraction; it does not satisfy or override the original crash-site requirements. The following full-crash reconnaissance and NO-GO verdicts remain in force. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. Ten installed loose zombie class hashes drifted since the earlier inventory; initial evidence integrity is not a fresh installation-validation result.
+
 Date: 2026-10-09 (America/Phoenix). Project version: read ../VERSION. Target and observed JAR build: **42.21**. Scope: read-only game/repository investigation and design follow-up with local documentation/evidence output. The accepted initial reconnaissance remains historical in history/phase0-accepted. No gameplay implementation. No runtime tests executed.
 
 ## Follow-up A-D decision

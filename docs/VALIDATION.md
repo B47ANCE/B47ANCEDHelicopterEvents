@@ -1,4 +1,27 @@
-# Phase 0 follow-up validation record
+# Phase 0 validation records
+
+## Current documentation correction - 2026-10-14
+
+Project version: ../VERSION, unchanged. This is a correction/extension of the existing documentation checkpoint, not a gameplay/API/config/save change or a new version iteration. No Phase 1, game/server launch, mod assets, packaging, deployment or Workshop publication. The public Git repository was created with user approval; initial main baseline ec5b9e5a9d090e5b1264c34f772de425c022a32c was pushed and remote-SHA verified before this feature-branch edit.
+
+Exact commands from repository root (using the developer's existing Python interpreter):
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+git diff --check
+git diff --cached --check
+```
+
+Version checks run before/after edits. The portable checker validates current links, twelve NOT TESTED dedicated audio scenarios, preserved runtime gates and tracked-file boundaries. It explicitly excludes private game-source links from source-validation claims. Staged/trackable content is inspected for credentials, private player data, logs, generated packages, local diagnostic snapshots and raw game source before each public push. Current validation status is in VALIDATION_STATUS.json. No CI or runtime result is manufactured.
+
+Original evidence manifests still match 61 initial and 125 follow-up local files. The installed JAR still matches the earlier fingerprint; ten loose zombie classes changed, so current patched-install equivalence is NOT established. Source findings remain CONDITIONAL, and SP/dedicated audio are NOT TESTED. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. Original collectors/validate_audit.py are retained locally, ignored and not rerun to overwrite earlier evidence.
+
+Current public mirrors are README, newest changelog entry and VALIDATION_STATUS.json. Earlier OFFLINE_VALIDATION.json and evidence-followup/environment.json retain their actual earlier provenance and are classified historical, not rewritten as current mirrors. Raw game/diagnostic/config files stay local. Git backup is verified separately in the final iteration report; a PR is not a merge or runtime approval.
+
+## Historical 2026-10-09 follow-up record
+
+The record below describes the original non-Git workspace and checks at that time. Its machine paths, no-Git assertion, original installed-file hashes and PASS counts are historical only; they are not current clean-install or runtime results.
 
 Date: 2026-10-09 (America/Phoenix). Current project version: ../VERSION. Environment: Windows, offline source/document checks only. No PZ/server launch, installed-file edits, live deployment, assets/gameplay or packaging.
 
