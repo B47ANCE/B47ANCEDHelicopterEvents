@@ -6,6 +6,8 @@ Current policy permits Lua calls to exposed vanilla engine APIs, not custom Java
 
 ## Bounded candidate
 
+The [Phase 1 audio implementation contract](PHASE1_AUDIO_IMPLEMENTATION_CONTRACT.md) narrows a future first prototype to one rotor-bed flyover, one server flight/client emitter, three settings and default-disabled opt-in. It defers distress and supersedes this broader research table's provisional enabled-by-default/four-option proposal only for that prototype. It is a pending design, not implementation authorization or a change to the original full-crash scope.
+
 Server-owned flyovers and distress presentation; no airborne model, wreck materialization, terrain/structure changes, fire, bodies, cargo, salvage, zombie-attracting world sounds or confirmed impact sounds. Do not promise a discoverable crash that does not exist. Preserve vanilla helicopter scheduling/singleton state. Sound and path identifiers are allowlisted server decisions, not client-supplied filenames or outcomes.
 
 ## Emitter lifecycle

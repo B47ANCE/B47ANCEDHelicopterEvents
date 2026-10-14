@@ -15,6 +15,7 @@ The handoff's proposed initial version is adopted for this new documentation-onl
 - [Runtime test plan](docs/RUNTIME_TEST_PLAN.md)
 - [Lua-only audio feasibility](docs/AUDIO_FEASIBILITY.md)
 - [Audio API evidence](docs/AUDIO_API_EVIDENCE.md)
+- [Phase 1 audio implementation contract - design only](docs/PHASE1_AUDIO_IMPLEMENTATION_CONTRACT.md)
 - [Off-screen safety follow-up](docs/OFFSCREEN_SAFETY_DESIGN.md)
 - [Structural destruction follow-up](docs/STRUCTURAL_DESTRUCTION_AUDIT.md)
 - [Crash persistence follow-up](docs/CRASH_PERSISTENCE_DESIGN.md)
