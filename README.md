@@ -1,6 +1,6 @@
 # B47ANCE'd Helicopter Events
 
-Project Version: 0.1.0-dev.2
+Project Version: 0.1.0-dev.3
 
 Public source: [B47ANCE/B47ANCEDHelicopterEvents](https://github.com/B47ANCE/B47ANCEDHelicopterEvents). This remains Phase 0 research with no runtime implementation. Current policy is **Lua-only**; earlier bridge/Java proposals in dated research are historical, not authorization. Raw game source, bytecode, linked local configuration and diagnostic snapshots stay local and are not published. See [repository governance](docs/REPOSITORY.md).
 

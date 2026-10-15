@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.0-dev.3]
+- Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
+- Offline branding/version checks only; earlier validation remains historical at 0.1.0-dev.2. No new SP/dedicated MP evidence.
+
 ## [0.1.0-dev.2] - Phase 0 follow-up
 
 - Prepare a pending Phase 1 Lua-only audio implementation contract: one transient rotor bed, default-disabled server configuration, full expiring snapshots, owned-emitter cleanup and explicit test/stop gates. No code, assets or runtime authorization; current version unchanged.
