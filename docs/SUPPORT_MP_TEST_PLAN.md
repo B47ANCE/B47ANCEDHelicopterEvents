@@ -16,6 +16,8 @@ The [Lua-only gunner follow-up](DOOR_GUNNER_LUA_FEASIBILITY.md) adds G-R01..10 i
 
 The [ownership/result trace O-C01..06](GUNNER_OWNERSHIP_RESULT_AUDIT.md) remains NO-GO for a mutating probe. Neither empty AI sync methods nor a custom Lua acknowledgement supplies the native result/fence contract. If later supported, extend G-R05/G-R06 to delayed pre-hit snapshots arriving after acknowledgement, immediate null-owner reassignment and A-to-B-to-A ownership; G-R07 must preserve delayed ordinary player combat in both orders. Do not call sendHitZombie to test zombie damage: that helper sends zombie attacks against a player. The shared getFakeAttacker proxy must not be treated as mod-owned cleanup state. All cases remain unexecuted.
 
+The [third-party NPC comparison](THIRD_PARTY_RESEARCH.md) does not waive those prerequisites. Any later independently designed owner-side result adapter must also demonstrate one server-resolved shot when clients disagree about ownership, refusal of client-invented outcomes, exact preservation of concurrent native player hits and no silent skipping of remote targets. Registered NPC health messaging, an MP label or another mod's Java framework is not ordinary-zombie dedicated evidence. These are additional acceptance conditions for existing G-R04..07, all NOT TESTED; no external mod is a test dependency.
+
 ## Staged cases
 
 | ID | Stage / procedure | Required observation | Actual |

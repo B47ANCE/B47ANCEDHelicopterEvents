@@ -1,5 +1,25 @@
 # Phase 0 validation records
 
+## Third-party NPC comparison - 2026-10-15
+
+Documentation-only extension of docs/military-support-audit, baseline cc494cf2f6cd92dd9295643eacdf2f7431920490. Version remains 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [THIRD_PARTY_RESEARCH.md](THIRD_PARTY_RESEARCH.md) is a neutral behavior/provenance ledger for staged A-Life 1.4.2, staged Remnants metadata and installed Bandits. [THIRD_PARTY_RESEARCH_INDEX.json](THIRD_PARTY_RESEARCH_INDEX.json) records 17 selected file fingerprints/ranges and explicit source states. Steam's user-controlled queue was not operated; readable staged files do not authenticate a completed package.
+
+Exact repository validation commands (bundled Python interpreter):
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+python -B scripts/test_audio.py
+git diff --check
+git diff --cached --check
+git diff cc494cf2f6cd92dd9295643eacdf2f7431920490 -- src assets VERSION version-inventory.json scripts tests
+```
+
+[TESTED: offline] Version consistency PASS; document/source checks STATIC PASS; unchanged 17 fake-boundary audio cases and three event adapters PASS. Inline Python hashlib/range checks re-read all 17 indexed third-party files and confirm their selected hashes/line bounds unchanged; STATIC PASS. Remnants JAR was opened only for its Java-agent manifest metadata, not class bodies. A staged A-Life source inventory found no .java/.class/.jar files in the selected mod root; this is not a full dependency/runtime audit. Ten G-R and 24 S-R rows remain NOT TESTED. Runtime source/assets/version/scripts/tests are byte-unchanged from this baseline. Whitespace and targeted staged/tracked public-surface checks PASS; no third-party bodies/assets, private snapshots, credentials or generated outputs included. Two INFERRED / NOT_TESTED reusable observations were recorded in the unmanaged API draft.
+
+Clean-room self-check records no imports or adopted implementation; independent reviewer signoff remains PENDING, not fabricated. No permissions/license clearance for code reuse was inferred. Public primary descriptions were consulted alongside local selected source, not substituted for runtime evidence. No third-party or PZ game/server/installer/JAR was executed, installed, deployed or published by this work. No mutating combat probe implemented. MS04 unchanged; G7 BLOCKED / NOT TESTED, stable-release G8 BLOCKED. Findings await review.
+
 ## Ownership/result path trace - 2026-10-15
 
 Documentation-only extension of docs/military-support-audit, baseline 88443396b76781a95635a25ce41eab2323fca72e. Version remains 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [GUNNER_OWNERSHIP_RESULT_AUDIT.md](GUNNER_OWNERSHIP_RESULT_AUDIT.md) records six unresolved contracts and a NO-GO for the mutating combat probe. [OWNERSHIP_RESULT_SOURCE_INDEX.json](OWNERSHIP_RESULT_SOURCE_INDEX.json) fingerprints 24 packaged native members, targeted loose counterparts and one installed server Lua caller. Raw native output stays private/ignored.

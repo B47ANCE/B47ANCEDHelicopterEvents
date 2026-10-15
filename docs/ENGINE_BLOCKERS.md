@@ -8,6 +8,8 @@
 
 [Ownership/result access trace](GUNNER_OWNERSHIP_RESULT_AUDIT.md), O-C01..06: no complete supported Lua path established. The engine's shared getFakeAttacker proxy improves the attacker lead, not authority. Zombie syncHealth/syncDamage inherit empty bodies; null owner bypasses the reassignment delay; player-hit relay requires real player/source identity. A custom result acknowledgement does not fence old native health packets. No mutating combat probe should be implemented under these findings; bindings/ownership may be observed without mutation after separate authorization.
 
+[Third-party NPC comparison](THIRD_PARTY_RESEARCH.md): examined A-Life paths delegate body execution to clients and separate registered NPC health from ordinary-zombie damage; Bandits has local hit/health rebroadcast paths; Remnants requires a Java agent. These are different execution/trust surfaces, not proof of our native fence. Server-approved owner-side result application remains UNKNOWN research; clients choosing shots/damage remains excluded. No code/assets/dependencies imported; MS04 unchanged, independent clean-room review pending.
+
 ## Implementation status - 2026-10-15
 
 Audio definitions and protocol/lifecycle logic now exist in the [offline prototype](AUDIO_PROTOTYPE.md); A03 is now unverified engine/UI/admin behavior rather than absent source. A01/A02/A04/A05/A06 remain runtime gates. No audio or full-crash blocker is promoted to PASS; full-crash B01-B12 remain unchanged.

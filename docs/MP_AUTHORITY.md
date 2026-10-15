@@ -6,6 +6,8 @@
 
 [Ownership/result audit](GUNNER_OWNERSHIP_RESULT_AUDIT.md): application-level shot IDs and acknowledgements cannot fence the native receiver's current-owner health writes. Supported manager access, a protected lease, ordered nonlethal result publication and safe reassignment remain unestablished. Empty zombie AI sync methods and real-player hit packets do not provide that adapter. The vanilla shared hit proxy is only an attacker lead. Keep mutating combat probes NO-GO; no client-selected damage or repeated server health overwrite fallback.
 
+[NPC comparison](THIRD_PARTY_RESEARCH.md) confirms source-backed client body execution exists in other Lua mods; that does not establish the same authority contract. A client applying an exact server result is conceptually different from choosing the target, accuracy, damage or ammunition. Only the former may remain an independent research candidate, contingent on verified native ordering/owner migration and preserved ordinary combat. Custom registered-NPC health messages cannot be generalized into control of every vanilla zombie; no third-party system or new dependency is adopted.
+
 ## Implementation status - 2026-10-15
 
 The audio boundary is implemented as an offline candidate: [behavior/configuration](AUDIO_PROTOTYPE.md), [source evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md). Server owns schedule/settings; client only requests snapshots. No persistence/world effects. Runtime authority, headless behavior and native sound isolation remain NOT TESTED. Dated proposals below are historical design; full-crash blockers remain in force.
