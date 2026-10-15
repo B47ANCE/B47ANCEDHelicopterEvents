@@ -1,5 +1,9 @@
 # Multiplayer authority proposal
 
+## Military support direction - 2026-10-15
+
+[Military support authorization](SUPPORT_AUTHORIZATION_DESIGN.md) and [combat audit](DOOR_GUNNER_COMBAT_AUDIT.md) extend the proposed future authority model, not current runtime code. Item/mission persistence and server-owned combat remain unproved; clients cannot authorize shared outcomes.
+
 ## Implementation status - 2026-10-15
 
 The audio boundary is implemented as an offline candidate: [behavior/configuration](AUDIO_PROTOTYPE.md), [source evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md). Server owns schedule/settings; client only requests snapshots. No persistence/world effects. Runtime authority, headless behavior and native sound isolation remain NOT TESTED. Dated proposals below are historical design; full-crash blockers remain in force.

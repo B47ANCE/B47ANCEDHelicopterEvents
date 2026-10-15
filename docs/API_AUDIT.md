@@ -1,5 +1,9 @@
 # Phase 0 API audit
 
+## Military support direction - 2026-10-15
+
+The first complete gameplay release is Military Air Support. See [targeted support API audit](MILITARY_SUPPORT_API_AUDIT.md) for exact new candidates and MS01-MS06 blockers. This direction does not expand current audio code or approve crash features.
+
 ## Implementation status - 2026-10-15
 
 The bounded audio implementation is now an offline candidate; see [implementation evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md) and [behavior/limits](AUDIO_PROTOTYPE.md). Runtime verdicts remain CONDITIONAL, G7 BLOCKED / NOT TESTED and stable-release G8 BLOCKED. All dated Phase 0 no-implementation statements below describe their original audits; full-crash NO-GO verdicts remain current.

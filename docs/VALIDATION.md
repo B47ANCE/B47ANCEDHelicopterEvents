@@ -1,5 +1,13 @@
 # Phase 0 validation records
 
+## Military support API audit - 2026-10-15
+
+Documentation-only branch docs/military-support-audit based on 81563f78ae0179f34f49385909c645bf6f9cf14e (open audio prototype PR #4). Six requested reports plus source fingerprint index; source, assets, metadata, canonical VERSION and runtime validation fields remain unchanged. Targeted installed script/native inspection, not engine execution. Military Air Support is the first complete release direction; crash blockers remain independent.
+
+Commands: python -B scripts/check_versions.py --root .; python -B scripts/validate_phase0_docs.py; python -B scripts/validate_audio_sources.py; python -B scripts/test_audio.py; git diff --check; git diff --cached --check. A separate inline Python check verifies six document files, verdict labels, 24 NOT TESTED support rows, all current S01-S11 source hashes and N01-N19 packaged member hashes against SUPPORT_SOURCE_INDEX.json. No raw native/decompiled bodies are committed.
+
+Results: version consistency PASS; documentation/source boundary checks STATIC PASS; all 17 existing audio fake-boundary scenarios and three fake event-adapter fixtures PASS (unchanged prototype regression, not support evidence). Six support reports, 24 NOT TESTED support rows and 11 text/19 native source fingerprints STATIC PASS; installed Steam build ID rechecked. Whitespace PASS. Public-surface review excludes private snapshots/raw native bodies, generated output and credentials. Runtime source/assets/metadata/VERSION are byte-unchanged relative to the audit baseline. No support gameplay, item/save changes, runtime tests, game/server launch, packaging, deployment or publication. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
 ## Bounded audio implementation - 2026-10-15
 
 Current version: root VERSION (0.1.0-dev.3), retained at the user's requested existing artwork checkpoint. Baseline main 126da35b65d0cecf39d251ba722e543cbc935ecc; clean startup, zero divergence from origin/main. Work occurs on feature/audio-prototype. Authoritative Lua source and metadata now exist under src/B47ANCEDHelicopterEvents/42; prior no-runtime assertions below describe their original dates. No historical reports/private game snapshots were regenerated.

@@ -2,6 +2,8 @@
 
 Project Version: 0.1.0-dev.3
 
+First complete gameplay release direction: **Military Air Support**. The current runtime source remains the experimental rotor-only prototype; support equipment, authorization, loot and combat are not implemented. The [targeted support API audit](docs/MILITARY_SUPPORT_API_AUDIT.md) records current NO-GO contracts and the smallest safe diagnostic. Crash/wreck/destruction features remain deferred and blocked independently.
+
 Public source: [B47ANCE/B47ANCEDHelicopterEvents](https://github.com/B47ANCE/B47ANCEDHelicopterEvents). This is a **Lua-only, default-disabled audio prototype**, targeting Build 42.21 dedicated servers. It schedules one transient positional rotor bed, with server-owned configuration and expiring snapshots. No wrecks, destruction, loot, salvage, distress, world mutations or zombie attraction. Actual dedicated multiplayer remains **NOT TESTED**.
 
 Authoritative source: `src/B47ANCEDHelicopterEvents/42`; Mod ID: `B47ANCEDHelicopterEvents`. Existing approved icon/poster bytes are reused. There are no custom Java/JAR dependencies, new sound assets, crash persistence, packages or Workshop item. SP/host modes are unsupported and silent. Preserve native helicopter behavior. Raw game source, private snapshots and local settings remain excluded from public Git.
@@ -20,6 +22,11 @@ git diff --check
 
 No game/server launch, packaging, deployment or publication has been performed. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
 
+- [Military radio design](docs/MILITARY_RADIO_DESIGN.md)
+- [Army Credentials loot audit](docs/ARMY_CREDENTIALS_LOOT_AUDIT.md)
+- [Single-use authorization design](docs/SUPPORT_AUTHORIZATION_DESIGN.md)
+- [Door gunner combat audit](docs/DOOR_GUNNER_COMBAT_AUDIT.md)
+- [Support dedicated test plan](docs/SUPPORT_MP_TEST_PLAN.md)
 - [API audit and verdicts](docs/API_AUDIT.md)
 - [Exact source evidence](docs/API_EVIDENCE.md)
 - [Engine blockers](docs/ENGINE_BLOCKERS.md)
