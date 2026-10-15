@@ -1,5 +1,9 @@
 # API evidence
 
+## Combat ordering evidence - 2026-10-15
+
+[COMBAT_ORDERING_CONTRACT.md](COMBAT_ORDERING_CONTRACT.md) records exact native transport/receiver signatures and instruction offsets; [T01-T15 fingerprints](COMBAT_ORDERING_SOURCE_INDEX.json) identify packaged members and loose counterparts. Configured reliable-unordered Lua commands/zombie variants and reliable-ordered player hits do not establish a shared mutation order. The [offline integer model](../scripts/audit_combat_interleavings.py) reproduces bounded assumptions/counterexamples, not engine behavior or a safe protocol. Native bodies remain excluded; patched installation and all dedicated outcomes remain unverified.
+
 ## Implementation status - 2026-10-15
 
 New implementation assumptions and scalar transport inspection are recorded in [AUDIO_IMPLEMENTATION_EVIDENCE.md](AUDIO_IMPLEMENTATION_EVIDENCE.md). Earlier signatures/source observations below remain dated reconnaissance, not runtime proof. The only new code is the bounded audio adapter; no full-crash capability is approved.

@@ -2,6 +2,8 @@
 
 ## Military support direction - 2026-10-15
 
+[Combat ordering follow-up](COMBAT_ORDERING_CONTRACT.md): native Lua commands and reliable zombie variants are reliable unordered; ordinary player hits are reliable ordered, without a common cross-stream order. Current-owner identity rejects A while B owns the target, but does not distinguish an old A packet after A-to-B-to-A. Absolute/minimum health corrections and unconditional handoff retry/skip have explicit player-damage or duplicate/loss counterexamples. The 28-schedule offline model is not an engine test. O-C02/O-C03/O-C04 and MS04 remain unresolved; no mutating combat probe.
+
 [Military support authorization](SUPPORT_AUTHORIZATION_DESIGN.md) and [combat audit](DOOR_GUNNER_COMBAT_AUDIT.md) extend the proposed future authority model, not current runtime code. Item/mission persistence and server-owned combat remain unproved; clients cannot authorize shared outcomes.
 
 [Ownership/result audit](GUNNER_OWNERSHIP_RESULT_AUDIT.md): application-level shot IDs and acknowledgements cannot fence the native receiver's current-owner health writes. Supported manager access, a protected lease, ordered nonlethal result publication and safe reassignment remain unestablished. Empty zombie AI sync methods and real-player hit packets do not provide that adapter. The vanilla shared hit proxy is only an attacker lead. Keep mutating combat probes NO-GO; no client-selected damage or repeated server health overwrite fallback.

@@ -61,6 +61,8 @@ A Lua acknowledgement proves receipt of the Lua operation, not drainage/rejectio
 
 ## Contract decision and next permitted work
 
+[The ordering follow-up](COMBAT_ORDERING_CONTRACT.md) now verifies the relevant packet configuration: Lua commands and reliable zombie packets are reliable unordered; native player hits are reliable ordered, without a combined stream fence. Fifteen native fingerprints and a reproducible 28-schedule abstract model document positive stable-owner delta assumptions and counterexamples for health correction, owner migration and retries. This strengthens the unresolved O-C02/O-C03/O-C04 evidence, not implementation approval.
+
 Subsequent [clean-room NPC comparison](THIRD_PARTY_RESEARCH.md) inspects A-Life, Remnants and Bandits. It finds delegated client execution/custom NPC health and an excluded Java-agent surface, not a verified native ownership/result fence for our server-decided hits on ordinary zombies. The source-backed existence of NPC gunfire does not close O-C01..06. Owner-side application of server-approved results remains a research candidate; no client outcome authority, code import or combat probe is approved.
 
 | Contract | Current source status | Must exist before mutating probe |

@@ -1,5 +1,32 @@
 # Phase 0 validation records
 
+## Combat ordering and ordinary damage - 2026-10-15
+
+Research/tooling extension of docs/military-support-audit, baseline e63e5c05e861f27753835155e8f16fb733552621. Root version remains 0.1.0-dev.3; no runtime/API/configuration/save compatibility change or new version checkpoint. [COMBAT_ORDERING_CONTRACT.md](COMBAT_ORDERING_CONTRACT.md) and [T01-T15 source index](COMBAT_ORDERING_SOURCE_INDEX.json) record native transport configuration, current-owner acceptance and unresolved handoff/result contracts. New scripts/audit_combat_interleavings.py is a project-owned offline integer-state model, not gameplay/probe implementation or an engine simulation.
+
+Exact repository commands (bundled Python interpreter):
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+python -B scripts/test_audio.py
+python -B scripts/audit_combat_interleavings.py
+python -B scripts/audit_combat_interleavings.py --json
+python -B .tmp-ordering-audit/verify_sources.py
+git diff --check
+git diff --cached --check
+git diff e63e5c05e861f27753835155e8f16fb733552621 -- src assets VERSION version-inventory.json tests
+```
+
+[TESTED: offline] Version consistency PASS before/after edits; documentation/source checks STATIC PASS; unchanged audio suite 17 fake-boundary cases and three event adapters PASS. Model assertions PASS: 28 bounded schedules, 17 preserving assumed damage and 11 expected counterexamples reproduced. These numbers are model coverage, not protocol success rates or engine outcomes. Stable-owner delta arithmetic is conditional on one intact context and exactly one application; native Hit, death and transport are not exercised.
+
+The ignored/private verify_sources.py uses standard-library ZipFile/hashlib, Steam manifest matching, row checks and the model's JSON output: current JAR/Steam build, all 15 member/loose fingerprints and 34 NOT TESTED G-R/S-R rows STATIC PASS. It exports three project-summary records to the unmanaged local API draft; record/validate helper actions PASS (201 total draft records). No managed catalog edited. Native inspection uses javap -c -p, with -v for annotation/constants metadata, against the indexed packaged classes; exact observations/offsets are in the contract. No native class instantiated or engine launched. Private extractor/inspection output is deliberately not a public reproducibility dependency for the standalone model.
+
+Runtime source/assets/VERSION/version inventory/tests remain byte-unchanged from baseline; the only new executable file is the offline model. Whitespace and targeted staged/tracked public-surface review PASS; no raw native/third-party bodies, private logs/settings, credentials or generated packages included. Existing clean-room independent signoff remains PENDING. Public Git backup/PR update are reported separately; no CI or runtime result is inferred from them.
+
+Result: supported common ordering, owner-transfer operation inclusion and preservation of ordinary damage are not established. MS04/mutating probe NO-GO; no health clamp, player-hit interception, fake player attribution or client-selected outcome workaround. All G-R/S-R cases NOT TESTED; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No gameplay implementation, engine launch, installed-file change, package, deployment or Workshop publication. Stop for findings review.
+
 ## Third-party NPC comparison - 2026-10-15
 
 Documentation-only extension of docs/military-support-audit, baseline cc494cf2f6cd92dd9295643eacdf2f7431920490. Version remains 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [THIRD_PARTY_RESEARCH.md](THIRD_PARTY_RESEARCH.md) is a neutral behavior/provenance ledger for staged A-Life 1.4.2, staged Remnants metadata and installed Bandits. [THIRD_PARTY_RESEARCH_INDEX.json](THIRD_PARTY_RESEARCH_INDEX.json) records 17 selected file fingerprints/ranges and explicit source states. Steam's user-controlled queue was not operated; readable staged files do not authenticate a completed package.

@@ -4,6 +4,8 @@
 
 The first complete gameplay release is Military Air Support. See [targeted support API audit](MILITARY_SUPPORT_API_AUDIT.md) for exact new candidates and MS01-MS06 blockers. This direction does not expand current audio code or approve crash features.
 
+[Ordering/owner migration follow-up](COMBAT_ORDERING_CONTRACT.md): packet configuration is verified, but no native fence connecting Lua results, owner health and ordinary player hits is established. Stable-owner delta arithmetic is CONDITIONAL only; correction/retry counterexamples keep MS04 and the mutating combat probe NO-GO. Source inspection and the offline model do not change runtime gates.
+
 ## Implementation status - 2026-10-15
 
 The bounded audio implementation is now an offline candidate; see [implementation evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md) and [behavior/limits](AUDIO_PROTOTYPE.md). Runtime verdicts remain CONDITIONAL, G7 BLOCKED / NOT TESTED and stable-release G8 BLOCKED. All dated Phase 0 no-implementation statements below describe their original audits; full-crash NO-GO verdicts remain current.

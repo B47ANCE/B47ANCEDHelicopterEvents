@@ -12,6 +12,8 @@ The handoff's alternate repository path was absent. The verified existing B47ANC
 
 ## Subsystem decisions
 
+Latest [ordering/owner-transfer investigation](COMBAT_ORDERING_CONTRACT.md) verifies the transport configuration and documents player-damage preservation counterexamples. Neither Lua acknowledgements nor retry/skip/absolute/minimum-health policies establish the required native fence. MS04 stays NO-GO for a mutating combat probe; no support implementation authorized by these findings.
+
 | Subsystem | Verdict | Verified fact / remaining gate | Smallest later dedicated test |
 |---|---|---|---|
 | Ordinary Army radio | CONDITIONAL | S01:115-141 Base.WalkieTalkie5 is portable, battery-powered, two-way, range 16000. Reuse candidate; no new radio type justified yet. | Read-only enumeration and ordinary tuning/battery tests with two clients. |

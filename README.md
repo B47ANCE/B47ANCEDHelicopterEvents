@@ -28,6 +28,7 @@ No game/server launch, packaging, deployment or publication has been performed. 
 - [Door gunner combat audit](docs/DOOR_GUNNER_COMBAT_AUDIT.md)
 - [Lua-only gunner alternatives and ownership blocker](docs/DOOR_GUNNER_LUA_FEASIBILITY.md)
 - [Ownership/result path and native hit proxy audit](docs/GUNNER_OWNERSHIP_RESULT_AUDIT.md)
+- [Combat ordering, owner migration and ordinary damage contract](docs/COMBAT_ORDERING_CONTRACT.md)
 - [A-Life, Remnants and Bandits clean-room comparison](docs/THIRD_PARTY_RESEARCH.md)
 - [Support dedicated test plan](docs/SUPPORT_MP_TEST_PLAN.md)
 - [API audit and verdicts](docs/API_AUDIT.md)

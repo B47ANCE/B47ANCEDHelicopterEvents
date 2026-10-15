@@ -6,6 +6,8 @@ Follow-up: [Lua-only attacker and ownership investigation](DOOR_GUNNER_LUA_FEASI
 
 The subsequent [ownership/result trace](GUNNER_OWNERSHIP_RESULT_AUDIT.md) checks manager access, reassignment, player-hit relay, object changes, inherited sync methods and the vanilla getFakeAttacker hit proxy. No complete supported path was established: syncHealth/syncDamage are empty for zombie AI, null ownership is not a lease and the inspected player-hit result envelope requires a real player. **Mutating dedicated combat probe: NO-GO.** Read-only observation remains a possible separately reviewed diagnostic; no G-R case has run.
 
+The [ordering and ordinary-damage contract](COMBAT_ORDERING_CONTRACT.md) further traces unordered Lua/native zombie routes, ordered player hits and same-connection owner reuse. Positive stable-owner delta arithmetic and 11 bounded counterexamples do not establish a safe result/handoff adapter. MS04 remains NO-GO, including the mutating probe; no native player combat interception or health correction fallback is proposed.
+
 ## Vanilla helicopter reference without takeover
 
 Reuse original [E11](API_EVIDENCE.md) and native N16 in [source index](SUPPORT_SOURCE_INDEX.json). Initial private Helicopter.java snapshot:105-118 setTarget(IsoGameCharacter) starts at player position +1000,+1000, points toward the player and activates Arriving. update():128-259 has Arriving/Hovering/Searching/Leaving, normalized movement, 30-FPS multiplier, overshoot clamp, target/death checks and server packet publication. Arriving movement length 0.75; hover/search length 0.5; timers combine real-world delta with time multiplier. These are native reference units, not directly tiles/second or approved hidden support-balance constants.
