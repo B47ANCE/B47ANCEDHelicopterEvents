@@ -1,5 +1,9 @@
 # Phase 0 API audit
 
+## Implementation status - 2026-10-15
+
+The bounded audio implementation is now an offline candidate; see [implementation evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md) and [behavior/limits](AUDIO_PROTOTYPE.md). Runtime verdicts remain CONDITIONAL, G7 BLOCKED / NOT TESTED and stable-release G8 BLOCKED. All dated Phase 0 no-implementation statements below describe their original audits; full-crash NO-GO verdicts remain current.
+
 ## Current Lua-only audio review - 2026-10-14
 
 Current policy allows only Lua runtime code and exposed vanilla APIs. Custom Java/bridges/agents/injected classes/native extensions/JAR dependencies are prohibited; dated engine-bridge proposals below/in related documents are historical only. This update is documentation at the existing root VERSION, not Phase 1 or runtime approval.

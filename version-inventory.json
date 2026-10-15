@@ -3,7 +3,9 @@
   "canonical": "VERSION",
   "mirrors": [
     {"path": "README.md", "pattern": "^Project Version: (?P<version>\\S+)$"},
-    {"path": "docs/VALIDATION_STATUS.json", "pattern": "^  \"projectVersion\": \"(?P<version>[^\"]+)\",$"}
+    {"path": "docs/VALIDATION_STATUS.json", "pattern": "^  \"projectVersion\": \"(?P<version>[^\"]+)\",$"},
+    {"path": "src/B47ANCEDHelicopterEvents/42/mod.info", "pattern": "^modversion=(?P<version>\\S+)$"},
+    {"path": "docs/BRANDING.md", "pattern": "^Current authoring version: (?P<version>\\S+)$"}
   ],
   "changelog": {"path": "docs/CHANGELOG.md", "pattern": "^## \\[(?P<version>[^\\]]+)\\][^\\n]*$"},
   "packaging": {"artifacts": [{"glob": "dist/current/*.zip", "pattern": "B47ANCEDHelicopterEvents-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip"}]},

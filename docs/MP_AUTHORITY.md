@@ -1,5 +1,9 @@
 # Multiplayer authority proposal
 
+## Implementation status - 2026-10-15
+
+The audio boundary is implemented as an offline candidate: [behavior/configuration](AUDIO_PROTOTYPE.md), [source evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md). Server owns schedule/settings; client only requests snapshots. No persistence/world effects. Runtime authority, headless behavior and native sound isolation remain NOT TESTED. Dated proposals below are historical design; full-crash blockers remain in force.
+
 ## Current Lua-only audio boundary - 2026-10-14
 
 [AUDIO_FEASIBILITY.md](AUDIO_FEASIBILITY.md) is the current audio research contract; it is not implementation or approval to replace the full-crash requirements. Server owns schedule, settings, flight descriptors and cancellation. Clients own local-only sound playback and may request only a rate-limited current-state snapshot. Ordinary native sound rebroadcast wrappers are excluded. No client may choose shared event outcomes or alter authoritative SandboxVars.

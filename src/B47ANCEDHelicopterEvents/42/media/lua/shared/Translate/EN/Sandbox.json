@@ -1,0 +1,9 @@
+{
+  "Sandbox_B47HE": "B47ANCE'd Helicopter Audio Prototype",
+  "Sandbox_B47HE_EnableAudioFlights": "Enable audio flyovers",
+  "Sandbox_B47HE_EnableAudioFlights_tooltip": "Experimental dedicated-server audio only; multiplayer NOT TESTED. No wreck, loot or zombie attraction. Disabling cancels current audio. Unsupported SP/host modes stay silent.",
+  "Sandbox_B47HE_FlightIntervalDays": "Flyover interval (game days)",
+  "Sandbox_B47HE_FlightIntervalDays_tooltip": "1-365 in-game days; default 14. The first flight waits a full interval after an eligible player is present. Restart resets the schedule; missed flights do not accumulate. Changes affect future scheduling.",
+  "Sandbox_B47HE_FlightDurationSeconds": "Flyover duration (real seconds)",
+  "Sandbox_B47HE_FlightDurationSeconds_tooltip": "10-180 real seconds; default 60. Changes affect future flights. Rejoining never extends the original expiry."
+}

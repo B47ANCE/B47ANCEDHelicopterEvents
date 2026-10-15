@@ -1,5 +1,9 @@
 # API evidence
 
+## Implementation status - 2026-10-15
+
+New implementation assumptions and scalar transport inspection are recorded in [AUDIO_IMPLEMENTATION_EVIDENCE.md](AUDIO_IMPLEMENTATION_EVIDENCE.md). Earlier signatures/source observations below remain dated reconnaissance, not runtime proof. The only new code is the bounded audio adapter; no full-crash capability is approved.
+
 ## Current audio evidence - 2026-10-14
 
 [AUDIO_API_EVIDENCE.md](AUDIO_API_EVIDENCE.md) records exact exposed signatures, JAR member hashes, native instruction offsets and the source/runtime boundary. [AUDIO_FEASIBILITY.md](AUDIO_FEASIBILITY.md) specifies the candidate lifecycle, authoritative settings, expiry and reconnect contract. All audio runtime outcomes are NOT TESTED.

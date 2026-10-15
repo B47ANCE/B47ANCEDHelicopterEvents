@@ -1,5 +1,9 @@
 # Engine blockers
 
+## Implementation status - 2026-10-15
+
+Audio definitions and protocol/lifecycle logic now exist in the [offline prototype](AUDIO_PROTOTYPE.md); A03 is now unverified engine/UI/admin behavior rather than absent source. A01/A02/A04/A05/A06 remain runtime gates. No audio or full-crash blocker is promoted to PASS; full-crash B01-B12 remain unchanged.
+
 ## Current Lua-only audio status - 2026-10-14
 
 Lua-only is mandatory. Former Java/bridge proposals are historical, not an exit route. The full-crash B01-B12 blockers below remain unchanged. A bounded audio-only candidate avoids world/cargo transactions but still has these separate runtime gates:

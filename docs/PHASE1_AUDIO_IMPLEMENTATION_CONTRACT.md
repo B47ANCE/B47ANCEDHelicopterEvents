@@ -1,5 +1,9 @@
 # Phase 1 audio prototype implementation contract
 
+## Implementation status - 2026-10-15
+
+PR #2 was reviewed and merged; the user separately authorized the bounded implementation on 2026-10-15 at 0.1.0-dev.3. See [actual implementation, scope and limitations](AUDIO_PROTOTYPE.md). The contract body below is preserved as the merged preimplementation design, including its then-pending approval/version language. This request authorizes code/offline checks/PR only, no game/server launch, deployment or publication. Runtime gates remain NOT TESTED.
+
 Prepared 2026-10-14 for review. **DESIGN ONLY - IMPLEMENTATION NOT AUTHORIZED.** Current project version: root VERSION. Source baseline: merged PR #1, commit 17454de4b3c75d70288932968a1217760101ca76. Target: Project Zomboid Build 42.21, dedicated-server first. Source feasibility is CONDITIONAL; every runtime gate is NOT TESTED.
 
 This is the bounded **Phase 1 audio track**, not the original Phase 1 wreck prototype. Preparing or merging this contract does not authorize coding, assets, launching PZ/server, installation, packaging, deployment, Workshop publication or a stable release. A separate implementation request is required. Full-crash B01-B12 blockers remain in force.

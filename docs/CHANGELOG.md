@@ -1,6 +1,8 @@
 # Changelog
 
 ## [0.1.0-dev.3]
+- 2026-10-15: implement authorized bounded Lua-only rotor audio prototype at the requested existing artwork checkpoint. One server flight/client emitter; three default-disabled server sandbox settings; expiring full snapshots, readiness/nonce/revision guards, bounded retries and cleanup. No world effects, wrecks, destruction, loot, salvage or attraction.
+- Add offline Lua 5.1 fake-boundary tests and source checks. Actual Kahlua/audio/network/dedicated behavior remains NOT TESTED; G7 and stable-release G8 blocked. No launch, package, deploy or publish.
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
 - Offline branding/version checks only; earlier validation remains historical at 0.1.0-dev.2. No new SP/dedicated MP evidence.
 

@@ -1,9 +1,10 @@
 {
   "projectVersion": "0.1.0-dev.3",
-  "scope": "Phase 0 documentation; no runtime mod source",
+  "scope": "Bounded Lua-only dedicated audio prototype; default disabled; offline candidate",
   "sourceEvidence": "Historical local game snapshots are excluded from the public repository",
   "runtimeSP": "NOT TESTED",
   "runtimeDedicatedMP": "BLOCKED / NOT TESTED",
   "G7": "BLOCKED / NOT TESTED",
-  "stableReleaseG8": "BLOCKED"
+  "stableReleaseG8": "BLOCKED",
+  "offlineAudio": "Lua 5.1 fake-boundary tests and static source checks; not engine evidence"
 }

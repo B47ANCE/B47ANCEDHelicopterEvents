@@ -1,5 +1,24 @@
 # Phase 0 validation records
 
+## Bounded audio implementation - 2026-10-15
+
+Current version: root VERSION (0.1.0-dev.3), retained at the user's requested existing artwork checkpoint. Baseline main 126da35b65d0cecf39d251ba722e543cbc935ecc; clean startup, zero divergence from origin/main. Work occurs on feature/audio-prototype. Authoritative Lua source and metadata now exist under src/B47ANCEDHelicopterEvents/42; prior no-runtime assertions below describe their original dates. No historical reports/private game snapshots were regenerated.
+
+Exact commands from repository root, using the bundled Python interpreter rather than the Windows Store alias:
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+python -B scripts/test_audio.py
+git diff --check
+git diff --cached --check
+```
+
+[TESTED: offline Python / Lua 5.1 through Lupa 2.6] Version consistency PASS; document links/gates STATIC PASS (12 dedicated scenarios still NOT TESTED; 102 private links deliberately not validated). Bounded Lua-only source/metadata, exact-case requires, three option/English translation keys, payload ceiling and copied artwork byte checks STATIC PASS. All four Lua modules compile under Lua 5.1; 17 fake-boundary behavior scenarios PASS, including two clients and admin cancellation; three additional fake event-adapter fixtures PASS (server/client/SP) for registration, no immediate OnConnected handshake, headless isolation and disconnect/menu cleanup. Whitespace checks PASS. Source/tracked-file review excludes custom Java/dependencies, generated packages, private snapshots, diagnostic logs and credentials before push. Offline dependencies are listed in tests/requirements.txt and are not runtime requirements.
+
+Installed JAR/member observations remain source inspection, not authenticated clean provenance or a Lua invocation. [AUDIO_IMPLEMENTATION_EVIDENCE.md](AUDIO_IMPLEMENTATION_EVIDENCE.md) records the current assumptions. Remaining gates include Kahlua overloads/native autoload, actual looping/stop tails/resource return, settings UI/fallback/existing saves, synchronization/event order/reconnect, packet isolation/no attraction, split-screen/acoustics and prolonged resource behavior. No game/server launch, packaging, deployment or publication. G6/SP NOT TESTED; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. Do not run --release without separately authorized artifacts; there are none.
+
 ## Phase 1 contract preparation - 2026-10-14
 
 Documentation only, current root VERSION unchanged. Baseline 17454de4b3c75d70288932968a1217760101ca76 is the merged Phase 0 audio review. The earlier feature branch differed from main only by that merge commit and had the same tracked file tree; this contract branch starts from verified origin/main. No runtime source, assets, mod.info, implementation, game/server launch, package, deployment or Workshop publication.

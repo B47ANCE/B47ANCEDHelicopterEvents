@@ -1,0 +1,22 @@
+# Audio implementation evidence - 2026-10-15
+
+Target Build 42.21; installed Steam build 25485521. [Earlier exact signatures](AUDIO_API_EVIDENCE.md) remain the source baseline. Packaged projectzomboid.jar SHA-256 e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33; local fingerprint, not authenticated clean depot. Installed loose patches remain separately unverified. No game/server launch, custom Java compilation, class injection or redistribution of native source.
+
+[VERIFIED: source] Re-read original GameTime constructor/sync/getServerTime/getServerTimeMills/getServerTimeShiftIsSet snapshots. The constructor clears shift state, but no public current-connection reset guarantee was established. New code therefore requires a nonce-bound server timestamp sample in addition to the native flag; rejects >2-second disagreement and regressing time. This guard is [TESTED: offline Lua 5.1] logic; actual reconnect/sync behavior is [RUNTIME GATE], not certified by a cached flag.
+
+[VERIFIED: source] LuaManager.GlobalObject public static ArrayList<IsoPlayer> getOnlinePlayers() is a global binding and returns GameServer.getPlayers() on server. Vanilla server ClientCommands.lua uses the returned size()/get(i) list. Vanilla Farming/SFarmingSystem.lua uses getGameTime():getWorldAgeHours(); HealthSystem/HealthUpdate.lua uses getCore():isDedicated(). Exact metadata/overloads were not inferred from another mod. IsoPlayer position/isDead use ordinary exposed vanilla player methods. Runtime return conversion/mode detection remains NOT TESTED.
+
+[VERIFIED: packaged native inspection] Read-only javap -c -p against zombie.network.TableNetworkUtils, zombie.core.network.ByteBufferWriter, zombie.GameWindow and zombie.GameWindow$StringUTF. Native methods inspected, without loading engine code:
+
+- static void TableNetworkUtils.save(KahluaTable,ByteBufferWriter): int entry count then typed keys/values; private static void save(ByteBufferWriter,byte,Object) uses string/double/boolean scalar paths.
+- ByteBufferWriter.putUTF(String) delegates GameWindow.WriteString(ByteBuffer,String); StringUTF.save(ByteBuffer,String) writes a short length then encoded bytes. putDouble writes 8 bytes; putBoolean writes one byte.
+
+Also re-inspected FMODSoundEmitter.stopSoundLocal(long) and stopAll(): packaged methods release queued/active sounds and clear their lists; neither inspected body calls a native network-send helper. This supports the local cleanup candidate only. Underlying FMOD releases/tails and patched class behavior are not verified by that observation.
+
+For this ASCII-only flat protocol, worst-case string key/value costs 1 type + 2 length + 64 bytes each; doubles/booleans cost less. Exact table upper bound 4+24*(67+67)=3220 bytes. The conservative implementation bound 24*(64+64+32)+32=3872 is below 4096, excluding native command framing. Request has exactly two permitted keys; active Snapshot has 18. This bounds valid mod output, not engine deserialization of malicious native traffic. Source inspection is not a Lua invocation, packet capture or multiplayer PASS.
+
+[VERIFIED: installed data] media/lua/shared/Translate/EN/Sandbox.json uses JSON keys Sandbox_<page>, Sandbox_<translation> and tooltips. Existing custom-option source supports boolean/integer min/max/default and page/translation; no invented step. Exact English fallback behavior/custom UI and existing-save native defaults still [RUNTIME GATE].
+
+[INFERRED] The exposed three-argument playSoundImpl call should resolve with nil IsoObject, based on the recorded registered class and overload. No native transport-send path was found in that implementation candidate. Actual Kahlua dispatch, loop suitability, no unintended native sends, attraction isolation, headless event order, pause/disconnect cleanup, stop tails/pool recovery and split-screen listener mixing are [UNKNOWN] / [RUNTIME GATE]. Ordinary playSound/playSoundLooped and direct FMOD calls are excluded from the mod.
+
+[TESTED: offline Lua 5.1] Constructor-based fake boundaries verify protocol/revision/nonce/expiry/settings/scheduling and emitter ownership call order. See scripts/test_audio.py; this does not load PZ, native classes or FMOD. Source/static scope checks verify require case, supported options/English keys, approved branding byte equality and prohibited API strings, not arbitrary semantic correctness. Full-crash B01-B12 remain NO-GO. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.

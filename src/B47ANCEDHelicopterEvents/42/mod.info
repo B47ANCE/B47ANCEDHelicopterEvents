@@ -1,0 +1,7 @@
+name=B47ANCE'd Helicopter Events - Audio Prototype
+id=B47ANCEDHelicopterEvents
+modversion=0.1.0-dev.3
+versionMin=42.21
+icon=media/ui/B47_ICON_SMALL.png
+poster=poster.png
+description=Experimental dedicated-server audio only. Disabled by default. No wrecks or zombie attraction. Dedicated multiplayer NOT TESTED.

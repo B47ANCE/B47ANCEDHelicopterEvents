@@ -6,6 +6,8 @@ Use manually supplied artwork first, independently for each role. Only missing r
 
 User-provided art on 2026-10-14. SHA-256 small: 60e2a193a6c1e1190941e6c342ec23c673a561dbed895c80067fe2b89c7f7e83; large: 0e30a776c77dbf66eeb9acfa7596c7f850cb5b334e8873ef94acbb3b071582c3.
 
-This is asset-only work. Current version headers/mirrors identify this authoring iteration; all prior gameplay/API/runtime evidence remains historical at 0.1.0-dev.2 and its original source commits. No prior PASS is promoted to current evidence. No new game/dedicated tests, packages, deployment or publication. Projects without production mod.info retain these as authoring assets, not a fabricated runtime package.
+The 2026-10-14 addition was asset-only work; on 2026-10-15 the existing exact icon/poster bytes were copied to the authorized audio source layout. No custom art was replaced and no new assets were generated. The paragraph below describes the earlier artwork iteration.
+
+This was asset-only work. Current version headers/mirrors identify this authoring iteration; all prior gameplay/API/runtime evidence remains historical at 0.1.0-dev.2 and its original source commits. No prior PASS is promoted to current evidence. No new game/dedicated tests, packages, deployment or publication. Projects without production mod.info retain these as authoring assets, not a fabricated runtime package.
 
 Workshop thumbnail correction: B47_THUMBNAIL.png is a direct 512x512 resize of the user-supplied B47.png. Its SHA-256 is f775bff1783d59af91f331652740d5279fd5603f66d431c6349f38cbd2d9915b. Preserve custom thumbnails; the mod icon remains 64x64 and poster remains 128x128.
