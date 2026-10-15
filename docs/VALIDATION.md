@@ -1,5 +1,27 @@
 # Phase 0 validation records
 
+## Ownership/result path trace - 2026-10-15
+
+Documentation-only extension of docs/military-support-audit, baseline 88443396b76781a95635a25ce41eab2323fca72e. Version remains 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [GUNNER_OWNERSHIP_RESULT_AUDIT.md](GUNNER_OWNERSHIP_RESULT_AUDIT.md) records six unresolved contracts and a NO-GO for the mutating combat probe. [OWNERSHIP_RESULT_SOURCE_INDEX.json](OWNERSHIP_RESULT_SOURCE_INDEX.json) fingerprints 24 packaged native members, targeted loose counterparts and one installed server Lua caller. Raw native output stays private/ignored.
+
+Exact commands from repository root, using the bundled Python interpreter:
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+python -B scripts/test_audio.py
+git diff --check
+git diff --cached --check
+git diff 88443396b76781a95635a25ce41eab2323fca72e -- src assets VERSION version-inventory.json scripts tests
+```
+
+[TESTED: offline] Version consistency PASS; document/source checks STATIC PASS; 17 unchanged fake-boundary audio scenarios and three event adapters PASS. Inline Python ZipFile/hashlib checks revalidated JAR/Steam build, 24 native members, loose comparisons and L01 Lua file; STATIC PASS. Constant-pool manager-reference inventory still matches the recorded five members. Static inspected-text checks confirm empty inherited syncHealth/syncDamage and no NetworkZombieAI override. Ten G-R and 24 S-R rows remain NOT TESTED. Runtime source/assets/version/scripts/tests remain byte-unchanged from the stated baseline. Whitespace and staged/tracked public-surface checks PASS; no raw native bodies, private snapshots, credentials or generated outputs included.
+
+[TESTED: offline ordering models only] A queued owner A health=1.0 packet can replace server health=0.7 after a Lua result acknowledgement while A is current owner; A-to-B-to-A reassignment has the same counterexample. The native delay predicate applies to a recent non-null owner but not null. Assertions PASS; these are models of inspected branches, not an engine reproduction or a working barrier. Five INFERRED / NOT_TESTED reusable observations were recorded in the unmanaged local API draft; catalog structure validation PASS.
+
+No custom Java, gameplay/probe implementation, native proxy/actor allocation, hit, packet send, engine launch, installed-file mutation, package, deployment or Workshop publication. No complete supported ownership/result path established. No CI or runtime PASS claimed. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
 ## Lua-only gunner follow-up - 2026-10-15
 
 Documentation-only extension of docs/military-support-audit, baseline 8fefbe0f90b9ccdab0f1d6339d62f7c35b3d8611. Version remains 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [DOOR_GUNNER_LUA_FEASIBILITY.md](DOOR_GUNNER_LUA_FEASIBILITY.md) records the genuine native survivor candidate, native Hit consequences, current-owner health overwrite counterexample and unresolved lifecycle/ownership/result contracts. [GUNNER_SOURCE_INDEX.json](GUNNER_SOURCE_INDEX.json) contains 19 native member and one installed Lua caller fingerprints. Raw inspection output stays private/ignored.

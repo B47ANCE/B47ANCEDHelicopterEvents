@@ -1,0 +1,198 @@
+{
+  "auditDate": "2026-10-15",
+  "gameBuild": "42.21",
+  "steamBuild": "25485521",
+  "baselineCommit": "88443396b76781a95635a25ce41eab2323fca72e",
+  "jarSha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "runtime": "NOT TESTED",
+  "references": "O01-O24 identify packaged native members. Document references are JVM offsets within named methods, not source lines. Raw native inspection output remains private/ignored.",
+  "native": [
+    {
+      "id": "O01",
+      "member": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O02",
+      "member": "zombie/iso/IsoCell.class",
+      "sha256": "5e9a88e1cd9a3f370e31ae0152c9de381d649caea7cab750ebc82a91b4e1f767",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O03",
+      "member": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O04",
+      "member": "zombie/characters/IsoZombie.class",
+      "sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "looseSha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "O05",
+      "member": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "looseSha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "O06",
+      "member": "zombie/characters/NetworkZombieAI.class",
+      "sha256": "87e4f6e43d16dec23f685b4ebad68eb12eaea15ed87dce3fc3c3394f96cd1e3d",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O07",
+      "member": "zombie/characters/NetworkCharacterAI.class",
+      "sha256": "7ec30ba9fc20cd90ab14c36907c89ccba11faf29c506739e0998c167c598c4c8",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O08",
+      "member": "zombie/popman/NetworkZombieManager.class",
+      "sha256": "27af8b12cc9ab2af778cbce03ed546168c69976e63a905b16279445234d89ad8",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O09",
+      "member": "zombie/popman/NetworkZombiePacker.class",
+      "sha256": "5b202038b360877e8a308265e6bf7ce720e34d0c3670adfb3a7c5dbddaf5197e",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O10",
+      "member": "zombie/popman/NetworkZombieSimulator.class",
+      "sha256": "962b26ff39c12bbee442c6e6edf10245cf7eff8dbfdae06756f06fae2364da31",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O11",
+      "member": "zombie/network/packets/hit/PlayerHitZombiePacket.class",
+      "sha256": "88fd205bfb3bc37b85af9b61734fb5729a4c0d4b0581ce10c14f3425dfc3fb79",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O12",
+      "member": "zombie/network/packets/hit/PlayerHitCharacter.class",
+      "sha256": "f6f728553123829645c4a3e6cdffe4629910e9c3c8ddc2d49cf5a33030a2befc",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O13",
+      "member": "zombie/network/packets/hit/PlayerHit.class",
+      "sha256": "29ff960769982cc64518e88a16d87283790eadcc5ee17629f44eeeb6a760cea5",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O14",
+      "member": "zombie/network/packets/hit/HitCharacter.class",
+      "sha256": "b4eceb651a4372cb710613c8c9e6673d322bf26211d37147dc8de7e99300ac06",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O15",
+      "member": "zombie/network/fields/hit/WeaponHit.class",
+      "sha256": "c2e99722743b11bd8e9774ab33c9a87286755dad554a2bc3f8eae102ed8cdb37",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O16",
+      "member": "zombie/network/fields/hit/Character.class",
+      "sha256": "3fa00b61ee3812b5dc59c5fe597f6625e2024186b3c06137ce643de2a0181ccd",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O17",
+      "member": "zombie/network/fields/hit/Zombie.class",
+      "sha256": "f0b301d96c2116d8446d10de68cd50f1489adf0d23650e78df08032c3d28d42c",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O18",
+      "member": "zombie/network/packets/character/ZombiePacket.class",
+      "sha256": "b7f75b36c8ec41a72537d03fe8aa6d681c432b3454d12e5d092af5f1faa31756",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O19",
+      "member": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O20",
+      "member": "zombie/iso/IsoObject.class",
+      "sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "looseSha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "O21",
+      "member": "zombie/iso/IsoMovingObject.class",
+      "sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+      "looseSha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "O22",
+      "member": "zombie/network/GameClient.class",
+      "sha256": "99d1778ab2c2627ddcbc04fdbb435461289c3c3075c96cf70eae5c216193352b",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O23",
+      "member": "zombie/core/raknet/UdpEngine.class",
+      "sha256": "385c8fa80a6b24c8a7fe1770cae1e5c9ddb0d23e614297c6c0c05283e51adf36",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "O24",
+      "member": "zombie/iso/objects/IsoTrap.class",
+      "sha256": "0509215dc881b38aa99ed719eecdfc525d38bfde511314f7d24f49731efdb502",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    }
+  ],
+  "managerReferenceMembers": [
+    "zombie/characters/IsoZombie.class",
+    "zombie/core/raknet/UdpEngine.class",
+    "zombie/network/GameServer.class",
+    "zombie/popman/NetworkZombieManager.class",
+    "zombie/popman/NetworkZombiePacker.class"
+  ],
+  "lua": [
+    {
+      "id": "L01",
+      "path": "media/lua/server/ClientCommands.lua",
+      "sha256": "c9de3d3024a46e2b3ab1670c11f98885647bfb6d73114ff7896bf41e263923fd",
+      "lines": [
+        861,
+        902
+      ],
+      "observation": "Capability-gated animal kill handlers use getFakeAttacker; no zombie ownership/result proof."
+    }
+  ]
+}

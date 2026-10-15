@@ -14,6 +14,8 @@ The original rotor A-R01..12 remain separate prerequisites for reused audio. The
 
 The [Lua-only gunner follow-up](DOOR_GUNNER_LUA_FEASIBILITY.md) adds G-R01..10 isolated diagnostics, all NOT TESTED: native context lifecycle, actual nonlethal publication, stale owner snapshots, ownership handoff/reassignment, concurrent player combat, lethal attribution and invisibility/reconnect. A source-backed ownership/result contract is required before mutating tests. These probes supplement S-R01..24; passing a construction probe or using only already server-owned targets does not satisfy complete armed support.
 
+The [ownership/result trace O-C01..06](GUNNER_OWNERSHIP_RESULT_AUDIT.md) remains NO-GO for a mutating probe. Neither empty AI sync methods nor a custom Lua acknowledgement supplies the native result/fence contract. If later supported, extend G-R05/G-R06 to delayed pre-hit snapshots arriving after acknowledgement, immediate null-owner reassignment and A-to-B-to-A ownership; G-R07 must preserve delayed ordinary player combat in both orders. Do not call sendHitZombie to test zombie damage: that helper sends zombie attacks against a player. The shared getFakeAttacker proxy must not be treated as mod-owned cleanup state. All cases remain unexecuted.
+
 ## Staged cases
 
 | ID | Stage / procedure | Required observation | Actual |

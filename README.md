@@ -27,6 +27,7 @@ No game/server launch, packaging, deployment or publication has been performed. 
 - [Single-use authorization design](docs/SUPPORT_AUTHORIZATION_DESIGN.md)
 - [Door gunner combat audit](docs/DOOR_GUNNER_COMBAT_AUDIT.md)
 - [Lua-only gunner alternatives and ownership blocker](docs/DOOR_GUNNER_LUA_FEASIBILITY.md)
+- [Ownership/result path and native hit proxy audit](docs/GUNNER_OWNERSHIP_RESULT_AUDIT.md)
 - [Support dedicated test plan](docs/SUPPORT_MP_TEST_PLAN.md)
 - [API audit and verdicts](docs/API_AUDIT.md)
 - [Exact source evidence](docs/API_EVIDENCE.md)

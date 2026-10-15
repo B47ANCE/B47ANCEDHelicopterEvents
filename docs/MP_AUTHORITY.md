@@ -4,6 +4,8 @@
 
 [Military support authorization](SUPPORT_AUTHORIZATION_DESIGN.md) and [combat audit](DOOR_GUNNER_COMBAT_AUDIT.md) extend the proposed future authority model, not current runtime code. Item/mission persistence and server-owned combat remain unproved; clients cannot authorize shared outcomes.
 
+[Ownership/result audit](GUNNER_OWNERSHIP_RESULT_AUDIT.md): application-level shot IDs and acknowledgements cannot fence the native receiver's current-owner health writes. Supported manager access, a protected lease, ordered nonlethal result publication and safe reassignment remain unestablished. Empty zombie AI sync methods and real-player hit packets do not provide that adapter. The vanilla shared hit proxy is only an attacker lead. Keep mutating combat probes NO-GO; no client-selected damage or repeated server health overwrite fallback.
+
 ## Implementation status - 2026-10-15
 
 The audio boundary is implemented as an offline candidate: [behavior/configuration](AUDIO_PROTOTYPE.md), [source evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md). Server owns schedule/settings; client only requests snapshots. No persistence/world effects. Runtime authority, headless behavior and native sound isolation remain NOT TESTED. Dated proposals below are historical design; full-crash blockers remain in force.
