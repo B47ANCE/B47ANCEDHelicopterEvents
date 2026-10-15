@@ -12,6 +12,8 @@ For each test record test ID, UTC and local timezone, player/local-slot count, a
 
 The original rotor A-R01..12 remain separate prerequisites for reused audio. Their offline tests do not prove support following, gunfire, attraction or persistent authorization. Every stage requires a separate later implementation request and explicit engine-test permission; no stage is executed here.
 
+The [Lua-only gunner follow-up](DOOR_GUNNER_LUA_FEASIBILITY.md) adds G-R01..10 isolated diagnostics, all NOT TESTED: native context lifecycle, actual nonlethal publication, stale owner snapshots, ownership handoff/reassignment, concurrent player combat, lethal attribution and invisibility/reconnect. A source-backed ownership/result contract is required before mutating tests. These probes supplement S-R01..24; passing a construction probe or using only already server-owned targets does not satisfy complete armed support.
+
 ## Staged cases
 
 | ID | Stage / procedure | Required observation | Actual |

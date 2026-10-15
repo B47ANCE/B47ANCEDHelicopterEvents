@@ -4,6 +4,8 @@
 
 [Military Support MS01-MS06](MILITARY_SUPPORT_API_AUDIT.md) independently gate credential custody, original officer loot, durable authorization, virtual-attacker combat and runtime sound. Full-crash B01-B12 remain deferred; none was waived.
 
+[Lua-only MS04 follow-up](DOOR_GUNNER_LUA_FEASIBILITY.md): genuine native survivor plus ranged Hit is a CONDITIONAL diagnostic candidate, and Hit reaches native damage/death handling. The current-owner packet can still replace server health; safe ownership handoff, ordered nonlethal result publication and actor lifecycle are unresolved. A hidden NPC, owner=nil assignment, extra-update call or repeated health correction does not clear this contract. Complete armed support remains NO-GO; G-R01..10 all NOT TESTED.
+
 ## Implementation status - 2026-10-15
 
 Audio definitions and protocol/lifecycle logic now exist in the [offline prototype](AUDIO_PROTOTYPE.md); A03 is now unverified engine/UI/admin behavior rather than absent source. A01/A02/A04/A05/A06 remain runtime gates. No audio or full-crash blocker is promoted to PASS; full-crash B01-B12 remain unchanged.

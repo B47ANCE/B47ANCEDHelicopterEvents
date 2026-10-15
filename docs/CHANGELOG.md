@@ -1,6 +1,7 @@
 # Changelog
 
 ## [0.1.0-dev.3]
+- 2026-10-15: investigate Lua-only gunner alternatives: native survivor attacker context is a CONDITIONAL candidate; native Hit reaches damage/death handling. Record current-owner health overwrite risk, nonlethal replication/lifecycle gates, 19 native fingerprints and ten NOT TESTED diagnostic cases. Complete armed support remains NO-GO; documentation only, version/runtime unchanged.
 - 2026-10-15: record Military Air Support as first complete gameplay release direction; add targeted radio/loot/authorization/combat/API audits and dedicated test plan. Documentation only; loss-safe authorization, exact officer loot and virtual-attacker combat remain NO-GO pending evidence. Existing rotor code/version unchanged; no support gameplay, engine launch, deployment or publication.
 - 2026-10-15: implement authorized bounded Lua-only rotor audio prototype at the requested existing artwork checkpoint. One server flight/client emitter; three default-disabled server sandbox settings; expiring full snapshots, readiness/nonce/revision guards, bounded retries and cleanup. No world effects, wrecks, destruction, loot, salvage or attraction.
 - Add offline Lua 5.1 fake-boundary tests and source checks. Actual Kahlua/audio/network/dedicated behavior remains NOT TESTED; G7 and stable-release G8 blocked. No launch, package, deploy or publish.

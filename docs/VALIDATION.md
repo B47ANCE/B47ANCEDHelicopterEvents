@@ -1,5 +1,27 @@
 # Phase 0 validation records
 
+## Lua-only gunner follow-up - 2026-10-15
+
+Documentation-only extension of docs/military-support-audit, baseline 8fefbe0f90b9ccdab0f1d6339d62f7c35b3d8611. Version remains 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [DOOR_GUNNER_LUA_FEASIBILITY.md](DOOR_GUNNER_LUA_FEASIBILITY.md) records the genuine native survivor candidate, native Hit consequences, current-owner health overwrite counterexample and unresolved lifecycle/ownership/result contracts. [GUNNER_SOURCE_INDEX.json](GUNNER_SOURCE_INDEX.json) contains 19 native member and one installed Lua caller fingerprints. Raw inspection output stays private/ignored.
+
+Exact repository commands (bundled Python interpreter):
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+python -B scripts/test_audio.py
+git diff --check
+git diff --cached --check
+git diff HEAD -- src assets VERSION version-inventory.json scripts tests
+```
+
+[TESTED: offline] Version consistency PASS; documentation links/gates and bounded unchanged Lua source checks STATIC PASS; 17 existing fake-boundary audio cases plus three event-adapter fixtures PASS. An inline Python ZipFile/hashlib check rechecked JAR/Steam build, all 19 native members, loose-class comparisons and L01 installed Lua file against the new index; STATIC PASS. Ten G-R and 24 S-R cases remain NOT TESTED. The final diff command returns no changes: source/assets/version/scripts/tests are unchanged from this follow-up baseline. Whitespace checks PASS; targeted staged/tracked review excludes credentials, private snapshots, native bodies and generated output.
+
+[TESTED: offline ordering model only] Start health=1.0 with queued owner A snapshot=1.0; subtract 0.3 on server; accepting that owner restores 1.0. A hypothetical owner=None fence rejects that snapshot, but reassigning A while it retains the snapshot accepts 1.0 again. Assertions PASS. This models inspected assignments; it is not an engine failure reproduction or a tested ownership solution. Four reusable INFERRED/NOT_TESTED findings were recorded in the unmanaged local API draft; neither catalog membership nor source fingerprints verify dedicated behavior.
+
+No actor allocation, weapon creation, hit, packet send, game/server launch, installed-file edit, packaging, deployment or publication. MS04 remains NO-GO for complete combat; native survivor context is only CONDITIONAL research. Source inspection/offline checks do not satisfy G7. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
 ## Military support API audit - 2026-10-15
 
 Documentation-only branch docs/military-support-audit based on 81563f78ae0179f34f49385909c645bf6f9cf14e (open audio prototype PR #4). Six requested reports plus source fingerprint index; source, assets, metadata, canonical VERSION and runtime validation fields remain unchanged. Targeted installed script/native inspection, not engine execution. Military Air Support is the first complete release direction; crash blockers remain independent.
