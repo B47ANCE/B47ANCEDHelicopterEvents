@@ -1,5 +1,31 @@
 # Phase 0 validation records
 
+## Read-only support preflight implementation — 2026-10-16
+
+Baseline 6eb56fa011f43ab2ac9acebdfe67ad7bf5e348d7; feature/support-preflight-probe branches from the existing audit PR. Canonical version advances from 0.1.0-dev.3 to 0.1.0-dev.4 with all declared mirrors synchronized. This is an additive diagnostic checkpoint within the pending initial 0.1.0 feature line, no incompatible API/config/save change. The [implementation contract/evidence](SUPPORT_PREFLIGHT_PROBE.md) documents the source-only native boundary and the restricted manual API. This change introduces no support gameplay, military equipment, context menus, persistent authorization, missions, following, loot, attraction or combat. Rotor Lua modules and artwork are byte-unchanged; historical evidence retains its original checkpoint.
+
+Exact offline commands (bundled Python interpreter; Lupa Lua 5.1 only):
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+python -B scripts/test_audio.py
+python -B scripts/test_support_probe.py
+python -B .tmp-support-preflight/verify.py
+python <pz-api-audit>/scripts/api_library.py record --entry .tmp-support-preflight/api-entry.json
+python <pz-api-audit>/scripts/api_library.py validate --library <user-profile>/.codex/pz-api-audit/library.local.json
+python -B .tmp-support-preflight/public_review.py
+git diff --check
+git diff --cached --check
+```
+
+[TESTED: offline] Version consistency PASS before/after edits; source/require-case/options/English localization/art checks and document links/gates STATIC PASS. Support suite: 14 core scenarios and four fake server/host/client/SP adapters PASS, including injected API exceptions that deliberately print diagnostic-stopped messages. Existing audio suite: 17 behavior cases and three adapters PASS. Both test runners compile the current Lua source but neither imports PZ, Kahlua, native classes, FMOD or real network transport. No new ordering/lethal model run was necessary: those models and combat remain unchanged.
+
+[VERIFIED: source/bytecode] Local read-only javap -c -p inspection of ItemContainer and DeviceData plus private checks rechecked Steam/JAR, two text files, four packaged/loose fingerprints, the nonrecursive direct-ID lookup and four direct-field device getters without native calls/writes. No custom Java was compiled or engine class instantiated. Source index is portable; native bodies/verifier output stay private. One reusable source-call observation was recorded in the unmanaged local API draft; helper record/validate PASS (245 total draft records). Managed catalog untouched. Private helpers are not public reproducibility dependencies; missing private installed evidence means unavailable evidence, never an inferred PASS.
+
+Eight new P-R dedicated scenarios remain NOT TESTED; earlier audio/support/gunner/lethal/menu scenarios are not promoted. Staged/tracked public boundaries, secret-pattern scan and manual diff review exclude raw native/third-party source, assets from external mods, logs, private settings, credentials and packages. Git backup/PR status is reported separately. No CI success inferred; inherited third-party research signoff stays pending. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No game/server launch, installed-file modification, package, deployment or Workshop publication.
+
 ## Selected thumbnail and context-menu requirements — 2026-10-15
 
 Asset/documentation-only change from baseline 8a6f44c7d031316fc4506a830058ecf4f27bbccb on docs/military-support-audit. Current/target authoring version stays 0.1.0-dev.3: no gameplay, public API, configuration or save compatibility change and no new implementation checkpoint. Root thumbnail.png is the exact supplied helicopter image; [BRANDING.md](BRANDING.md) records size/hash/provenance. Icon/poster, fallback art, production source, tools, tests and version inventory are byte-unchanged from baseline. [CONTEXT_MENU_CONTRACT.md](CONTEXT_MENU_CONTRACT.md) records the direct user requirements, distinguishes reference handoffs from current authorization, and adds eight unexecuted U-R cases. No new native API finding, resolved blocker or completed broader handoff audit is claimed.

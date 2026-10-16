@@ -1,5 +1,9 @@
 # Phase 0 API audit
 
+## Read-only support preflight — 2026-10-16
+
+[Implemented diagnostic](SUPPORT_PREFLIGHT_PROBE.md): source/offline candidate only, with exact direct inventory/type/container checks and server-owned enablement. No custody, SPENT state, mission or combat mutation. Native lookup evidence is narrowed to the own-list getItemWithID path; this supplies no stable identity/save fence. MS01-MS06 and all crash blockers remain unchanged. Dedicated G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
 ## Military support direction - 2026-10-15
 
 [Native lethal-result follow-up](NATIVE_LETHAL_RESULT_AUDIT.md) identifies a source-supported Lua Kill/die candidate and the zombie death listener that publishes native ZombieDeath. Completed removal drops the live ID; later snapshots for an unmapped ID are ignored. Owner fields are not unconditionally cleared: invalid IDs are pruned from native authorization lists. This narrows the missing terminal-entry/publication sub-blocker. A disposable lethal probe is CONDITIONAL for findings review; nonlethal gunfire/full MS04 remain unresolved, with client corpse timing/streaming, ID reuse and restart gates still NOT TESTED. No implementation or launch approval.

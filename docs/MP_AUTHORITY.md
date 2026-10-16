@@ -1,5 +1,9 @@
 # Multiplayer authority proposal
 
+## Read-only radio diagnostic — 2026-10-16
+
+The [implemented preflight probe](SUPPORT_PREFLIGHT_PROBE.md) resolves only the OnClientCommand connection-associated player's directly carried Base.WalkieTalkie5, validates a bounded item-ID hint, uses the server sandbox toggle and returns a nonce-correlated expiring observation to that connection. It accepts no card/authorization/mission state, makes no shared gameplay/inventory/save writes and cannot dispatch support. Rechecking ownership is observation hygiene, not a native transfer/save fence. Restart/reconnect preserve no diagnostic state; native routing and split-screen delivery remain NOT TESTED. Existing custody/durability/combat blockers and G7/G8 remain unchanged.
+
 ## Military support direction - 2026-10-15
 
 [Native lethal-result follow-up](NATIVE_LETHAL_RESULT_AUDIT.md) identifies a source-supported Lua Kill/die candidate and the zombie death listener that publishes native ZombieDeath. Completed removal drops the live ID; later snapshots for an unmapped ID are ignored. Owner fields are not unconditionally cleared: invalid IDs are pruned from native authorization lists. This narrows the missing terminal-entry/publication sub-blocker. A disposable lethal probe is CONDITIONAL for findings review; nonlethal gunfire/full MS04 remain unresolved, with client corpse timing/streaming, ID reuse and restart gates still NOT TESTED. No implementation or launch approval.

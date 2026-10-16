@@ -1,5 +1,7 @@
 # Military radio design and native API audit
 
+2026-10-16 implementation note: [read-only radio preflight](SUPPORT_PREFLIGHT_PROBE.md) now observes the candidate vanilla walkie without changing ordinary DeviceData, item definitions, custody or authorization. Original-card insertion/removal and protected SPENT state remain unimplemented and blocked. No military context actions were added.
+
 Date: 2026-10-15. Version: [root VERSION](../VERSION). **Ordinary-radio reuse: CONDITIONAL. Persistent credential insertion/single-use equipment: NO-GO pending MS01/MS03.** Design only; runtime NOT TESTED.
 
 The user's [context-menu contract](CONTEXT_MENU_CONTRACT.md) governs action visibility, card/radio selection, pending requests and server revalidation. It adds requirements, not implemented UI or a resolved custody/authorization contract. In its Level 5 conditions, an "unused" radio with a card means ARMED but unspent, not the empty UNUSED state below. Exact Build 42.21 menu/input integration remains to be audited before implementation.

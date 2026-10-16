@@ -18,7 +18,22 @@ The [ownership/result trace O-C01..06](GUNNER_OWNERSHIP_RESULT_AUDIT.md) remains
 
 The [third-party NPC comparison](THIRD_PARTY_RESEARCH.md) does not waive those prerequisites. Any later independently designed owner-side result adapter must also demonstrate one server-resolved shot when clients disagree about ownership, refusal of client-invented outcomes, exact preservation of concurrent native player hits and no silent skipping of remote targets. Registered NPC health messaging, an MP label or another mod's Java framework is not ordinary-zombie dedicated evidence. These are additional acceptance conditions for existing G-R04..07, all NOT TESTED; no external mod is a test dependency.
 
-## Context-menu acceptance cases — requirements only
+## Implemented read-only probe acceptance — 2026-10-16
+
+The [preflight probe](SUPPORT_PREFLIGHT_PROBE.md) is source/offline implemented; none of these native tests has run. Use its manual developer API only in a separately authorized disposable clean Build 42.21 dedicated fixture, recording patched comparisons separately. It is not a support authorization request.
+
+| ID | Procedure | Required observation | Status |
+|---|---|---|---|
+| P-R01 | Default/missing/false server toggle, then literal true; divergent client toggle | Disabled returns no item data; only server true enables reads; ambient audio remains independent. | NOT TESTED |
+| P-R02 | Two remote clients inspect their directly owned vanilla Army Walkies; pass another player's item ID and forged flags/types | Only requesting connection inventory resolved; no other player's data returned; unknown fields rejected; exact FullType enforced. | NOT TESTED |
+| P-R03 | Radio off/on, empty/full battery, channel changes; normal transmit/tune/equip operations before/after | Accurate timestamped native readings; no battery/tuning/condition/authorization/inventory/save changes. | NOT TESTED |
+| P-R04 | Move/drop/trade/die during request; nested/placed/vehicle radios, direct inventory above cap | Current owner/container/ID rechecked, changed/ineligible binding rejected; no transfer lock or authorization inferred from a sample. | NOT TESTED |
+| P-R05 | Malformed, nested, oversized/nonfinite input; request/reply duplication and repeated nonce; high request rate | Bounded work and replies; malformed traffic consumes rate allowance; no observation accepted for unknown nonce; no mutation. | NOT TESTED |
+| P-R06 | Two local slots (up to four if supported), delayed/reordered replies | Correct local pending entry receives its result; no cross-slot leakage or overwritten nonce; capacity bounded. | NOT TESTED |
+| P-R07 | Unready/unsynchronized clock, pause, stale sample, expiry, disconnect/rejoin and server restart | No automatic query/replay; no stale observation reused; pending/result references cleared; invalid native clock fails closed. | NOT TESTED |
+| P-R08 | Native adapter exception, SP/host gates and Linux loading/case/translation | Diagnostic stops without affecting vanilla radio/rotor code; unsupported modes silent; native binding and English fallback measured separately. | NOT TESTED |
+
+## Context-menu acceptance cases — requirements only (unimplemented)
 
 The [user menu contract](CONTEXT_MENU_CONTRACT.md) adds the following cases. Run only after source/API review, affected implementation authorization and separate game/server test authorization. Use two remote clients and multiple local slots where supported; record mouse and controller results separately. These cases are additional requirements, not evidence that the corresponding equipment or five-level missions exist.
 

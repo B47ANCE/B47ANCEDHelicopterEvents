@@ -1,5 +1,9 @@
 # Engine blockers
 
+## Read-only implementation checkpoint — 2026-10-16
+
+The [radio preflight probe](SUPPORT_PREFLIGHT_PROBE.md) now implements the audit's smallest non-mutating diagnostic. It does not clear MS01-MS06, approve an armed/combat probe or satisfy any runtime gate. No real credentials, military item mutations, support dispatch or save writes are implemented. Earlier "no support implementation" statements describe their dated audit baselines; the new diagnostic is source/offline work only. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
 ## Military support direction - 2026-10-15
 
 [Native lethal-result follow-up](NATIVE_LETHAL_RESULT_AUDIT.md) identifies a source-supported Lua Kill/die candidate and the zombie death listener that publishes native ZombieDeath. Completed removal drops the live ID; later snapshots for an unmapped ID are ignored. Owner fields are not unconditionally cleared: invalid IDs are pruned from native authorization lists. This narrows the missing terminal-entry/publication sub-blocker. A disposable lethal probe is CONDITIONAL for findings review; nonlethal gunfire/full MS04 remain unresolved, with client corpse timing/streaming, ID reuse and restart gates still NOT TESTED. No implementation or launch approval.

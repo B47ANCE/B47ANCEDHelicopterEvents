@@ -1,5 +1,9 @@
 # API evidence
 
+## Read-only preflight evidence — 2026-10-16
+
+[Probe evidence and signatures](SUPPORT_PREFLIGHT_PROBE.md) reuse radio/device and command/clock bindings and add the exact vanilla server lookup caller and nonrecursive getItemWithID bytecode observation. [Fingerprints](SUPPORT_PREFLIGHT_SOURCE_INDEX.json) identify two installed text files and four packaged/loose members under the unchanged Build 42.21 JAR/Steam baseline. No native invocation or clean/patched equivalence inferred. Offline Lua fake tests do not constitute dedicated evidence.
+
 ## Native lethal-result evidence - 2026-10-15
 
 [NATIVE_LETHAL_RESULT_AUDIT.md](NATIVE_LETHAL_RESULT_AUDIT.md) traces static Lua exposure, terminal lifecycle/listener, native death transport, live-map removal and ordinary-hit/client corpse processing. [L01-L32 fingerprints](NATIVE_LETHAL_SOURCE_INDEX.json) identify exact packaged/loose inputs. The [17-case abstract model](../scripts/audit_lethal_interleavings.py) is offline reasoning, not native execution or a dedicated result. The terminal route is now identified; nonlethal ordering and unrestricted production guarantees remain unresolved.
