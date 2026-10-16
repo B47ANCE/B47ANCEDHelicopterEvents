@@ -18,7 +18,22 @@ The [ownership/result trace O-C01..06](GUNNER_OWNERSHIP_RESULT_AUDIT.md) remains
 
 The [third-party NPC comparison](THIRD_PARTY_RESEARCH.md) does not waive those prerequisites. Any later independently designed owner-side result adapter must also demonstrate one server-resolved shot when clients disagree about ownership, refusal of client-invented outcomes, exact preservation of concurrent native player hits and no silent skipping of remote targets. Registered NPC health messaging, an MP label or another mod's Java framework is not ordinary-zombie dedicated evidence. These are additional acceptance conditions for existing G-R04..07, all NOT TESTED; no external mod is a test dependency.
 
-## Staged cases
+## Context-menu acceptance cases — requirements only
+
+The [user menu contract](CONTEXT_MENU_CONTRACT.md) adds the following cases. Run only after source/API review, affected implementation authorization and separate game/server test authorization. Use two remote clients and multiple local slots where supported; record mouse and controller results separately. These cases are additional requirements, not evidence that the corresponding equipment or five-level missions exist.
+
+| ID | Procedure | Required observation | Status |
+|---|---|---|---|
+| U-R01 | Empty radio with zero, one and multiple eligible cards; unused card with zero, one and multiple accessible eligible radios | Only applicable insertion actions; correct exact-item choices; no empty request action or duplicate menu entry; occupied/inaccessible radios excluded. | NOT TESTED |
+| U-R02 | Insert/remove original card, revisit menus, change card clearance, inspect through another inventory view | ARMED shows Remove and authorized missions only; no Insert; original inserted card cannot be freely used/transferred/duplicated; removal recovers that card once. | NOT TESTED |
+| U-R03 | Successful request, then tune/transmit/equip/battery operations, transfer and restart spent radio | SPENT permanently hides all military actions, reset and recharge; ordinary radio operations still work; stale client metadata cannot restore authorization. | NOT TESTED |
+| U-R04 | Concurrent requests for one radio from two clients/local slots; delayed success, rejection, timeout and reconnect | Pending suppresses duplicate requests and excludes conflicting custody mutation; server accepts at most one authorization. Only synchronized rejection without consumption restores availability; uncertain result remains unavailable for reconciliation. | NOT TESTED |
+| U-R05 | Level 5 with map only, designator only, both, neither; wrong region/clearance, unavailable event and stale menu | Only valid targeting methods; no parent request when none qualify; server revalidates current availability, ownership, equipment and targets, rejecting spoofed/stale intents. | NOT TESTED |
+| U-R06 | Designator inactive/active, empty/changed battery, unusable device; second player guides an incoming map strike | Activate/Deactivate mutually exclusive and applicable; normal equipment actions preserved; designator cannot dispatch alone; cooperative guidance uses existing authorization once. | NOT TESTED |
+| U-R07 | Mouse/controller navigation, inventory and radio views, focus changes, localized labels and UI scaling | No duplicate entries or unnecessary nesting; accessible choices, correct callbacks and refresh on state change; no opposite-state or impossible actions. | NOT TESTED |
+| U-R08 | Transfer/drop/trade/death, power loss and other state changes between menu build and callback; malformed IDs/flags/clearance/target payloads | Server re-resolves authoritative objects and all eligibility; no stale authorization, card loss/duplication or ordinary-player-action interference. Bounded menu lookups; no per-frame inventory-wide traversal. | NOT TESTED |
+
+## Existing staged support cases
 
 | ID | Stage / procedure | Required observation | Actual |
 |---|---|---|---|

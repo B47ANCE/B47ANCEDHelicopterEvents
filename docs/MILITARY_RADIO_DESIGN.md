@@ -2,6 +2,8 @@
 
 Date: 2026-10-15. Version: [root VERSION](../VERSION). **Ordinary-radio reuse: CONDITIONAL. Persistent credential insertion/single-use equipment: NO-GO pending MS01/MS03.** Design only; runtime NOT TESTED.
 
+The user's [context-menu contract](CONTEXT_MENU_CONTRACT.md) governs action visibility, card/radio selection, pending requests and server revalidation. It adds requirements, not implemented UI or a resolved custody/authorization contract. In its Level 5 conditions, an "unused" radio with a card means ARMED but unspent, not the empty UNUSED state below. Exact Build 42.21 menu/input integration remains to be audited before implementation.
+
 ## Existing equipment before custom items
 
 References S01/S04 and N01-N05 use [source index](SUPPORT_SOURCE_INDEX.json). S01 is media/scripts/generated/items/radio.txt; S04 is the English ItemName.json.

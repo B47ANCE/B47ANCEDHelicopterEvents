@@ -1,5 +1,25 @@
 # Phase 0 validation records
 
+## Selected thumbnail and context-menu requirements — 2026-10-15
+
+Asset/documentation-only change from baseline 8a6f44c7d031316fc4506a830058ecf4f27bbccb on docs/military-support-audit. Current/target authoring version stays 0.1.0-dev.3: no gameplay, public API, configuration or save compatibility change and no new implementation checkpoint. Root thumbnail.png is the exact supplied helicopter image; [BRANDING.md](BRANDING.md) records size/hash/provenance. Icon/poster, fallback art, production source, tools, tests and version inventory are byte-unchanged from baseline. [CONTEXT_MENU_CONTRACT.md](CONTEXT_MENU_CONTRACT.md) records the direct user requirements, distinguishes reference handoffs from current authorization, and adds eight unexecuted U-R cases. No new native API finding, resolved blocker or completed broader handoff audit is claimed.
+
+Commands executed with the bundled Python interpreter (Pillow used only to inspect the PNG):
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+python -B -c "from pathlib import Path; from PIL import Image; import hashlib; p=Path('thumbnail.png'); b=p.read_bytes(); assert len(b)==1532650; assert hashlib.sha256(b).hexdigest()=='46dd0ab5bc851ca2443a182db3be35eb0c3e3a69a304ec8f2ae27183fd7beb69'; im=Image.open(p); assert (im.format,im.size,im.mode)==('PNG',(1254,1254),'RGB'); im.verify(); print('PNG integrity PASS')"
+git diff 8a6f44c7d031316fc4506a830058ecf4f27bbccb -- src assets VERSION version-inventory.json scripts tests
+git diff --check
+git diff --cached --check
+```
+
+[TESTED: offline] Version consistency PASS before/after edits; document links/gates and bounded Lua-only audio source checks STATIC PASS. PNG metadata/decode/hash PASS; an additional in-memory comparison against the original user attachment confirmed exact byte equality. Source-invariance diff is empty; eight U-R rows are all NOT TESTED. Supplied image visually inspected. No new test script or runtime regression suite was needed for unchanged gameplay. Whitespace and staged/tracked public-surface review recorded with this change; no private attachment text, native/third-party implementation, logs, credentials or package included. Git commit/push status is reported separately.
+
+Exact Build 42.21 menu hooks, localization, controller behavior, custody/authorization and targeting integration still need source review before affected implementation. Game/server/Workshop rendering and all new UI/MP cases NOT TESTED. Existing API and persistence/combat verdicts unchanged. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No game/server launch, gameplay implementation, installed-file modification, packaging, deployment or Workshop publication.
+
 ## Native lethal result and replication - 2026-10-15
 
 Source/design/tooling extension of docs/military-support-audit at baseline 736c490f89c07eab56d740bfead273694b489784. Root version stays 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [NATIVE_LETHAL_RESULT_AUDIT.md](NATIVE_LETHAL_RESULT_AUDIT.md) identifies the terminal Lua binding/lifecycle/native publication route and its limits. [L01-L32 index](NATIVE_LETHAL_SOURCE_INDEX.json) fingerprints packaged members and loose counterparts. New scripts/audit_lethal_interleavings.py is a standalone offline abstract branch model, not a PZ combat probe. No additional third-party implementation inspection or imports; earlier clean-room signoff remains PENDING.

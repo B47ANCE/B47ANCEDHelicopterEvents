@@ -2,6 +2,8 @@
 
 Project Version: 0.1.0-dev.3
 
+Selected project artwork: [thumbnail.png](thumbnail.png), the supplied helicopter image preserved exactly. The [context-menu contract](docs/CONTEXT_MENU_CONTRACT.md) records the required state-dependent military actions; these menus and support equipment are not implemented.
+
 First complete gameplay release direction: **Military Air Support**. The current runtime source remains the experimental rotor-only prototype; support equipment, authorization, loot and combat are not implemented. The [targeted support API audit](docs/MILITARY_SUPPORT_API_AUDIT.md) records current NO-GO contracts and the smallest safe diagnostic. Crash/wreck/destruction features remain deferred and blocked independently.
 
 Public source: [B47ANCE/B47ANCEDHelicopterEvents](https://github.com/B47ANCE/B47ANCEDHelicopterEvents). This is a **Lua-only, default-disabled audio prototype**, targeting Build 42.21 dedicated servers. It schedules one transient positional rotor bed, with server-owned configuration and expiring snapshots. No wrecks, destruction, loot, salvage, distress, world mutations or zombie attraction. Actual dedicated multiplayer remains **NOT TESTED**.
