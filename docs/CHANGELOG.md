@@ -1,6 +1,7 @@
 # Changelog
 
 ## [0.1.0-dev.3]
+- 2026-10-15: download and inspect official CSR 2.0.25 with user-confirmed author research permission. Record server-selected terminal health changes, client presentation, absent packaged becomeCorpseSilently symbol and a narrower native-death audit candidate. No code/assets/dependency imported; existing nonlethal ordering and complete-support blockers remain. Research only, runtime/version unchanged.
 - 2026-10-15: establish native transport configuration and bounded ordering/owner-transfer counterexamples. Lua commands and reliable zombie variants are unordered; ordinary player hits use an ordered route without a common cross-stream fence. Add a 28-schedule offline integer model and 15 native fingerprints. Preserved-damage/handoff contract remains unresolved; combat probe NO-GO, runtime/version unchanged.
 - 2026-10-15: compare staged A-Life 1.4.2, staged Remnants metadata and installed Bandits combat under clean-room rules. Record client body execution, separate NPC health messaging and Java-agent differences with 17 fingerprints; no import/dependency or gameplay change. Server-owned ordinary-zombie result contract remains unresolved; reviewer signoff pending.
 - 2026-10-15: trace ownership/result access, null-owner reassignment, empty zombie AI health/damage sync, real-player hit relay and the vanilla shared getFakeAttacker proxy. No complete supported Lua path established; mutating combat probe remains NO-GO. Add 24 native/one Lua fingerprints and contract exit criteria; documentation only, runtime/version unchanged.

@@ -1,5 +1,27 @@
 # Phase 0 validation records
 
+## CSR Knox Syndicate comparison - 2026-10-15
+
+Documentation-only extension of docs/military-support-audit at baseline 7df75bcaf57a15b75146e021ca5a922b39eef084. Root version stays 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [CSR_AIR_SUPPORT_RESEARCH.md](CSR_AIR_SUPPORT_RESEARCH.md) records the user's confirmation of explicit author inspection/reporting permission, the official 2.0.25 package and neutral source findings. No reuse/source-redistribution permission inferred. [CSR_AIR_SUPPORT_SOURCE_INDEX.json](CSR_AIR_SUPPORT_SOURCE_INDEX.json) records eight text/two optional JAR fingerprints plus three native members. Package/source remain private and ignored, outside installed mods. No third-party code/assets adopted.
+
+Exact repository commands (bundled Python interpreter):
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/audit_combat_interleavings.py
+python -B .tmp-csr-research/verify_csr.py
+git diff --check
+git diff --cached --check
+git diff 7df75bcaf57a15b75146e021ca5a922b39eef084 -- src assets VERSION scripts tests version-inventory.json
+```
+
+[TESTED: offline] Version consistency PASS before/after edits; portable documentation/gates STATIC PASS. Official archive byte count and SHA-256 match the manifest/listing; full ZIP CRC PASS. Private verify_csr.py re-reads the archive and eight selected research copies, checks text/JAR hashes and inclusive ranges, three packaged/loose native fingerprints, JAR/Steam build and negative literal-symbol inventories; STATIC PASS. The source summary does not claim its member-name/symbol scan proves runtime binding or excludes dynamic injection. Optional JAR inspection was limited to archive/class-symbol metadata, not implementation decompilation or execution. Native javap -c -p inspection never instantiated engine classes. Three uncertain/negative API records were added to the unmanaged draft; helper record/validate PASS (204 total records), no managed catalog edits.
+
+The unchanged abstract ordering model still passes its 28 schedule assertions: 17 preserving under assumptions and 11 counterexamples reproduced. This is not a test of CSR or a terminal-death contract. Existing audio regression results remain historical at their recorded baseline; not rerun because runtime/tooling/assets/tests are byte-unchanged. All ten G-R and 24 S-R rows remain NOT TESTED. Whitespace and staged/tracked public-surface checks PASS; no package, raw third-party/native body, private diagnostics/settings or credentials staged. Exact Git/remote backup status is reported separately. Independent clean-room signoff stays PENDING; no CI result manufactured.
+
+Result: CSR establishes a source-backed server target/terminal-mutation loop; a native terminal-death/publication route is a narrower CONDITIONAL audit candidate. Its guarded becomeCorpseSilently call is not a verified vanilla Build 42.21 entry; setHealth alone has no death/send in its body. No runtime failure reproduced, no native nonlethal ownership/result contract cleared, no mutating probe implemented or approved. MS01-MS04 remain open; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No installer, mod module/JAR or engine run, installed-file changes, release packaging, deployment or Workshop publication.
+
 ## Combat ordering and ordinary damage - 2026-10-15
 
 Research/tooling extension of docs/military-support-audit, baseline e63e5c05e861f27753835155e8f16fb733552621. Root version remains 0.1.0-dev.3; no runtime/API/configuration/save compatibility change or new version checkpoint. [COMBAT_ORDERING_CONTRACT.md](COMBAT_ORDERING_CONTRACT.md) and [T01-T15 source index](COMBAT_ORDERING_SOURCE_INDEX.json) record native transport configuration, current-owner acceptance and unresolved handoff/result contracts. New scripts/audit_combat_interleavings.py is a project-owned offline integer-state model, not gameplay/probe implementation or an engine simulation.

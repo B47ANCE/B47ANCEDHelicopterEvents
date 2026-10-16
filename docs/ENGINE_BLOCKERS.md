@@ -2,6 +2,8 @@
 
 ## Military support direction - 2026-10-15
 
+[CSR air-support research](CSR_AIR_SUPPORT_RESEARCH.md) identifies server-selected zero-health kill attempts with client audio. It does not use an invisible NPC or supply a nonlethal result fence. The optional becomeCorpseSilently symbol is absent from the target packaged classes scanned; the verified setter itself sends no result or death transition. Native terminal-death/publication is a smaller CONDITIONAL audit candidate, not a cleared MS04 or an approved instant-kill substitute.
+
 [Combat ordering follow-up](COMBAT_ORDERING_CONTRACT.md): native Lua commands and reliable zombie variants are reliable unordered; ordinary player hits are reliable ordered, without a common cross-stream order. Current-owner identity rejects A while B owns the target, but does not distinguish an old A packet after A-to-B-to-A. Absolute/minimum health corrections and unconditional handoff retry/skip have explicit player-damage or duplicate/loss counterexamples. The 28-schedule offline model is not an engine test. O-C02/O-C03/O-C04 and MS04 remain unresolved; no mutating combat probe.
 
 [Military Support MS01-MS06](MILITARY_SUPPORT_API_AUDIT.md) independently gate credential custody, original officer loot, durable authorization, virtual-attacker combat and runtime sound. Full-crash B01-B12 remain deferred; none was waived.

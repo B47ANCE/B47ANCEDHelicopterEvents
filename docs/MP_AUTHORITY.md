@@ -2,6 +2,8 @@
 
 ## Military support direction - 2026-10-15
 
+[CSR Knox Syndicate](CSR_AIR_SUPPORT_RESEARCH.md) provides source-backed server target/terminal-mutation selection, not client outcome authority. Its local active-mission table and player audio cues do not establish an ordered nonlethal result, owner handoff, join snapshot or restart transaction. Separately audit native terminal finalization/publication before any proposed lethal-only scope; preserve legitimate player kill/loot attribution and one corpse. No CSR system is adopted and no mutating probe approved.
+
 [Combat ordering follow-up](COMBAT_ORDERING_CONTRACT.md): native Lua commands and reliable zombie variants are reliable unordered; ordinary player hits are reliable ordered, without a common cross-stream order. Current-owner identity rejects A while B owns the target, but does not distinguish an old A packet after A-to-B-to-A. Absolute/minimum health corrections and unconditional handoff retry/skip have explicit player-damage or duplicate/loss counterexamples. The 28-schedule offline model is not an engine test. O-C02/O-C03/O-C04 and MS04 remain unresolved; no mutating combat probe.
 
 [Military support authorization](SUPPORT_AUTHORIZATION_DESIGN.md) and [combat audit](DOOR_GUNNER_COMBAT_AUDIT.md) extend the proposed future authority model, not current runtime code. Item/mission persistence and server-owned combat remain unproved; clients cannot authorize shared outcomes.
