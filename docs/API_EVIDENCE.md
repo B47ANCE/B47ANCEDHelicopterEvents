@@ -1,5 +1,9 @@
 # API evidence
 
+## Native lethal-result evidence - 2026-10-15
+
+[NATIVE_LETHAL_RESULT_AUDIT.md](NATIVE_LETHAL_RESULT_AUDIT.md) traces static Lua exposure, terminal lifecycle/listener, native death transport, live-map removal and ordinary-hit/client corpse processing. [L01-L32 fingerprints](NATIVE_LETHAL_SOURCE_INDEX.json) identify exact packaged/loose inputs. The [17-case abstract model](../scripts/audit_lethal_interleavings.py) is offline reasoning, not native execution or a dedicated result. The terminal route is now identified; nonlethal ordering and unrestricted production guarantees remain unresolved.
+
 ## Combat ordering evidence - 2026-10-15
 
 [COMBAT_ORDERING_CONTRACT.md](COMBAT_ORDERING_CONTRACT.md) records exact native transport/receiver signatures and instruction offsets; [T01-T15 fingerprints](COMBAT_ORDERING_SOURCE_INDEX.json) identify packaged members and loose counterparts. Configured reliable-unordered Lua commands/zombie variants and reliable-ordered player hits do not establish a shared mutation order. The [offline integer model](../scripts/audit_combat_interleavings.py) reproduces bounded assumptions/counterexamples, not engine behavior or a safe protocol. Native bodies remain excluded; patched installation and all dedicated outcomes remain unverified.

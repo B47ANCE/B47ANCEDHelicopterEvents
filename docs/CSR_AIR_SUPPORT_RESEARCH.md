@@ -40,6 +40,8 @@ The existing [native acceptance trace](COMBAT_ORDERING_CONTRACT.md) still allows
 
 ## Independent options and verdict
 
+Subsequent [native lethal-result audit](NATIVE_LETHAL_RESULT_AUDIT.md) completes the source investigation proposed below: the Lua-exposed Kill/die candidate reaches the registered native death listener and ZombieDeath transport. This is an independent vanilla path, not adoption of CSR's setter/guarded helper. Missing terminal publication is narrowed to explicit client/streaming/durability gates; the nonlethal contract and full feature remain unresolved. No CSR/runtime claim is retroactively promoted.
+
 **GO: read-only capability research completed.** This package supplies a concrete server-side support example and a smaller terminal-death question. It is not necessary to construct an invisible NPC to investigate that question. The earlier nonlethal ordering analysis remains applicable to nonlethal support damage; it must not be generalized into a claim that every terminal native route is impossible.
 
 **CONDITIONAL: separate Lua-only lethal-result audit.** Independently verify a supported native terminal-damage/death entry, its Lua binding, server publication/removal, stale-owner rejection after finalization, target identity reuse, concurrent legitimate player kills, native loot/attribution and restart behavior. Do not substitute setHealth(0), a private constructor or an invented method for that contract. One-hit support would need an explicit gameplay-scope decision; it is not silently accepted as the requested ammunition-limited machine gun.

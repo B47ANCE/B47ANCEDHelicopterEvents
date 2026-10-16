@@ -2,9 +2,11 @@
 
 ## Military support direction - 2026-10-15
 
+[Native lethal-result follow-up](NATIVE_LETHAL_RESULT_AUDIT.md) identifies a source-supported Lua Kill/die candidate and the zombie death listener that publishes native ZombieDeath. Completed removal drops the live ID; later snapshots for an unmapped ID are ignored. Owner fields are not unconditionally cleared: invalid IDs are pruned from native authorization lists. This narrows the missing terminal-entry/publication sub-blocker. A disposable lethal probe is CONDITIONAL for findings review; nonlethal gunfire/full MS04 remain unresolved, with client corpse timing/streaming, ID reuse and restart gates still NOT TESTED. No implementation or launch approval.
+
 The first complete gameplay release is Military Air Support. See [targeted support API audit](MILITARY_SUPPORT_API_AUDIT.md) for exact new candidates and MS01-MS06 blockers. This direction does not expand current audio code or approve crash features.
 
-[Ordering/owner migration follow-up](COMBAT_ORDERING_CONTRACT.md): packet configuration is verified, but no native fence connecting Lua results, owner health and ordinary player hits is established. Stable-owner delta arithmetic is CONDITIONAL only; correction/retry counterexamples keep MS04 and the mutating combat probe NO-GO. Source inspection and the offline model do not change runtime gates.
+[Ordering/owner migration follow-up](COMBAT_ORDERING_CONTRACT.md): packet configuration is verified, but no native fence connecting custom nonlethal Lua results, owner health and ordinary player hits is established. Stable-owner delta arithmetic is CONDITIONAL only; correction/retry counterexamples keep the nonlethal combat probe NO-GO. The native terminal candidate above uses a different finalization boundary. Source inspection and the offline model do not change runtime gates.
 
 ## Implementation status - 2026-10-15
 

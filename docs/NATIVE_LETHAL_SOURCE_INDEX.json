@@ -1,0 +1,235 @@
+{
+  "auditDate": "2026-10-15",
+  "gameBuild": "42.21",
+  "steamBuild": "25485521",
+  "baselineCommit": "736c490f89c07eab56d740bfead273694b489784",
+  "runtime": "NOT TESTED",
+  "jarSha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "references": "L01-L32 identify packaged members. Exact signatures, method instruction offsets and metadata observations are in NATIVE_LETHAL_RESULT_AUDIT.md. Raw inspection output stays private/ignored; static binding is not an executed Lua invocation.",
+  "native": [
+    {
+      "id": "L01",
+      "member": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "looseSha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "L02",
+      "member": "zombie/characters/IsoZombie.class",
+      "sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "looseSha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "L03",
+      "member": "zombie/iso/objects/IsoDeadBody.class",
+      "sha256": "09f2aaf80526c97a2f05e8abbedaf758e7c17d86aea03074fdb5e118eef1ef96",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L04",
+      "member": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L05",
+      "member": "zombie/network/packets/character/DeadCharacterPacket.class",
+      "sha256": "33294c804be78e3dc0771cd220fb189e316b8dc2617dce4336772abdabf5bcde",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L06",
+      "member": "zombie/network/packets/character/DeadZombiePacket.class",
+      "sha256": "cfcadc33210dfaab7d87b2925e43c148676939be03ca190ec310db8c0e15fe3f",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L07",
+      "member": "zombie/network/packets/INetworkPacket.class",
+      "sha256": "616a8d2e86a03952e16c45e756dae12910f637716568a74571defdc1884ce7e9",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L08",
+      "member": "zombie/network/PacketTypes$PacketType.class",
+      "sha256": "aa6718ed4e2e33b199734c8cfa4b85a64c193ccc307b2cc4deafe18e0a43d5f5",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L09",
+      "member": "zombie/popman/NetworkZombiePacker.class",
+      "sha256": "5b202038b360877e8a308265e6bf7ce720e34d0c3670adfb3a7c5dbddaf5197e",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L10",
+      "member": "zombie/popman/NetworkZombieSimulator.class",
+      "sha256": "962b26ff39c12bbee442c6e6edf10245cf7eff8dbfdae06756f06fae2364da31",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L11",
+      "member": "zombie/network/fields/character/ZombieID.class",
+      "sha256": "fd124570584cde3229f207d6372fae99618fd31664cfbf2b23884c63281dc1fb",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L12",
+      "member": "zombie/network/packets/hit/PlayerHitZombiePacket.class",
+      "sha256": "88fd205bfb3bc37b85af9b61734fb5729a4c0d4b0581ce10c14f3425dfc3fb79",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L13",
+      "member": "zombie/network/packets/hit/PlayerHit.class",
+      "sha256": "29ff960769982cc64518e88a16d87283790eadcc5ee17629f44eeeb6a760cea5",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L14",
+      "member": "zombie/network/packets/hit/PlayerHitCharacter.class",
+      "sha256": "f6f728553123829645c4a3e6cdffe4629910e9c3c8ddc2d49cf5a33030a2befc",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L15",
+      "member": "zombie/network/fields/hit/WeaponHit.class",
+      "sha256": "c2e99722743b11bd8e9774ab33c9a87286755dad554a2bc3f8eae102ed8cdb37",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L16",
+      "member": "zombie/network/fields/hit/Character.class",
+      "sha256": "3fa00b61ee3812b5dc59c5fe597f6625e2024186b3c06137ce643de2a0181ccd",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L17",
+      "member": "zombie/characters/NetworkCharacterAI.class",
+      "sha256": "7ec30ba9fc20cd90ab14c36907c89ccba11faf29c506739e0998c167c598c4c8",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L18",
+      "member": "zombie/characters/NetworkCharacterAI$PostponedPacket.class",
+      "sha256": "448936202adf3bfd7f217c880a3b19d1aa892f1b298a7636b034a7e549185731",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L19",
+      "member": "zombie/iso/IsoGridSquare.class",
+      "sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "looseSha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "L20",
+      "member": "zombie/network/IsoObjectID.class",
+      "sha256": "07bda0283a8d09bf08f10711c1809cb6d74dc933daea33e2c21c692c6a708145",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L21",
+      "member": "zombie/network/id/ObjectIDManager.class",
+      "sha256": "c0ba428bcc813384ff59184cea3a1e0d467dceda4da788c43fb87608674e7eea",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L22",
+      "member": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L23",
+      "member": "se/krka/kahlua/integration/expose/LuaJavaClassExposer.class",
+      "sha256": "4c8dc24c94de2cb814741f135d7d9baf8bc09062dd821d3c56cc4b09f322c0bd",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L24",
+      "member": "se/krka/kahlua/integration/expose/LuaJavaInvoker.class",
+      "sha256": "2c431080d2ce2b94966012e982e64b6d66cd1ae67af2eccd23e163fdfea24457",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L25",
+      "member": "se/krka/kahlua/converter/KahluaConverterManager.class",
+      "sha256": "d2293d6b953c17d3e9f7849b3403a35fc04ec5a76f8d138d8fbd778f5accd15c",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L26",
+      "member": "zombie/gameStates/IngameState.class",
+      "sha256": "07e35d9e04faa98aad8a7059e5bf82590e4d679f30941ca2469afe1555e3c10c",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L27",
+      "member": "zombie/network/packets/actions/AddCorpseToMapPacket.class",
+      "sha256": "4fa3270b727603bf729eac9f9a0178dedc7d5606186882356c26189aaabc1cc0",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L28",
+      "member": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L29",
+      "member": "zombie/network/fields/character/CharacterID.class",
+      "sha256": "11e78338c79a5abb1612a5940ffd1d59e03d3ffe5d3f5a0b924cf5822f29dda5",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L30",
+      "member": "zombie/VirtualZombieManager.class",
+      "sha256": "8a14e4e207387e7d7a22e8d07236c96a65e688ceec6b6a95d09f4745934d8366",
+      "looseSha256": "55975034b12a5362bd8bca62f20babe91570be8c10d2d5a7374a4d57d7cdec1c",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "L31",
+      "member": "zombie/popman/NetworkZombieManager.class",
+      "sha256": "27af8b12cc9ab2af778cbce03ed546168c69976e63a905b16279445234d89ad8",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "L32",
+      "member": "zombie/network/GameClient.class",
+      "sha256": "99d1778ab2c2627ddcbc04fdbb435461289c3c3075c96cf70eae5c216193352b",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    }
+  ]
+}

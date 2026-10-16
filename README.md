@@ -31,6 +31,7 @@ No game/server launch, packaging, deployment or publication has been performed. 
 - [Combat ordering, owner migration and ordinary damage contract](docs/COMBAT_ORDERING_CONTRACT.md)
 - [A-Life, Remnants and Bandits clean-room comparison](docs/THIRD_PARTY_RESEARCH.md)
 - [CSR Knox Syndicate air-support source research](docs/CSR_AIR_SUPPORT_RESEARCH.md)
+- [Native lethal-result, replication and ordinary-hit audit](docs/NATIVE_LETHAL_RESULT_AUDIT.md)
 - [Support dedicated test plan](docs/SUPPORT_MP_TEST_PLAN.md)
 - [API audit and verdicts](docs/API_AUDIT.md)
 - [Exact source evidence](docs/API_EVIDENCE.md)

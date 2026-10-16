@@ -1,5 +1,29 @@
 # Phase 0 validation records
 
+## Native lethal result and replication - 2026-10-15
+
+Source/design/tooling extension of docs/military-support-audit at baseline 736c490f89c07eab56d740bfead273694b489784. Root version stays 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [NATIVE_LETHAL_RESULT_AUDIT.md](NATIVE_LETHAL_RESULT_AUDIT.md) identifies the terminal Lua binding/lifecycle/native publication route and its limits. [L01-L32 index](NATIVE_LETHAL_SOURCE_INDEX.json) fingerprints packaged members and loose counterparts. New scripts/audit_lethal_interleavings.py is a standalone offline abstract branch model, not a PZ combat probe. No additional third-party implementation inspection or imports; earlier clean-room signoff remains PENDING.
+
+Exact repository validation commands (bundled Python interpreter):
+
+```text
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/audit_combat_interleavings.py
+python -B scripts/audit_lethal_interleavings.py
+python -B scripts/audit_lethal_interleavings.py --json
+python -B .tmp-lethal-audit/verify.py
+git diff --check
+git diff --cached --check
+git diff 736c490f89c07eab56d740bfead273694b489784 -- src assets VERSION version-inventory.json tests scripts/check_versions.py scripts/audit_combat_interleavings.py scripts/validate_audio_sources.py scripts/validate_phase0_docs.py scripts/test_audio.py
+```
+
+[TESTED: offline] Version consistency PASS before/after edits; portable documentation/gates STATIC PASS. Private standard-library verify.py rechecks Steam/JAR and 32 native/loose fingerprints, selected metadata/method observations, public/final/no-HiddenFromLua filters, native sender/removal/auth pruning and finite corpse predicate; STATIC PASS. Native inspection used javap -c -p and -v metadata against the packaged JAR, never engine class instantiation. Its detailed output remains private/ignored. Five INFERRED / NOT_TESTED reusable API findings were recorded in the unmanaged local draft; helper record/validate PASS (209 total records), no managed catalog changes. Private source verification is not a public reproducibility dependency for either standalone model.
+
+New model assertions PASS: 17 cases, seven expected limitation counterexamples. The existing nonlethal model still passes 28 schedules (11 expected counterexamples). These are bounded branch models, not native calls, engine failures or proof of client completion. No new audio suite run: runtime/source/assets/tests and all existing check scripts are byte-unchanged from baseline; earlier audio results retain their recorded environment. Ten new L-R rows join the ten G-R and 24 S-R rows, all 44 NOT TESTED. Runtime guards/VALIDATION_STATUS remain unchanged. Whitespace and staged/tracked public-surface checks PASS; only intended project documentation, fingerprints and the new offline model included, with no native bodies, third-party sources/assets, credentials, logs, private settings or packages. Git/remote backup is reported separately; no CI result inferred.
+
+Conclusion: a source-supported terminal entry/result sender and post-removal map protection are identified, narrowing that sub-blocker. A disposable loaded-target lethal probe is CONDITIONAL for review only, not implemented/approved to run. Immediate owner-field clearing is not assumed; invalid-ID authorization pruning is recorded. Nonlethal synchronization, expired/missing corpse guards, streaming/ID reuse, native attribution and restart durability remain explicit limitations/gates. Complete armed-support scope is not approved by a terminal candidate. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No gameplay implementation, engine launch, installed-file edit, package, deployment or Workshop publication. Stop for findings review.
+
 ## CSR Knox Syndicate comparison - 2026-10-15
 
 Documentation-only extension of docs/military-support-audit at baseline 7df75bcaf57a15b75146e021ca5a922b39eef084. Root version stays 0.1.0-dev.3; no gameplay/API/configuration/save compatibility change. [CSR_AIR_SUPPORT_RESEARCH.md](CSR_AIR_SUPPORT_RESEARCH.md) records the user's confirmation of explicit author inspection/reporting permission, the official 2.0.25 package and neutral source findings. No reuse/source-redistribution permission inferred. [CSR_AIR_SUPPORT_SOURCE_INDEX.json](CSR_AIR_SUPPORT_SOURCE_INDEX.json) records eight text/two optional JAR fingerprints plus three native members. Package/source remain private and ignored, outside installed mods. No third-party code/assets adopted.
