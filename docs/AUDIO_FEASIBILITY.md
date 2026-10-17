@@ -1,5 +1,9 @@
 # Phase 0 Lua-only audio feasibility
 
+## Implementation status - 2026-10-15
+
+The narrower [merged contract](PHASE1_AUDIO_IMPLEMENTATION_CONTRACT.md) is implemented under explicit 2026-10-15 coding authorization. See [actual behavior and settings](AUDIO_PROTOTYPE.md). The broader candidate/defaults and no-code descriptions below are dated research, not current implementation scope. Distress remains deferred; all runtime findings remain CONDITIONAL / NOT TESTED.
+
 Reviewed 2026-10-14. Current project version: ../VERSION. Target: installed JAR Build 42.21. **CONDITIONAL source feasibility; runtime NOT TESTED.** Documentation only: no Phase 1, assets, implementation or launch authorization.
 
 Current policy permits Lua calls to exposed vanilla engine APIs, not custom Java, bridges, agents, injected classes, native extensions or JAR dependencies. Native bytecode inspection supplies evidence only. Earlier engine-bridge proposals are historical and unavailable. The full crash/wreck/destruction scope remains blocked; an audio candidate does not silently satisfy or replace those requirements.

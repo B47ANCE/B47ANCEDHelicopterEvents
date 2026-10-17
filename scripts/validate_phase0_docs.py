@@ -1,4 +1,4 @@
-"""Portable, offline Phase 0 document checks. Does not validate game behavior."""
+"""Portable research-document checks, retained alongside the audio source checks."""
 import json
 import re
 import subprocess
@@ -32,6 +32,7 @@ for name in filter(None, tracked):
     assert not name.startswith(('.codex/', '.agents/', 'docs/evidence/',
                                 'docs/evidence-followup/', 'docs/history/')), name
     assert Path(name).suffix.lower() not in ('.class', '.jar', '.zip', '.log', '.pem', '.key'), name
-assert not list(ROOT.glob('src/**/mod.info')), 'Unexpected runtime implementation'
+assert {p.relative_to(ROOT).as_posix() for p in ROOT.glob('src/**/mod.info')} == {
+    'src/B47ANCEDHelicopterEvents/42/mod.info'}, 'Unexpected runtime metadata surface'
 print(f'STATIC PASS: documentation links, 12 NOT TESTED audio scenarios, gates and tracked-file boundaries; {local_evidence_links} private evidence links not validated.')
 print('NOT TESTED: Lua runtime/overload behavior, sound/network effects, SP, clean provenance and dedicated MP.')

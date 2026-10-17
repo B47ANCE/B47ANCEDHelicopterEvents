@@ -1,0 +1,7 @@
+name=B47ANCE'd Helicopter Events - Development Probes
+id=B47ANCEDHelicopterEvents
+modversion=0.1.0-dev.4
+versionMin=42.21
+icon=media/ui/B47_ICON_SMALL.png
+poster=poster.png
+description=Experimental dedicated-server audio and read-only radio preflight probes. Disabled by default. No military support gameplay. Dedicated multiplayer NOT TESTED.

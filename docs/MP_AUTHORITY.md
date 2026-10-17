@@ -1,5 +1,27 @@
 # Multiplayer authority proposal
 
+## Read-only radio diagnostic — 2026-10-16
+
+The [implemented preflight probe](SUPPORT_PREFLIGHT_PROBE.md) resolves only the OnClientCommand connection-associated player's directly carried Base.WalkieTalkie5, validates a bounded item-ID hint, uses the server sandbox toggle and returns a nonce-correlated expiring observation to that connection. It accepts no card/authorization/mission state, makes no shared gameplay/inventory/save writes and cannot dispatch support. Rechecking ownership is observation hygiene, not a native transfer/save fence. Restart/reconnect preserve no diagnostic state; native routing and split-screen delivery remain NOT TESTED. Existing custody/durability/combat blockers and G7/G8 remain unchanged.
+
+## Military support direction - 2026-10-15
+
+[Native lethal-result follow-up](NATIVE_LETHAL_RESULT_AUDIT.md) identifies a source-supported Lua Kill/die candidate and the zombie death listener that publishes native ZombieDeath. Completed removal drops the live ID; later snapshots for an unmapped ID are ignored. Owner fields are not unconditionally cleared: invalid IDs are pruned from native authorization lists. This narrows the missing terminal-entry/publication sub-blocker. A disposable lethal probe is CONDITIONAL for findings review; nonlethal gunfire/full MS04 remain unresolved, with client corpse timing/streaming, ID reuse and restart gates still NOT TESTED. No implementation or launch approval.
+
+[CSR Knox Syndicate](CSR_AIR_SUPPORT_RESEARCH.md) provides source-backed server target/terminal-mutation selection, not client outcome authority. Its local active-mission table and player audio cues do not establish an ordered nonlethal result, owner handoff, join snapshot or restart transaction. The completed terminal follow-up above identifies an entry/publication path; dedicated tests must still establish finalization, player kill/loot attribution and one corpse. No CSR system is adopted and no mutating probe approved.
+
+[Combat ordering follow-up](COMBAT_ORDERING_CONTRACT.md): native Lua commands and reliable zombie variants are reliable unordered; ordinary player hits are reliable ordered, without a common cross-stream order. For a living target, current-owner identity rejects A while B owns it but does not distinguish an old A packet after A-to-B-to-A. Absolute/minimum health corrections and unconditional handoff retry/skip have explicit player-damage or duplicate/loss counterexamples. The 28-schedule offline model is not an engine test. O-C02/O-C03/O-C04 remain unresolved for that nonlethal protocol; its mutating probe remains NO-GO. The terminal native candidate above is narrower than full MS04.
+
+[Military support authorization](SUPPORT_AUTHORIZATION_DESIGN.md) and [combat audit](DOOR_GUNNER_COMBAT_AUDIT.md) extend the proposed future authority model, not current runtime code. Item/mission persistence and server-owned combat remain unproved; clients cannot authorize shared outcomes.
+
+[Ownership/result audit](GUNNER_OWNERSHIP_RESULT_AUDIT.md): application-level shot IDs and acknowledgements cannot fence the native receiver's current-owner health writes. Supported manager access, a protected living-target lease, ordered nonlethal result publication and safe reassignment remain unestablished. Empty zombie AI sync methods and real-player hit packets do not provide that adapter. The vanilla shared hit proxy is only an attacker lead. Keep mutating nonlethal probes NO-GO; no client-selected damage or repeated server health overwrite fallback. The terminal native path above does not require that living-target lease once finalization removes the live ID.
+
+[NPC comparison](THIRD_PARTY_RESEARCH.md) confirms source-backed client body execution exists in other Lua mods; that does not establish the same authority contract. A client applying an exact server result is conceptually different from choosing the target, accuracy, damage or ammunition. Only the former may remain an independent research candidate, contingent on verified native ordering/owner migration and preserved ordinary combat. Custom registered-NPC health messages cannot be generalized into control of every vanilla zombie; no third-party system or new dependency is adopted.
+
+## Implementation status - 2026-10-15
+
+The audio boundary is implemented as an offline candidate: [behavior/configuration](AUDIO_PROTOTYPE.md), [source evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md). Server owns schedule/settings; client only requests snapshots. No persistence/world effects. Runtime authority, headless behavior and native sound isolation remain NOT TESTED. Dated proposals below are historical design; full-crash blockers remain in force.
+
 ## Current Lua-only audio boundary - 2026-10-14
 
 [AUDIO_FEASIBILITY.md](AUDIO_FEASIBILITY.md) is the current audio research contract; it is not implementation or approval to replace the full-crash requirements. Server owns schedule, settings, flight descriptors and cancellation. Clients own local-only sound playback and may request only a rate-limited current-state snapshot. Ordinary native sound rebroadcast wrappers are excluded. No client may choose shared event outcomes or alter authoritative SandboxVars.

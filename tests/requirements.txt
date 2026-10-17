@@ -1,0 +1,2 @@
+# Offline test interpreter only; never a mod runtime dependency.
+lupa==2.6

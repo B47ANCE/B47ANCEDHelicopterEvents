@@ -1,5 +1,9 @@
 # Clean versus patched Build 42.21
 
+## Implementation status - 2026-10-15
+
+Implementation source inspection still targets the same packaged JAR fingerprint; no clean-depot authentication or patched-runtime revalidation was performed. [Current implementation evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md) does not authorize executing, repairing or replacing the installation. Future clean/patched runtime results remain separate.
+
 Current review annotation, 2026-10-14: the installed JAR hash still matches the earlier snapshot; ten loose zombie classes changed since that inventory. FMODSoundEmitter, GameTime and LuaEventManager also have loose copies differing from the JAR. The recorded local source bundles remain intact; that does not revalidate the patched runtime. Java agents/loaders mentioned below describe the existing installation only and are not permitted mod dependencies. Preserve that installation; do not repair it. See [audio source fingerprints](AUDIO_API_EVIDENCE.md).
 
 Date: 2026-10-09. Project version: ../VERSION. **Current installation: NO-GO as clean vanilla evidence. Separate clean-fixture validation plan: CONDITIONAL.** No installed file was deleted, overwritten, repaired, replaced or executed as PZ/server.

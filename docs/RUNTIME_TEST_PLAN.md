@@ -1,5 +1,13 @@
 # Runtime test plan
 
+## Military support direction - 2026-10-15
+
+The separate [Military Air Support plan](SUPPORT_MP_TEST_PLAN.md) defines S-R01..S-R24, all NOT TESTED. It requires review of support-specific NO-GO contracts before affected code and separate authorization before launch. Existing audio/full-crash evidence below is unchanged.
+
+## Implementation status - 2026-10-15
+
+The [bounded prototype](AUDIO_PROTOTYPE.md) now exists; this plan grants no launch/distribution permission. Test only the three implemented settings and rotor bed. Distress subcases remain deferred, and SP/host must stay silent. Capture the current-connection clock sample/skew, 6-second heartbeat stop, three retries and process-lifetime cleanup-failure latch in A-R04/A-R07/A-R08/A-R11. Existing A-R01..12 remain NOT TESTED; source/fake tests do not satisfy them.
+
 ## Dedicated MP audio plan - 2026-10-14
 
 The pending [Phase 1 contract](PHASE1_AUDIO_IMPLEMENTATION_CONTRACT.md) is narrower than this broader audio research plan: one rotor bed, three supported settings, no distress/intro seeking and no runtime implementation yet. Apply A-R01 through A-R12 to that actual slice; explicitly defer distress subcases and the unsupported SP path rather than marking the broader feature PASS. Do not change the NOT TESTED rows or claim G7 PASS from contract preparation.

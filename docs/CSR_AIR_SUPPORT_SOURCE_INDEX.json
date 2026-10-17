@@ -1,0 +1,190 @@
+{
+  "auditDate": "2026-10-15",
+  "projectBaseline": "7df75bcaf57a15b75146e021ca5a922b39eef084",
+  "runtime": "NOT TESTED",
+  "mod": "Common Sense Reborn",
+  "author": "Faded / Common Sense Reborn Team",
+  "observedVersion": "2.0.25",
+  "modId": "CommonSenseReborn",
+  "versionMin": "42.20.4",
+  "listingUrl": "https://fadedmods.com/?mod=CommonSenseReborn&page_id=12",
+  "manifestUrl": "https://raw.githubusercontent.com/FadedMods/faded-mod-installer-cloud/main/manifest.json",
+  "manifestSha256": "c8b6377419c1fe65b8d3ba5be0276ac96bc426ce69d2e61ca26c69a47ee1956e",
+  "downloadUrl": "https://github.com/FadedMods/faded-mod-installer-cloud/releases/download/mod-assets-2026-10-14-csr-2.0.25-tooltip-cleanup/CommonSenseReborn-v2.0.25.zip",
+  "archiveName": "CommonSenseReborn-v2.0.25.zip",
+  "archiveSize": 82439392,
+  "archiveSha256": "9aad9baec5681a12950a4e9113ddf48478a6aeb29d15e004128e5fd53aa30a41",
+  "zipCrc": "PASS",
+  "permissionBasis": "Human user confirmed explicit author permission in this conversation for inspection for this project and recording high-level findings. No written grant independently inspected; no reuse or source redistribution authorized/inferred.",
+  "sourceState": "checksum_verified_official_archive_private_research_not_installed",
+  "licenseStatus": "All rights reserved; research permission is separately user-confirmed. No code/assets imported.",
+  "files": [
+    {
+      "id": "C01",
+      "path": "CommonSenseReborn/42/mod.info",
+      "sha256": "ea81e198dfbe8376cbf5b1ba330f62309ca53bed2417c6234c9dd6915beb336e",
+      "lineCount": 27,
+      "references": [
+        [
+          1,
+          8
+        ]
+      ]
+    },
+    {
+      "id": "C02",
+      "path": "CommonSenseReborn/42/media/lua/shared/CSR_KnoxSyndicate.lua",
+      "sha256": "87a9ccfb32aa0ef97dc49dfefd3303bac9e2eb6d8d49566ce85a4055b198a0e1",
+      "lineCount": 99,
+      "references": [
+        [
+          16,
+          65
+        ],
+        [
+          69,
+          99
+        ]
+      ]
+    },
+    {
+      "id": "C03",
+      "path": "CommonSenseReborn/42/media/lua/client/CSR_KnoxSyndicateContext.lua",
+      "sha256": "c81e9feb6365c872d47e06078d4c337e42bb97c5ba221213a133aaf3e8b90d26",
+      "lineCount": 200,
+      "references": [
+        [
+          35,
+          46
+        ],
+        [
+          139,
+          200
+        ]
+      ]
+    },
+    {
+      "id": "C04",
+      "path": "CommonSenseReborn/42/media/lua/server/CSR_ServerCommandPiggyback.lua",
+      "sha256": "36912f331503c38f0cedbedbc189db5a9fa60226558d40e0d6b49aa12e76b9bf",
+      "lineCount": 313,
+      "references": [
+        [
+          30,
+          105
+        ],
+        [
+          108,
+          142
+        ],
+        [
+          146,
+          204
+        ]
+      ]
+    },
+    {
+      "id": "C05",
+      "path": "CommonSenseReborn/42/media/lua/server/CSR_ServerCommands.lua",
+      "sha256": "c4c9961cbec5b90ea6553e6ea1e9499f9896646e1a1f72be2d176f30bd82f691",
+      "lineCount": 6503,
+      "references": [
+        [
+          6148,
+          6167
+        ],
+        [
+          6474,
+          6475
+        ],
+        [
+          6491,
+          6501
+        ]
+      ]
+    },
+    {
+      "id": "C06",
+      "path": "CommonSenseReborn/42/media/lua/server/CSR_ServerIngress.lua",
+      "sha256": "73d87ab06536cf993e8046717420870ef9843eef99dc823e48c6b1ec954d2e47",
+      "lineCount": 853,
+      "references": [
+        [
+          681,
+          723
+        ]
+      ]
+    },
+    {
+      "id": "C07",
+      "path": "CommonSenseReborn/42/media/lua/shared/CSR_SettingsCatalog.lua",
+      "sha256": "6f01c013be1746502b2c9e676b065ff6eb713781054d664c9c700eadb26760de",
+      "lineCount": 2608,
+      "references": [
+        [
+          511,
+          518
+        ]
+      ]
+    },
+    {
+      "id": "C08",
+      "path": "CommonSenseReborn/LICENSE.txt",
+      "sha256": "aa40cd3ae3d939bd834cd7802d01e413b81f978f0a102e119d38f668248a2338",
+      "lineCount": 134,
+      "references": [
+        [
+          1,
+          31
+        ]
+      ]
+    },
+    {
+      "id": "C09",
+      "path": "CommonSenseReborn/42/java/CommonSenseReborn-Hybrid-2.0.12.jar",
+      "sha256": "f677b496bde52b20a3e8bf3589b5e61b36936deebc4537d991c2c4f61a86aff7",
+      "inspection": "Archive member metadata and literal native-symbol scan only; no execution or implementation decompilation."
+    },
+    {
+      "id": "C10",
+      "path": "CommonSenseReborn/42/java/CommonSenseReborn-Nearby-2.0.12.jar",
+      "sha256": "04a028baaf4bde5d8a10cb195bd3261029d6d88de42e50682fc8c52c18fec77c",
+      "inspection": "Archive member metadata and literal native-symbol scan only; no execution or implementation decompilation."
+    }
+  ],
+  "gameBuild": "42.21",
+  "steamBuild": "25485521",
+  "jarSha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "native": [
+    {
+      "id": "N01",
+      "member": "zombie/characters/IsoZombie.class",
+      "sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "looseSha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "N02",
+      "member": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "looseSha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "N03",
+      "member": "zombie/iso/objects/IsoDeadBody.class",
+      "sha256": "09f2aaf80526c97a2f05e8abbedaf758e7c17d86aea03074fdb5e118eef1ef96",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    }
+  ],
+  "symbolScan": {
+    "symbol": "becomeCorpseSilently",
+    "packagedNativeClassMatches": 0,
+    "bundledOptionalJarClassMatches": 0,
+    "packageLuaUseLocations": [
+      "C04:138-139"
+    ],
+    "scope": "Literal symbol inventory only; does not exclude dynamic generation, unexamined dependencies or other builds."
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "auditDate": "2026-10-15",
+  "gameBuild": "42.21",
+  "steamBuild": "25485521",
+  "runtime": "NOT TESTED",
+  "baselineCommit": "81563f78ae0179f34f49385909c645bf6f9cf14e",
+  "files": [
+    {
+      "id": "S01",
+      "path": "media/scripts/generated/items/radio.txt",
+      "sha256": "41ef575c15670e7ef538deecb5002f7ac741264194344cfd69eb4859ed27d60a",
+      "lines": 459
+    },
+    {
+      "id": "S02",
+      "path": "media/scripts/generated/items/literature.txt",
+      "sha256": "01f9950ecfa984eb1c874de0eeaee283b8ba265cd249cf34111df9f30268e293",
+      "lines": 8260
+    },
+    {
+      "id": "S03",
+      "path": "media/scripts/generated/items/clothing.txt",
+      "sha256": "9edb818c5366978acc691bf44a539eb22680d334db07037e5db33064598a060a",
+      "lines": 24599
+    },
+    {
+      "id": "S04",
+      "path": "media/lua/shared/Translate/EN/ItemName.json",
+      "sha256": "9aac068151021899bfc4112abc3f3314a5a1e7c50512da6be6d582f983d23f8e",
+      "lines": 4891
+    },
+    {
+      "id": "S05",
+      "path": "media/clothing/clothing.xml",
+      "sha256": "95b5de27ffa344c9143201c4d759cc5cee4965fe67da30a09abb54e5e205b826",
+      "lines": 38100
+    },
+    {
+      "id": "S06",
+      "path": "media/fileGuidTable.xml",
+      "sha256": "2dd35f787d87e5e039654970f62e4f6e58e7df8974c3c5f7e8668b48c4bb0edc",
+      "lines": 7183
+    },
+    {
+      "id": "S07",
+      "path": "media/lua/shared/NPCs/ZombiesZoneDefinition.lua",
+      "sha256": "998f31d6834c80d10cb25b817e612f4927bedfe14ce396ecee9ca798f0cb58c6",
+      "lines": 1820
+    },
+    {
+      "id": "S08",
+      "path": "media/lua/server/Items/Distributions.lua",
+      "sha256": "189ea31b26f445b753da68bff46f01b70bebadb90e0e1c263c18b4751d027ffd",
+      "lines": 22600
+    },
+    {
+      "id": "S09",
+      "path": "media/lua/shared/RadioCom/ISRadioAction.lua",
+      "sha256": "c8b5a6a07c849c85f6be70db4037128d347c9f5c6ab55df1e8b0b4aac3377045",
+      "lines": 207
+    },
+    {
+      "id": "S10",
+      "path": "media/lua/client/TimedActions/ISInventoryTransferAction.lua",
+      "sha256": "96ee554609f9ae029809643d50e4f31dbc5a7d21a558934be0804fd909c345b4",
+      "lines": 900
+    },
+    {
+      "id": "S11",
+      "path": "media/lua/shared/Definitions/AttachedWeaponDefinitions.lua",
+      "sha256": "ae16493f5063deff1106bc9121ed1ee14553e11f6f6bd119c3112b83006c8452",
+      "lines": 2630
+    }
+  ],
+  "native": [
+    {
+      "id": "N01",
+      "member": "zombie/inventory/types/Radio.class",
+      "sha256": "cd123324550a66332d52f094be448d5574f68b6d15ec7e0de3d697c331094b49",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N02",
+      "member": "zombie/radio/devices/DeviceData.class",
+      "sha256": "492af532cddfe49908a5f479e2749b8dc08334a6b661ab81eb81892926cdb102",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N03",
+      "member": "zombie/inventory/InventoryItem.class",
+      "sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N04",
+      "member": "zombie/inventory/ItemContainer.class",
+      "sha256": "a2ac7dd6235f91255dc57b91419a2c8609bdb105214cddf7fb445b70507b6f96",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N05",
+      "member": "zombie/inventory/types/InventoryContainer.class",
+      "sha256": "891cb2f37a7d13de869edf05909de493a55ef90aa8665368b36bff7fa6b2555e",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N06",
+      "member": "zombie/inventory/ItemPickerJava.class",
+      "sha256": "5c8cf626e46a52cdbd9d73e9de10766dece3388ee3e4f4d8d071df5e44d68522",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N07",
+      "member": "zombie/characters/IsoZombie.class",
+      "sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "looseSha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "looseMatchesJar": false,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N08",
+      "member": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "looseSha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "looseMatchesJar": false,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N09",
+      "member": "zombie/iso/objects/IsoDeadBody.class",
+      "sha256": "09f2aaf80526c97a2f05e8abbedaf758e7c17d86aea03074fdb5e118eef1ef96",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N10",
+      "member": "zombie/network/packets/RequestItemsForContainerPacket.class",
+      "sha256": "d440ee4810ea923f8e70fd8860c3736aa95ec29f10c974a0a1cd3dbf6537d486",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N11",
+      "member": "zombie/network/packets/SyncItemModDataPacket.class",
+      "sha256": "623e4361febdb7e1fbd3613ebcc1bf0d9c2fa8a97cab3c860adf2e7869b26dd7",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N12",
+      "member": "zombie/network/packets/hit/PlayerHitZombiePacket.class",
+      "sha256": "88fd205bfb3bc37b85af9b61734fb5729a4c0d4b0581ce10c14f3425dfc3fb79",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N13",
+      "member": "zombie/scripting/logic/ItemCodeOnCreate.class",
+      "sha256": "389d0f7cb961acf437a3f363eb53597208b56fc3e1bc627ed99c0daad7f27d58",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N14",
+      "member": "zombie/WorldSoundManager.class",
+      "sha256": "e235b19ab36988894c9d6ce07aed222d0d3cce7555f9e6e8b7c70a3d10280eea",
+      "looseSha256": "2957357c02e6f136141c30c68e5e2b670265b525a9f001d8efaeb4a0b0f3d369",
+      "looseMatchesJar": false,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N15",
+      "member": "zombie/iso/IsoCell.class",
+      "sha256": "5e9a88e1cd9a3f370e31ae0152c9de381d649caea7cab750ebc82a91b4e1f767",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N16",
+      "member": "zombie/iso/Helicopter.class",
+      "sha256": "5b230db5c8e29c1f9bf6ba97d3b777a9f411a7e5d3202560197d07d04c59fe1f",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N17",
+      "member": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N18",
+      "member": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    },
+    {
+      "id": "N19",
+      "member": "zombie/world/moddata/GlobalModData.class",
+      "sha256": "1c66b5e0c66b2c7b813c977fa91d2282a022605d12d44560298e30b340f8a718",
+      "looseSha256": null,
+      "looseMatchesJar": null,
+      "reference": "method signatures and JVM offsets in audit documents; no binary source line number"
+    }
+  ],
+  "jarSha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33"
+}

@@ -1,0 +1,116 @@
+{
+  "auditDate": "2026-10-15",
+  "gameBuild": "42.21",
+  "steamBuild": "25485521",
+  "baselineCommit": "e63e5c05e861f27753835155e8f16fb733552621",
+  "jarSha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "runtime": "NOT TESTED",
+  "references": "T01-T15 are packaged native members; exact methods, instruction offsets and metadata observations are in COMBAT_ORDERING_CONTRACT.md. Raw bodies remain private/ignored. Configuration is not observed transport behavior.",
+  "native": [
+    {
+      "id": "T01",
+      "member": "zombie/network/PacketTypes$PacketType.class",
+      "sha256": "aa6718ed4e2e33b199734c8cfa4b85a64c193ccc307b2cc4deafe18e0a43d5f5",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T02",
+      "member": "zombie/core/raknet/RakNetPeerInterface.class",
+      "sha256": "4911885c02c5216e5f7831d3834e3074ef56816dafa1310dca55b15e2a745ed4",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T03",
+      "member": "zombie/core/raknet/UdpConnection.class",
+      "sha256": "9c9bb471ff0c3dccdd0e52a3bb3c770327d02f0ad262187f950e660b2730e763",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T04",
+      "member": "zombie/network/packets/character/ZombieSimulationUnreliablePacket.class",
+      "sha256": "4aeb04968fc9bd8834d2b93c57266ea9641d6bd16b1b0e45d5cfa24197a023c3",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T05",
+      "member": "zombie/network/packets/character/ZombieSimulationReliablePacket.class",
+      "sha256": "15ccbb0820aeab1fc501a19562a86180b3383f3adc484476be5b82ba95be54b8",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T06",
+      "member": "zombie/network/packets/character/ZombieSynchronizationUnreliablePacket.class",
+      "sha256": "7e4477fd50dac4757819d0df5a8933c26c81fc19b92392db20f85ed8eaf582a4",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T07",
+      "member": "zombie/network/packets/character/ZombieSynchronizationReliablePacket.class",
+      "sha256": "e75af20704392f66b5d271ad9d6682fdc4564786fe5faa8adc46db7f9318731a",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T08",
+      "member": "zombie/network/packets/character/ZombieListPacket.class",
+      "sha256": "731e38beb2f0932f16f9f9de46c02bebc1091af9b32e84fb29ba830b2f806181",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T09",
+      "member": "zombie/network/packets/hit/PlayerHitZombiePacket.class",
+      "sha256": "88fd205bfb3bc37b85af9b61734fb5729a4c0d4b0581ce10c14f3425dfc3fb79",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T10",
+      "member": "zombie/network/GameClient.class",
+      "sha256": "99d1778ab2c2627ddcbc04fdbb435461289c3c3075c96cf70eae5c216193352b",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T11",
+      "member": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T12",
+      "member": "zombie/network/packets/character/ZombieSynchronizationPacket.class",
+      "sha256": "c6d61c3ea29ae775e638c68e11c9fe98fac28106f3d892c02c4e48f93c4aa186",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T13",
+      "member": "zombie/popman/NetworkZombiePacker.class",
+      "sha256": "5b202038b360877e8a308265e6bf7ce720e34d0c3670adfb3a7c5dbddaf5197e",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T14",
+      "member": "zombie/network/packets/character/ZombiePacket.class",
+      "sha256": "b7f75b36c8ec41a72537d03fe8aa6d681c432b3454d12e5d092af5f1faa31756",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "T15",
+      "member": "zombie/popman/NetworkZombieManager.class",
+      "sha256": "27af8b12cc9ab2af778cbce03ed546168c69976e63a905b16279445234d89ad8",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    }
+  ]
+}

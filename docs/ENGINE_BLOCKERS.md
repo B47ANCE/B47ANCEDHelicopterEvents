@@ -1,5 +1,29 @@
 # Engine blockers
 
+## Read-only implementation checkpoint — 2026-10-16
+
+The [radio preflight probe](SUPPORT_PREFLIGHT_PROBE.md) now implements the audit's smallest non-mutating diagnostic. It does not clear MS01-MS06, approve an armed/combat probe or satisfy any runtime gate. No real credentials, military item mutations, support dispatch or save writes are implemented. Earlier "no support implementation" statements describe their dated audit baselines; the new diagnostic is source/offline work only. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
+## Military support direction - 2026-10-15
+
+[Native lethal-result follow-up](NATIVE_LETHAL_RESULT_AUDIT.md) identifies a source-supported Lua Kill/die candidate and the zombie death listener that publishes native ZombieDeath. Completed removal drops the live ID; later snapshots for an unmapped ID are ignored. Owner fields are not unconditionally cleared: invalid IDs are pruned from native authorization lists. This narrows the missing terminal-entry/publication sub-blocker. A disposable lethal probe is CONDITIONAL for findings review; nonlethal gunfire/full MS04 remain unresolved, with client corpse timing/streaming, ID reuse and restart gates still NOT TESTED. No implementation or launch approval.
+
+[CSR air-support research](CSR_AIR_SUPPORT_RESEARCH.md) identifies server-selected zero-health kill attempts with client audio. It does not use an invisible NPC or supply a nonlethal result fence. The optional becomeCorpseSilently symbol is absent from the target packaged classes scanned; the verified setter itself sends no result or death transition. The completed native follow-up above identifies a terminal entry/publication path; it does not clear full MS04 or approve an instant-kill substitute.
+
+[Combat ordering follow-up](COMBAT_ORDERING_CONTRACT.md): native Lua commands and reliable zombie variants are reliable unordered; ordinary player hits are reliable ordered, without a common cross-stream order. For a living target, current-owner identity rejects A while B owns it but does not distinguish an old A packet after A-to-B-to-A. Absolute/minimum health corrections and unconditional handoff retry/skip have player-damage or duplicate/loss counterexamples. The 28-schedule offline model is not an engine test. O-C02/O-C03/O-C04 remain unresolved for that nonlethal protocol; its mutating probe remains NO-GO. The terminal native candidate above is narrower than full MS04.
+
+[Military Support MS01-MS06](MILITARY_SUPPORT_API_AUDIT.md) independently gate credential custody, original officer loot, durable authorization, virtual-attacker combat and runtime sound. Full-crash B01-B12 remain deferred; none was waived.
+
+[Lua-only MS04 follow-up](DOOR_GUNNER_LUA_FEASIBILITY.md): genuine native survivor plus ranged Hit is a CONDITIONAL diagnostic candidate, and Hit reaches native damage/death handling. The current-owner packet can still replace server health; safe ownership handoff, ordered nonlethal result publication and actor lifecycle are unresolved. A hidden NPC, owner=nil assignment, extra-update call or repeated health correction does not clear this contract. Complete armed support remains NO-GO; G-R01..10 all NOT TESTED.
+
+[Ownership/result access trace](GUNNER_OWNERSHIP_RESULT_AUDIT.md), O-C01..06: no complete supported living-target/nonlethal Lua path established. The engine's shared getFakeAttacker proxy improves that attacker lead, not authority. Zombie syncHealth/syncDamage inherit empty bodies; null owner bypasses the reassignment delay; player-hit relay requires real player/source identity. A custom result acknowledgement does not fence old native health packets. Those findings do not authorize a mutating nonlethal probe. The later native terminal candidate is documented separately above, with no implementation/launch approval.
+
+[Third-party NPC comparison](THIRD_PARTY_RESEARCH.md): examined A-Life paths delegate body execution to clients and separate registered NPC health from ordinary-zombie damage; Bandits has local hit/health rebroadcast paths; Remnants requires a Java agent. These are different execution/trust surfaces, not proof of our native fence. Server-approved owner-side result application remains UNKNOWN research; clients choosing shots/damage remains excluded. No code/assets/dependencies imported; MS04 unchanged, independent clean-room review pending.
+
+## Implementation status - 2026-10-15
+
+Audio definitions and protocol/lifecycle logic now exist in the [offline prototype](AUDIO_PROTOTYPE.md); A03 is now unverified engine/UI/admin behavior rather than absent source. A01/A02/A04/A05/A06 remain runtime gates. No audio or full-crash blocker is promoted to PASS; full-crash B01-B12 remain unchanged.
+
 ## Current Lua-only audio status - 2026-10-14
 
 Lua-only is mandatory. Former Java/bridge proposals are historical, not an exit route. The full-crash B01-B12 blockers below remain unchanged. A bounded audio-only candidate avoids world/cargo transactions but still has these separate runtime gates:
