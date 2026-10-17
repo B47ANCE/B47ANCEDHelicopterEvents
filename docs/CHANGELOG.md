@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.0-dev.4]
+- 2026-10-16: begin the handoffs' documented smallest safe prototype: independently default-disabled, server-resolved read-only Base.WalkieTalkie5 preflight, bounded requests and expiring client observations. No item/card/authorization/save writes, support menus, missions, following, loot, attraction or combat. Existing rotor behavior and artwork retained.
+- Add server sandbox toggle, English labels, offline Lua tests and dedicated probe acceptance plan. This is an additive development checkpoint within the pending initial 0.1.0 feature line; no breaking API/config/save change. Native/dedicated execution NOT TESTED; G7 and stable-release G8 blocked.
+
 ## [0.1.0-dev.3]
 - 2026-10-15: select the user-supplied helicopter PNG as root project thumbnail with exact bytes and recorded provenance; retain existing icon/poster and fallback art. Record Common Sense Context Menus requirements, authority boundaries and unexecuted UI/MP acceptance cases. Asset/documentation only, no support gameplay or API approval; version unchanged.
 - 2026-10-15: complete native lethal-result source audit: Lua exposure, Kill/die, registered native death publication, live-ID removal, conditional owner cleanup, main-loop player-hit processing and client corpse-order/expiry limits. Identify a narrower terminal probe candidate for review; no probe/gameplay implemented. Add 32 native fingerprints, a 17-case offline branch model and ten NOT TESTED lethal scenarios; nonlethal/full-release blockers remain.

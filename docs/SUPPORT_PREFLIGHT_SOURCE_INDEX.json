@@ -1,0 +1,47 @@
+{
+  "auditDate": "2026-10-16",
+  "gameBuild": "42.21",
+  "steamBuild": "25485521",
+  "runtime": "NOT TESTED",
+  "jarSha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "files": [
+    {
+      "path": "media/lua/server/ClientCommands.lua",
+      "sha256": "c9de3d3024a46e2b3ab1670c11f98885647bfb6d73114ff7896bf41e263923fd",
+      "lines": [
+        210,
+        210
+      ]
+    },
+    {
+      "path": "media/scripts/generated/items/radio.txt",
+      "sha256": "41ef575c15670e7ef538deecb5002f7ac741264194344cfd69eb4859ed27d60a",
+      "lines": [
+        115,
+        141
+      ]
+    }
+  ],
+  "members": [
+    {
+      "path": "zombie/inventory/ItemContainer.class",
+      "sha256": "a2ac7dd6235f91255dc57b91419a2c8609bdb105214cddf7fb445b70507b6f96",
+      "looseSha256": null
+    },
+    {
+      "path": "zombie/inventory/InventoryItem.class",
+      "sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "looseSha256": null
+    },
+    {
+      "path": "zombie/inventory/types/Radio.class",
+      "sha256": "cd123324550a66332d52f094be448d5574f68b6d15ec7e0de3d697c331094b49",
+      "looseSha256": null
+    },
+    {
+      "path": "zombie/radio/devices/DeviceData.class",
+      "sha256": "492af532cddfe49908a5f479e2749b8dc08334a6b661ab81eb81892926cdb102",
+      "looseSha256": null
+    }
+  ]
+}

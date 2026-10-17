@@ -1,5 +1,7 @@
 # Military support context-menu contract
 
+2026-10-16: the [read-only preflight diagnostic](SUPPORT_PREFLIGHT_PROBE.md) adds no player menu actions and does not make a radio eligible for support. Its temporary observation is not an authorization state or a substitute for server validation. The user subsequently requested implementation; affected custody/authorization/combat paths still remain blocked independently. The paragraph below distinguishes the original thumbnail/menu update from the referenced handoffs.
+
 Date: 2026-10-15. Version: [root VERSION](../VERSION). User requirements/design only. **CONDITIONAL design; implementation blocked by the applicable equipment, custody, authorization and targeting contracts.** No military menus, equipment or designator are implemented. Build 42.21 menu APIs/input paths and runtime behavior remain [UNKNOWN] / [RUNTIME GATE]; this document supplies no new API verification or gameplay authorization.
 
 ## Scope and interpretation

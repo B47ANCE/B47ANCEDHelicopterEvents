@@ -1,4 +1,11 @@
 VERSION = 1,
+option B47HE.EnableSupportPreflightProbe
+{
+    type = boolean,
+    default = false,
+    page = B47HESupport,
+    translation = B47HE_EnableSupportPreflightProbe,
+}
 option B47HE.EnableAudioFlights
 {
     type = boolean,

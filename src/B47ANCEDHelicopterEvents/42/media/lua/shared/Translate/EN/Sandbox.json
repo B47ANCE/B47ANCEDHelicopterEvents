@@ -1,4 +1,7 @@
 {
+  "Sandbox_B47HESupport": "B47ANCE'd Military Support Diagnostics",
+  "Sandbox_B47HE_EnableSupportPreflightProbe": "Enable read-only radio preflight probe",
+  "Sandbox_B47HE_EnableSupportPreflightProbe_tooltip": "Development diagnostic only; dedicated multiplayer NOT TESTED. Allows manual inspection of the requesting player's directly carried vanilla Army Walkie Talkie. No credentials, authorization, mission, item changes or combat. Defaults off in existing saves. Independent of audio flights.",
   "Sandbox_B47HE": "B47ANCE'd Helicopter Audio Prototype",
   "Sandbox_B47HE_EnableAudioFlights": "Enable audio flyovers",
   "Sandbox_B47HE_EnableAudioFlights_tooltip": "Experimental dedicated-server audio only; multiplayer NOT TESTED. No wreck, loot or zombie attraction. Disabling cancels current audio. Unsupported SP/host modes stay silent.",

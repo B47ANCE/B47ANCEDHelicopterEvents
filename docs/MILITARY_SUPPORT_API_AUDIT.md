@@ -1,5 +1,7 @@
 # Military Air Support API audit
 
+Current checkpoint (2026-10-16): the [read-only preflight diagnostic](SUPPORT_PREFLIGHT_PROBE.md) is implemented at the version in root VERSION, following the user's resume instruction. It is not support gameplay or an API/runtime approval. All audit observations below retain their original 0.1.0-dev.3 baseline and blockers; actual dedicated tests remain NOT TESTED.
+
 Date: 2026-10-15. Project version: [root VERSION](../VERSION), unchanged at 0.1.0-dev.3. Target: Build 42.21; installed Steam build 25485521. **Audit/design only. Overall first-release authorization/combat loop: NO-GO with currently verified contracts.** This is an evidence blocker, not a claim that every Lua-only approach is impossible. No support gameplay was implemented or run.
 
 ## Direction and evidence boundary

@@ -11,6 +11,8 @@ LUA = MOD / 'media/lua'
 expected = {
     'shared/B47HEAudio/Config.lua', 'shared/B47HEAudio/Protocol.lua',
     'server/B47HEAudio/Director.lua', 'client/B47HEAudio/Playback.lua',
+    'shared/B47HESupportProbe/Protocol.lua', 'server/B47HESupportProbe/Preflight.lua',
+    'client/B47HESupportProbe/Client.lua',
 }
 assert {p.relative_to(LUA).as_posix() for p in LUA.rglob('*.lua')} == expected
 seen = set()
@@ -33,16 +35,19 @@ for path in LUA.rglob('*.lua'):
         assert banned not in text, (path, banned)
     if 'client' not in path.parts:
         assert not re.search(r'getFreeEmitter|playSoundImpl|takeOwnershipOfEmitter', text), path
+    if 'B47HESupportProbe' in path.parts:
+        assert not re.search(r':(?:set[A-Z]\w*|Kill|die|Hit|Remove|AddItem|removeItem)\s*\(', text), path
+        assert not re.search(r'getModData|ModData\.|getCell|addSound|Helicopter\.', text), path
 info = dict(line.split('=', 1) for line in (MOD / 'mod.info').read_text().splitlines() if '=' in line)
 assert info['id'] == 'B47ANCEDHelicopterEvents'
 assert info['modversion'] == (ROOT / 'VERSION').read_text().strip()
 assert not any(key in info for key in ('require', 'pack', 'tiledef'))
 settings = (MOD / 'media/sandbox-options.txt').read_text()
 options = re.findall(r'option B47HE\.(\w+)\s*\{([^}]+)\}', settings)
-assert {name for name, _ in options} == {'EnableAudioFlights','FlightIntervalDays','FlightDurationSeconds'}
-assert len(options) == 3
+assert {name for name, _ in options} == {'EnableAudioFlights','FlightIntervalDays','FlightDurationSeconds','EnableSupportPreflightProbe'}
+assert len(options) == 4
 translation = json.loads((LUA / 'shared/Translate/EN/Sandbox.json').read_text())
-keys = {'Sandbox_B47HE'}
+keys = {'Sandbox_B47HE', 'Sandbox_B47HESupport'}
 for name, body in options:
     token = re.search(r'translation\s*=\s*(\w+)', body)[1]
     assert token == 'B47HE_' + name
