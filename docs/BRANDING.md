@@ -1,6 +1,14 @@
 # Fallback artwork
 
-Current authoring version: 0.1.0-dev.3
+Current authoring version: 0.1.0-dev.4
+
+## Selected project thumbnail — 2026-10-15
+
+The user selected the helicopter artwork supplied in this session as the project thumbnail. The authoritative selected image is root [thumbnail.png](../thumbnail.png): PNG, RGB, 1254x1254, 1,532,650 bytes, SHA-256 `46dd0ab5bc851ca2443a182db3be35eb0c3e3a69a304ec8f2ae27183fd7beb69`. It is an exact byte copy of the supplied image; no resizing, cropping or regeneration. Provenance: user-supplied project artwork, selected explicitly for this role. No additional third-party asset or license claim is inferred.
+
+The icon and poster, including their production mirrors, remain unchanged. The default thumbnail under assets/branding remains available as historical/fallback art; it must not overwrite this custom thumbnail. No uploader or package generator exists yet; any future authorized tooling must prefer root thumbnail.png and independently validate the selected distribution target's current image requirements. This records asset selection, not Workshop acceptance or publication. [TESTED: offline] PNG verification, dimensions, byte equality and SHA-256; visually inspected. In-game/Workshop rendering NOT TESTED.
+
+## Earlier fallback artwork records
 
 Use manually supplied artwork first, independently for each role. Only missing roles use assets/branding/B47_ICON_SMALL.png (64x64 mod icon) and B47_ICON.png (128x128 poster) and B47_THUMBNAIL.png (512x512 Workshop thumbnail). Copy bytes without resizing or regenerating. Existing Eyewear thumbnail and Buildable Fences poster are custom and preserved. Future custom replacements take precedence. No UI project is included.
 

@@ -1,0 +1,293 @@
+{
+  "auditDate": "2026-10-15",
+  "snapshotUtc": "2026-10-15T23:39:46.237202+00:00",
+  "projectBaseline": "cc494cf2f6cd92dd9295643eacdf2f7431920490",
+  "projectRuntime": "NOT TESTED",
+  "scope": "Read-only inspection; no code/assets imported. Paths relative to Workshop item. Staged files are not a verified final package.",
+  "sources": [
+    {
+      "name": "ALife",
+      "workshopId": "3803984183",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183",
+      "author": "Vice / A-Life team",
+      "observedVersion": "1.4.2",
+      "sourceState": "download_staging_not_final",
+      "itemRelativeRoot": "mods/ProjectALifeNPCs/42.20",
+      "files": [
+        {
+          "id": "A01",
+          "path": "mod.info",
+          "sha256": "2ed8e9296b2b7582b93724d0ef1330e0debcf2ff221042c402bd3bcc415ccbac",
+          "lineCount": 8,
+          "references": [
+            [
+              1,
+              8
+            ]
+          ]
+        },
+        {
+          "id": "A02",
+          "path": "media/lua/shared/ProjectALife/Core/ALifeExecutor.lua",
+          "sha256": "acef3c45b61044baa774c1ff74f25e8dd4c7ca254133af8f804de2d6baed9f3f",
+          "lineCount": 3319,
+          "references": [
+            [
+              238,
+              283
+            ],
+            [
+              523,
+              566
+            ],
+            [
+              669,
+              740
+            ],
+            [
+              2262,
+              2297
+            ],
+            [
+              3292,
+              3309
+            ]
+          ]
+        },
+        {
+          "id": "A03",
+          "path": "media/lua/shared/ProjectALife/Shells/ALifeShellSimulation.lua",
+          "sha256": "878e329d02d476a2bfabdbf1bf8756e80bdd9146f37f820bfff1b0bb43308990",
+          "lineCount": 814,
+          "references": [
+            [
+              329,
+              345
+            ],
+            [
+              510,
+              543
+            ]
+          ]
+        },
+        {
+          "id": "A04",
+          "path": "media/lua/shared/ProjectALife/Shells/ALifeAIFence.lua",
+          "sha256": "2b65532f7f632a037297d56f526b2b70db5fc6b13f758b2eb14ba5eb5d888293",
+          "lineCount": 3760,
+          "references": [
+            [
+              1827,
+              1830
+            ]
+          ]
+        },
+        {
+          "id": "A05",
+          "path": "media/lua/server/ProjectALife/Behaviours/ALifeModuleGunner.lua",
+          "sha256": "69eb0828c475f700416f9c282ae151fbfec702c776b53d8d40e392b016ddda89",
+          "lineCount": 689,
+          "references": [
+            [
+              247,
+              307
+            ]
+          ]
+        },
+        {
+          "id": "A06",
+          "path": "media/lua/server/ProjectALife/Combat/ALifeCombatStrike.lua",
+          "sha256": "2eff0ad55f7cff046764bd9b50ddcd4b1a193c567ae4ff9dd15aed05ba7c54ad",
+          "lineCount": 1485,
+          "references": [
+            [
+              843,
+              866
+            ],
+            [
+              890,
+              945
+            ]
+          ]
+        },
+        {
+          "id": "A07",
+          "path": "media/lua/shared/ProjectALife/Shells/ALifeNPCHitRelay.lua",
+          "sha256": "0b20f04d7aff51c97502e8c37fed46369d67698b04ccd14f46631fb1d74fbaea",
+          "lineCount": 502,
+          "references": [
+            [
+              54,
+              68
+            ]
+          ]
+        }
+      ],
+      "bundledJavaMembersInSelectedModRoot": [],
+      "licenseStatus": "No affirmative reuse license established; inspection only."
+    },
+    {
+      "name": "Bandits",
+      "workshopId": "3268487204",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204",
+      "author": "Slayer / Piotr Pawlowski",
+      "observedVersion": "Exact version UNKNOWN; local metadata V2 B42.20+ SP/MP",
+      "sourceState": "installed_content",
+      "itemRelativeRoot": "mods/Bandits/42.21",
+      "files": [
+        {
+          "id": "B01",
+          "path": "mod.info",
+          "sha256": "026723713770c55c1f297ae2593f16a8c86d7cb5645ee597503cf3b5d10ece0f",
+          "lineCount": 12,
+          "references": [
+            [
+              1,
+              12
+            ]
+          ]
+        },
+        {
+          "id": "B02",
+          "path": "media/lua/client/BanditUpdate.lua",
+          "sha256": "7c202dc0cbbcb2c4251a277b87fe1a3b454ca69021b7d9a9b0e0ffc032242287",
+          "lineCount": 2645,
+          "references": [
+            [
+              2071,
+              2076
+            ],
+            [
+              2267,
+              2274
+            ],
+            [
+              2632,
+              2639
+            ]
+          ]
+        },
+        {
+          "id": "B03",
+          "path": "media/lua/shared/ZombieActions/ZAShoot.lua",
+          "sha256": "81d5f2427943d072682aa0d536f333fb9ac391f3a2ca832226f5228562bdf48a",
+          "lineCount": 107,
+          "references": [
+            [
+              25,
+              48
+            ],
+            [
+              90,
+              100
+            ]
+          ]
+        },
+        {
+          "id": "B04",
+          "path": "media/lua/shared/BanditUtils.lua",
+          "sha256": "ab65995505dd93e1cd6be0d4f8cf0eda973736fbd30f68f62a0af9203038cf69",
+          "lineCount": 1529,
+          "references": [
+            [
+              243,
+              245
+            ],
+            [
+              350,
+              379
+            ],
+            [
+              551,
+              575
+            ]
+          ]
+        },
+        {
+          "id": "B05",
+          "path": "media/lua/server/BanditServerSync.lua",
+          "sha256": "925d9b7b7b6b51693eaf36a795ee1cd104a6e164c6c686112a9db175c0c19098",
+          "lineCount": 57,
+          "references": [
+            [
+              1,
+              6
+            ],
+            [
+              47,
+              57
+            ]
+          ]
+        },
+        {
+          "id": "B06",
+          "path": "media/lua/client/BanditClientCommands.lua",
+          "sha256": "2df8ebd5e79c41e3377839d69ca8101f8c69482fd3f349092485bd498299383f",
+          "lineCount": 63,
+          "references": [
+            [
+              28,
+              40
+            ]
+          ]
+        },
+        {
+          "id": "B07",
+          "path": "media/lua/shared/ZombieActions/ZASmack.lua",
+          "sha256": "2bceb5ef27fffe9262f4881c29a5727b8ddd11ee2bbd5e4931bac8e972aa37b0",
+          "lineCount": 653,
+          "references": [
+            [
+              418,
+              451
+            ]
+          ]
+        }
+      ],
+      "licenseStatus": "Author public notice restricts copying/reupload; no reuse permission obtained."
+    },
+    {
+      "name": "Remnants",
+      "workshopId": "3738362476",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3738362476",
+      "author": "Patrick / Datpat and Klosop",
+      "observedVersion": "Local UNKNOWN; public Workshop v0.3.0",
+      "sourceState": "download_staging_not_final",
+      "itemRelativeRoot": "mods/ProjectRemnants",
+      "files": [
+        {
+          "id": "R01",
+          "path": "42/mod.info",
+          "sha256": "a46157ffad73b15f061b7a3e91df677d617d939686309f63f4c7e3db83842244",
+          "lineCount": 8,
+          "references": [
+            [
+              1,
+              8
+            ]
+          ]
+        },
+        {
+          "id": "R02",
+          "path": "42/media/lua/shared/NPCFW_Main.lua",
+          "sha256": "1acab2b7e804f842443418ae345f50fcb6dfa7db1c4733ab7ab3d39b307dac51",
+          "lineCount": 79,
+          "references": [
+            [
+              24,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "R03",
+          "path": "NPCFW.jar",
+          "sha256": "5229eb5a6871514de274feb91e8db353fdbde8fb42fd9741493d40cde85ba19e",
+          "javaAgentManifest": true,
+          "inspection": "Archive metadata only; no class bodies decompiled/executed."
+        }
+      ],
+      "licenseStatus": "Author public notice restricts copying/reupload; no reuse permission obtained."
+    }
+  ]
+}

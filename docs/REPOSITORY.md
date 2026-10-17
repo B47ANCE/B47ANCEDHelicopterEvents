@@ -2,7 +2,9 @@
 
 Canonical version: root VERSION. Current public mirrors: README, mod.info, docs/BRANDING.md authoring header, newest docs/CHANGELOG entry and docs/VALIDATION_STATUS.json, selected by version-inventory.json.
 
-Authoritative Lua runtime source: src/B47ANCEDHelicopterEvents/42; confirmed Mod ID B47ANCEDHelicopterEvents under the authorized bounded contract. Existing approved assets/branding icon/poster bytes are mirrored into the source tree without regeneration. Authoring Workshop thumbnail remains in assets/branding; no Workshop item, release package or generated staging exists. No package script was created or executed. Python/Lupa and tests/requirements.txt are offline tools, never game dependencies. Prior Phase 0 source snapshots/design remain historical evidence; see [current scope](AUDIO_PROTOTYPE.md).
+The current source also includes the independently default-disabled [read-only radio preflight probe](SUPPORT_PREFLIGHT_PROBE.md), with its own Lua namespace and fake-boundary tests. No support gameplay or persistent state is introduced.
+
+Authoritative Lua runtime source: src/B47ANCEDHelicopterEvents/42; confirmed Mod ID B47ANCEDHelicopterEvents under the authorized bounded contract. Existing approved assets/branding icon/poster bytes are mirrored into the source tree without regeneration. The selected custom project thumbnail is root [thumbnail.png](../thumbnail.png); assets/branding retains fallback art, with provenance in [BRANDING.md](BRANDING.md). No Workshop item, release package or generated staging exists. No package script was created or executed. Python/Lupa and tests/requirements.txt are offline tools, never game dependencies. Prior Phase 0 source snapshots/design remain historical evidence; see [current scope](AUDIO_PROTOTYPE.md).
 
 Public repository: https://github.com/B47ANCE/B47ANCEDHelicopterEvents. Main holds the initial research baseline; subsequent changes use feature branches and PRs. No stable tags or runtime approvals are implied by Git history. No license/redistribution permission is invented for the game or its source.
 
@@ -19,6 +21,7 @@ python -B scripts/check_versions.py --root .
 python -B scripts/validate_phase0_docs.py
 python -B scripts/validate_audio_sources.py
 python -B scripts/test_audio.py
+python -B scripts/test_support_probe.py
 ```
 
 The audio documentation update supplies the second validator; the initial baseline used the version check and a staged-file security review. Packages are deferred. scripts/check_versions.py --release is only applicable after separately authorized artifacts and release gates. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
