@@ -2,17 +2,46 @@
   "schema": 1,
   "id": "heli",
   "name": "Helicopter Events",
-  "version": "0.1.0-dev.4",
-  "source_digest": "47f9f594f23793a315fdc068ea8c6477fbec28c21bf649f73412b72091ef5d61",
+  "version": "0.1.0-dev.6",
+  "source_digest": "949e572603d81bfe030bf132e5fe01341f47eca8ee2cc5bd77e5a924daf61070",
   "reviewed": true,
   "features": [
-    {"status": "Foundation", "text": "Default-disabled dedicated-only rotor audio probe with expiring server snapshots; offline-tested, native runtime NOT TESTED."},
-    {"status": "Foundation", "text": "Default-disabled, server-resolved read-only Army Walkie Talkie preflight diagnostic; no authorization or inventory mutation."},
-    {"status": "Planned", "text": "Military Air Support equipment, original-card custody, single-use authorization, following, officer loot and combat; not implemented."},
-    {"status": "Planned", "text": "Future crash-site wreck artwork has two locally retained high-resolution Meshy reference models; optimization, component authoring and PZ export NOT TESTED."},
-    {"status": "Blocked", "text": "Dynamic crash materialization, structural destruction and durable crash-site recovery retain their Lua-only NO-GO contracts."}
+    {
+      "status": "Foundation",
+      "text": "Default-disabled dedicated-only rotor audio probe with expiring server snapshots; offline-tested, native runtime NOT TESTED."
+    },
+    {
+      "status": "Foundation",
+      "text": "Default-disabled, server-resolved read-only Army Walkie Talkie preflight diagnostic; no authorization or inventory mutation."
+    },
+    {
+      "status": "Planned",
+      "text": "Military Air Support equipment, original-card custody, single-use authorization, following, officer loot and combat; not implemented."
+    },
+    {
+      "status": "Foundation",
+      "text": "Two locally optimized wreck-site assets, one static mesh/material per site. Default-disabled decorative upright probe at fixed ground 8871,8253,0 uses explicit server-validated admin intent, one native object and a per-process attempt latch; offline-tested only. No automatic spawning/regeneration, loot, destruction or collision promise."
+    },
+    {
+      "status": "Blocked",
+      "text": "Dynamic crash materialization, structural destruction and durable crash-site recovery retain their Lua-only NO-GO contracts."
+    }
   ],
-  "limits": "Source review only, not SP/dedicated runtime proof. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. Probes do not implement gameplay and do not support SP/host. No Workshop item assigned. Wreck source binaries/previews are local and ignored, not public backups; distribution provenance and Blender/native/game export remain unresolved.",
-  "evidence": ["README.md", "VERSION", "docs/SUPPORT_PREFLIGHT_PROBE.md", "docs/CRASH_MODEL_ASSETS.md", "assets/crash-sites/MANIFEST.json", "docs/ENGINE_BLOCKERS.md"],
+  "limits": "Source/offline review only. Native GLB/materials, physical scale, large-mesh culling, Linux/headless delivery/save/restart and dedicated correctness NOT TESTED. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No military support gameplay or SP/host placement. No Workshop item. Supplied and prepared wreck binaries stay local/ignored pending distribution provenance; public recipe/receipts are not binary backups. Probe has no durable identity, recovery ledger or exactly-once-across-restarts guarantee.",
+  "evidence": [
+    "README.md",
+    "VERSION",
+    "docs/SUPPORT_PREFLIGHT_PROBE.md",
+    "docs/CRASH_MODEL_ASSETS.md",
+    "docs/STATIC_CRASH_MODEL_OPTIMIZATION.md",
+    "assets/crash-sites/OPTIMIZATION_REPORT.json",
+    "assets/crash-sites/MANIFEST.json",
+    "docs/STATIC_WRECK_API_AUDIT.md",
+    "docs/STATIC_WRECK_SOURCE_INDEX.json",
+    "docs/ENGINE_BLOCKERS.md",
+    "docs/DECORATIVE_WRECK_PROBE.md",
+    "docs/WRECK_PROBE_SOURCE_INDEX.json",
+    "assets/crash-sites/WRECK_PROBE_ASSETS.json"
+  ],
   "relations": []
 }

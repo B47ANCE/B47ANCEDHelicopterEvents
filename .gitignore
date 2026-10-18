@@ -30,3 +30,7 @@ local.settings.json
 # Public intake manifest records hashes; these are not runtime distribution assets.
 /assets/crash-sites/local-source/
 /assets/crash-sites/local-previews/
+/assets/crash-sites/local-optimized/
+# Locally prepared supplied-model derivatives; redistribution provenance remains unresolved.
+/src/B47ANCEDHelicopterEvents/42/media/models_X/B47HE/
+/src/B47ANCEDHelicopterEvents/42/media/textures/B47HE/

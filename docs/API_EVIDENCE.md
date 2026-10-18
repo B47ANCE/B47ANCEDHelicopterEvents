@@ -1,5 +1,13 @@
 # API evidence
 
+## Decorative implementation bindings — 2026-10-17
+
+[Diagnostic evidence](DECORATIVE_WRECK_PROBE.md) and [WP01-WP15 fingerprints](WRECK_PROBE_SOURCE_INDEX.json) record server-native admin role comparison, global annotated fileExists/getScriptManager, loaded ServerMap lookup, public square inspection overloads, static definition getters and texture-backed fallback construction/save. Offline Lua adapters are fake boundaries, not engine invocation or native persistence proof. Earlier source-only audit at 0.1.0-dev.5 remains dated; implementation is a separately authorized bounded 0.1.0-dev.6 slice.
+
+## Single static wreck evidence — 2026-10-17
+
+[Exact signatures, instruction offsets and limits](STATIC_WRECK_API_AUDIT.md), backed by [W01-W31/WT01-WT06 fingerprints](STATIC_WRECK_SOURCE_INDEX.json), trace native GLB import and static named model definitions; Lua exposer/Kahlua binding; IsoObject.setSpriteModelName, save/load and complete publication; square insertion/invalidation; chunk persistence/streaming; and the separate PhysicsMesh system. Installed farming Lua independently demonstrates server IsoObject.new -> AddTileObject -> transmitCompleteItemToClients. There is no executed Kahlua/import/dedicated evidence. New fingerprints also identify differing loose Model/ModelManager/IsoObjectModelDrawer dependencies; packaged observations do not validate the patched runtime or authenticate a clean depot. Raw source/dumps remain private/ignored.
+
 ## Read-only preflight evidence — 2026-10-16
 
 [Probe evidence and signatures](SUPPORT_PREFLIGHT_PROBE.md) reuse radio/device and command/clock bindings and add the exact vanilla server lookup caller and nonrecursive getItemWithID bytecode observation. [Fingerprints](SUPPORT_PREFLIGHT_SOURCE_INDEX.json) identify two installed text files and four packaged/loose members under the unchanged Build 42.21 JAR/Steam baseline. No native invocation or clean/patched equivalence inferred. Offline Lua fake tests do not constitute dedicated evidence.

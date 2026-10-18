@@ -1,5 +1,123 @@
 # Phase 0 validation records
 
+## PR #9 review — 2026-10-17
+
+Reviewed head `abb7c5130adeb19dd47a290504f8e4a7ce0f90d7` against `assets/static-crash-models` at `def69a4e999382ecb8427b2c588cf15cbc98b2a8`. Review scope: Lua-only runtime, server ownership, bounded default-disabled manual placement and evidence accuracy. No blocking runtime-code finding; native behavior remains untested. The connection-to-player command routing, role checks, script type/exposure and ordinary object save path were rechecked in private packaged-source inspection, not invoked as engine APIs. No clean-install or dedicated claim follows from this inspection.
+
+One authoring-tool defect was reproduced offline before correction: an equivalent CRLF receipt was rejected as differing bytes with this repository's `core.autocrlf=true`. Preparation now compares JSON content while preserving an existing receipt's bytes; binary destinations still require exact bytes and changed provenance still refuses before output writes. Four isolated regression cases use approved-input stubs: initial preparation/idempotence, equivalent CRLF receipt, changed provenance and differing binary destination. They exercise file behavior, not GLB decoding, texture conversion or native loading. This is a correction within unreleased 0.1.0-dev.6; runtime Lua, configuration, real assets and save behavior are unchanged.
+
+[TESTED: offline] Review commands (bundled CPython executable denoted `$auditPython`):
+
+```powershell
+& $auditPython -B scripts/check_versions.py --root .
+& $auditPython -B scripts/validate_phase0_docs.py
+& $auditPython -B scripts/validate_audio_sources.py
+& $auditPython -B scripts/validate_wreck_probe.py --require-local-assets
+& $auditPython -B scripts/test_wreck_probe.py
+& $auditPython -B scripts/test_audio.py
+& $auditPython -B scripts/test_support_probe.py
+& $auditPython -B scripts/test_wreck_asset_preparation.py
+& $auditPython -B scripts/validate_crash_models.py --folder assets/crash-sites/local-optimized/v0.1.0-dev.5
+& $auditPython -B .tmp-wreck-probe/verify.py
+& $auditPython "$env:USERPROFILE/.codex/b47anced-team/tools/mod_overview.py" --describe-repository . --project-id heli
+git diff --check
+git diff --cached --check
+```
+
+All listed offline checks PASS: 51 fake-boundary Lua scenarios and 12 event adapters across the three probes, four isolated preparation cases, static/version/localization/case/source/asset provenance checks and whitespace. Private helpers/native snapshots remain ignored; public diff/tracked-file inspection excludes secrets, private player data, native bodies, logs and generated binaries. Overview digest refreshed. No real asset preparation/conversion rerun for this correction. GitHub reported no checks, branch protection or branch rules on the PR's existing target; that absence is not a CI PASS. Final reviewed correction SHA, push and merge outcome are recorded in Git/PR history, not fabricated here.
+
+**Native import/rendering/collision, replication, chunk/save/restart behavior, Linux/headless and dedicated MP remain NOT TESTED. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.** Locally retained binaries are not public backups and redistribution provenance remains unresolved. No game/server launch, installed-file edit, package, deployment or Workshop publication. PR #9 merges only into its named asset branch; its parent PRs/main require separate review and authorization.
+
+## Decorative wreck implementation — 2026-10-17
+
+Canonical version 0.1.0-dev.6: additive bounded diagnostic within the pending initial 0.1.0 line; no breaking stable API/save migration claim. Baseline def69a4e999382ecb8427b2c588cf15cbc98b2a8 on assets/static-crash-models. Freshness REVIEW only for the known previous-turn audit documents; exact upstream, 0 ahead/behind, 2 ahead/0 behind main, no unfinished Git operation. Those audit changes are preserved in this implementation's review branch. User selected fixed x=8871,y=8253; ground z=0 is explicit in the probe contract. [Implementation](DECORATIVE_WRECK_PROBE.md), [packaged source inputs](WRECK_PROBE_SOURCE_INDEX.json), [local asset receipt](../assets/crash-sites/WRECK_PROBE_ASSETS.json).
+
+Actual commands from the repository root (the explicit existing bundled CPython 3.12 executable is denoted `$auditPython`; no bare Windows Store alias, game or server executable):
+
+```powershell
+& $auditPython -B scripts/check_versions.py --root .
+& $auditPython -B scripts/prepare_wreck_probe_assets.py
+& $auditPython -B scripts/validate_crash_models.py --folder assets/crash-sites/local-optimized/v0.1.0-dev.5
+& $auditPython -B scripts/validate_audio_sources.py
+& $auditPython -B scripts/validate_wreck_probe.py --require-local-assets
+& $auditPython -B scripts/validate_phase0_docs.py
+& $auditPython -B scripts/test_wreck_probe.py
+& $auditPython -B scripts/test_audio.py
+& $auditPython -B scripts/test_support_probe.py
+& $auditPython -B .tmp-wreck-probe/verify.py
+& $auditPython "$env:USERPROFILE/.codex/b47anced-team/tools/mod_overview.py" --describe-repository . --project-id heli
+git diff --check
+git diff --cached --check
+```
+
+[TESTED: offline] Version consistency before/after changes PASS; current version mirrors synchronized. Wreck suite PASS: **20** Lua 5.1 fake-boundary behavior scenarios plus **5** event adapter cases (server normal/publication-fault, client, host, SP). Existing rotor **17** scenarios/3 adapters and read-only radio **14** cases/4 adapters PASS; their seven Lua source files remain byte-equivalent to baseline after text newline normalization. All runtime Lua compiles in offline Lua 5.1; this is not Kahlua/native dispatch. New cases cover server authority, disabled/malformed settings, timestamp/nonce/schema checks, missing assets/squares/chunks, all inspected obstruction lists, pre-insertion revalidation, reentry, consumed latch after construction/insertion/publication exceptions, ordinary removal, explicit fresh-session request with retained native object, client timeout/reconnect and no automatic retry/startup creation. Expected injected failure output explicitly reports a halted diagnostic, not successful rollback.
+
+Asset preparation/retention/integrity PASS offline: supplied four Downloads originals plus four source copies unchanged, optimized GLB/FBX/BLEND receipts unchanged, exact local runtime GLB copy and RGB-identical 2048x2048 base-color PNG, no original texture modification. Existing mod icon/poster unchanged. Original intake/optimization reports retain their dated checkpoints. New script refuses differing destinations; derived source assets remain ignored, not public GitHub binaries or deployment files. No Meshy/Blender/native importer invocation, paid operation or package build in this implementation turn.
+
+Read-only packaged inspection verifies the same installed JAR/Steam build and all preceding/current source-index member/loose/text hashes. Public API bindings, global annotations and selected HiddenFromLua metadata inspected with existing javap. No classes loaded as PZ; loose class differences/clean-depot provenance remain unresolved. Two qualified findings recorded in the unmanaged local API draft (347 records, schema validation PASS), not the installed managed catalog. Overview reviewed and digest refreshed; private helpers/source snapshots and supplied/prepared model binaries excluded from public candidates. Current public source check retains original audio/radio mutation bans and permits the one new native insertion/publication only in the wreck server adapter; client world mutation stays forbidden.
+
+During development the expanded static checker initially asserted a server-only exception even when the banned token was absent from client code. That checker condition was corrected to test token presence; no client world-mutation call was allowed. The 20th wreck case additionally verifies that a previously refused nonce cannot turn into placement after a settings change. All accepted final checks PASS; initial failures are not represented as runtime defects or approvals.
+
+**Native import/materials, physical calibration, full-size culling, fallback/FBO, Linux/headless operation, two-client replication/chunk races, ordinary and interrupted saves/restarts, interactions and performance: NOT TESTED.** No game/server launched, installed files changed, deployment, release packaging or Workshop publication. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. Git commit/push/PR outcome is reported separately; a source backup is not binary provenance, runtime approval or release authorization.
+
+## Static wreck API audit — 2026-10-17
+
+Read-only source investigation and documentation at unchanged canonical 0.1.0-dev.5. Baseline `def69a4e999382ecb8427b2c588cf15cbc98b2a8`, branch `assets/static-crash-models`. Repository freshness PASS before edits: exact upstream SHA, 0 ahead/0 behind, 2 ahead/0 behind origin/main, clean, no unfinished operation. No pull/rebase/reset or game launch. No runtime/source/assets/scripts changed, no packages produced. New evidence: [focused audit](STATIC_WRECK_API_AUDIT.md) and [portable source fingerprints](STATIC_WRECK_SOURCE_INDEX.json); twelve dedicated W-R cases remain NOT TESTED.
+
+Actual inspection used the existing JDK javap executable on the installed packaged JAR only, with `-classpath <verified-JAR> -c -p <class>` (also `-v` for IsoObject/packet metadata). No game classes were loaded or invoked. Raw output/helpers stay under ignored `.tmp-static-site-audit/`. Installed Lua/scripts and source/optimized models were read only. The initial bare `python` alias was unavailable; successful checks used the existing bundled CPython 3.12 executable explicitly. No new runtime/tool packages installed for this audit.
+
+Exact validation commands from the repository root (`$auditPython` denotes that explicitly resolved existing interpreter):
+
+```powershell
+& $auditPython -B .tmp-static-site-audit/verify.py
+& $auditPython -B scripts/check_versions.py --root .
+& $auditPython -B scripts/validate_phase0_docs.py
+& $auditPython -B scripts/validate_audio_sources.py
+& $auditPython -B scripts/validate_crash_models.py --folder assets/crash-sites/local-optimized/v0.1.0-dev.5
+& $auditPython -B .tmp-static-site-audit/catalog.py
+& $auditPython "$env:USERPROFILE/.codex/b47anced-team/tools/mod_overview.py" --describe-repository . --project-id heli
+git diff --check
+```
+
+[TESTED: offline] PASS: JAR/Steam-build recheck; all 31 packaged-member hashes and corresponding loose-file presence/hashes; six installed text hashes/line bounds; all four Downloads originals and four retained copies; critical native loader/setter/save/invalidation/publication/headless/physics branch observations. Existing GLB validator PASS for exact output fingerprints, single static meshes, finite geometry/UV/index data and unchanged embedded original maps. Version/document links/Lua-only/case/localization/artwork/static checks PASS. Reviewed overview digest refreshed after README change. Three qualified source-only findings recorded in the unmanaged local API draft, whose schema validator PASSed (345 records at this checkpoint); no managed catalog modified. Source-only draft statuses do not grant runtime approval.
+
+No unchanged gameplay/fake-Lua suites rerun: this task changes no runtime source or settings. No Blender/native import rerun; prior Blender evidence remains tied to its original authoring checkpoint. No server/client/save launched or changed. Clean-depot provenance, native import/materials, full-size culling, collision/navigation, join/download races, native removal/tampering, save/restart recovery and performance remain UNKNOWN / RUNTIME GATE. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No commit, push, deployment or publication performed by this audit; documentation is local for findings review.
+
+## Single static wreck optimization — 2026-10-17
+
+Baseline 8dc59c44e3bd645b0f9ba5625af3628d28ae5769; feature branch assets/static-crash-models builds on the intake PR. Canonical version/mirrors advance to 0.1.0-dev.5 as an authoring checkpoint in the pending initial 0.1.0 line; no runtime behavior, public Lua API, settings or save change. User direction supersedes component separation for current crash-site artwork: one static mesh/site. [Optimization assessment](STATIC_CRASH_MODEL_OPTIMIZATION.md) and [receipt](../assets/crash-sites/OPTIMIZATION_REPORT.json) distinguish actual local Blender work from still-unverified PZ behavior. Originals and the intake manifest are byte-unchanged.
+
+Exact commands, from repository root (ordinary Python is the bundled 3.12 interpreter; the isolated executable below is CPython 3.11.9 with bpy 4.5.3):
+
+```powershell
+& ./.tmp-model-optimization/python311/python.exe -B scripts/optimize_crash_models.py --site upright --targets 25000 50000 --output .tmp-model-optimization/upright-r2
+& ./.tmp-model-optimization/python311/python.exe -B scripts/optimize_crash_models.py --site collapsed --targets 25000 50000 --output .tmp-model-optimization/collapsed-r2
+& ./.tmp-model-optimization/python311/python.exe -B scripts/optimize_crash_models.py --site upright --targets 25000 --output .tmp-model-optimization/upright-approved
+& ./.tmp-model-optimization/python311/python.exe -B scripts/optimize_crash_models.py --site collapsed --targets 25000 --output .tmp-model-optimization/collapsed-approved
+& ./.tmp-model-optimization/python311/python.exe -B scripts/finalize_crash_models.py --site upright --candidate .tmp-model-optimization/upright-approved/crash_site_upright_25000.blend --output assets/crash-sites/local-optimized/v0.1.0-dev.5/upright
+& ./.tmp-model-optimization/python311/python.exe -B scripts/finalize_crash_models.py --site collapsed --candidate .tmp-model-optimization/collapsed-approved/crash_site_collapsed_25000.blend --output assets/crash-sites/local-optimized/v0.1.0-dev.5/collapsed
+& ./.tmp-model-optimization/python311/python.exe -B scripts/check_crash_model_readback.py --site upright --folder assets/crash-sites/local-optimized/v0.1.0-dev.5/upright --reference-report .tmp-model-optimization/upright-approved/report.json
+& ./.tmp-model-optimization/python311/python.exe -B scripts/check_crash_model_readback.py --site collapsed --folder assets/crash-sites/local-optimized/v0.1.0-dev.5/collapsed --reference-report .tmp-model-optimization/collapsed-approved/report.json
+python -B scripts/validate_crash_models.py --folder assets/crash-sites/local-optimized/v0.1.0-dev.5
+python -B .tmp-model-optimization/receipt.py
+python -B .tmp-model-optimization/verify_iteration.py
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+git diff --check
+git diff --cached --check
+```
+
+[TESTED: offline] Two 25k and two 50k Blender collapse candidates were visually compared; 25k was selected. Final GLBs contain 24,969/24,986 triangles after export cleanup, 97.351%/96.819% lower than source. GLB byte sizes fall 69.834%/65.527%; three source 2048px JPEG maps remain encoded byte-for-byte unchanged. All eight source fingerprints (four retained copies/four original Downloads files) match intake; output/source folders are distinct and only generated files were written. Final .blend/GLB/FBX each independently reopen as one nonanimated mesh/material with one UV layer, matching triangle count and bounds/ground pivot within 1e-5 source units. FBX's two bound images do not preserve the packed metallic/roughness input; all maps are supplied separately, GLB/.blend preserve all three. FBX PBR equivalence/native compatibility is not claimed.
+
+[TESTED: offline render QA] Four source-fixed Cycles CPU renders of independently re-imported final GLBs pass sampled art criteria: silhouette IoU 0.98486-0.99384 (minimum 0.98) and foreground RGB NRMSE 0.06036-0.07165 (maximum 0.10). Visual comparison reviewed. These are 512px/two-view authoring checks, not full-angle geometry, actual PZ fidelity or performance proof. Final output hashes and preview hash are recorded; binary outputs and local private helpers remain ignored.
+
+Tooling: live Blender MCP remained disconnected. Official portable download endpoints returned 403, so no portable executable was installed/run. The official bpy 4.5.3 wheel was installed into an isolated ignored target; its SHA matched PyPI metadata. The isolated CPython executable signature was Valid/Python Software Foundation. No Meshy/paid service, live Blender scene or saved preferences were used. Native tool libraries are authoring-only, outside runtime source. Tool hashes are in the receipt; no dependency was added to the mod.
+
+Development corrections: the first guard stopped on a dynamic glTF enum whose RNA list was empty; the recipe now validates its registered callback metadata. Early r2 GLBs used keep-original-images with packed inputs and omitted textures; those GLBs were rejected. Approved candidates/final exports use packed-image export and require all three source texture hashes. Embedded Python's isolated path needed explicit sibling-script imports. Readback now requires exact final export triangle counts within the selected budget, rather than assuming cleanup leaves precisely 25,000. All accepted outputs passed the corrected independent checks. Earlier failed intermediates remain private, never presented as accepted exports.
+
+Version consistency PASS before/after; documentation/source/localization/case checks STATIC PASS. Current overview/version/source digest and recipe/output fingerprints verified. Runtime Lua and tests are byte-unchanged; only mod.info's canonical version mirror changes. No gameplay suite rerun was justified for unchanged Lua. Public staged/tracked review excludes all binary models/previews/toolchains, native/third-party source, secrets, logs and local settings. Existing CI/runtime evidence is not promoted; commit/push/PR status is reported separately. Physical scale, native loader/materials, collision, culling/streaming, world placement and persistence remain NOT TESTED/blocked as applicable. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No game/server launch, game-install modification, release package, deployment or publication.
+
 ## Deferred wreck-model intake — 2026-10-17
 
 Baseline main f9c55d7911bda580c0cdc21b55a4776e2a52345b; named branch assets/crash-model-intake. Earlier PRs #4/#5/#6 were merged; old feature source tree was identical, and no user files were reconciled/reset. Root version remains 0.1.0-dev.4: asset-reference/documentation work only, no new runtime/export/API/config/save checkpoint. [CRASH_MODEL_ASSETS.md](CRASH_MODEL_ASSETS.md) records the source/preview limitations and pending adaptation. [Manifest](../assets/crash-sites/MANIFEST.json) pins four supplied sources and archive/image/mesh observations. Sources/previews are locally retained and ignored, never claimed as public backups. No original Download was modified.

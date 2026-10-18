@@ -1,4 +1,11 @@
 VERSION = 1,
+option B47HE.EnableDecorativeWreckProbe
+{
+    type = boolean,
+    default = false,
+    page = B47HEWreckProbe,
+    translation = B47HE_EnableDecorativeWreckProbe,
+}
 option B47HE.EnableSupportPreflightProbe
 {
     type = boolean,

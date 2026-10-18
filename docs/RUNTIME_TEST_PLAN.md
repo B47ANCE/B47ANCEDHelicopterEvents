@@ -1,5 +1,13 @@
 # Runtime test plan
 
+## Implemented decorative probe gates — 2026-10-17
+
+The [current diagnostic](DECORATIVE_WRECK_PROBE.md) is restricted to one upright site at 8871,8253,0. Its future dedicated checks must establish default-off/no-startup behavior; server admin/request expiry validation; missing files/definitions; loaded/clear/occupied area refusal; duplicate/reentrant/native-fault latching; two-client one-object counts and actual appearance; join/chunk overlap/reconnect; normal/interrupted save/restart with no automatic regeneration; fallback/FBO/Linux case behavior; and one-site performance/interactions. All are NOT TESTED, not authorized to launch here. Earlier W-R scenarios describe broader asset research; collapsed-model, multiple-instance and many-site tests are outside this implementation. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
+## Single static wreck diagnostic — 2026-10-17
+
+[W-R01..W-R12](STATIC_WRECK_API_AUDIT.md) are twelve dedicated acceptance scenarios, all NOT TESTED: headless definitions, actual GLB/materials, scale/variants, one-object native delivery, join/chunk races, save/restart/quarantine, full-size culling, fallback modes, independent collision/navigation, native interactions/forged metadata, Linux asset consistency and performance. This is a future diagnostic plan for findings review, not implementation/launch authorization. It excludes dynamic unseen materialization, destruction, containers, salvage and automatic recovery. Clean and patched fixture results must stay separate. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
 ## Military support direction - 2026-10-15
 
 The separate [Military Air Support plan](SUPPORT_MP_TEST_PLAN.md) defines S-R01..S-R24, all NOT TESTED. It requires review of support-specific NO-GO contracts before affected code and separate authorization before launch. Existing audio/full-crash evidence below is unchanged.

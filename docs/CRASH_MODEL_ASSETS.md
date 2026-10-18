@@ -1,5 +1,15 @@
 # Helicopter wreck authoring references
 
+Current implementation annotation, 2026-10-17: [one bounded upright decorative probe](DECORATIVE_WRECK_PROBE.md) now has native definitions and locally prepared GLB/base-color assets. These are a source/offline candidate; earlier statements about absent game definitions refer to their dated audit/intake. No native rendering/collision or dedicated result is approved. Original inputs and earlier exports remain unchanged; new binary derivatives remain ignored.
+
+2026-10-17 API follow-up: [native static-wreck loading/placement audit](STATIC_WRECK_API_AUDIT.md) identifies a packaged GLB/static-IsoObject route and preserved model-name serialization. Actual native asset appearance, collision/footprint, streaming, clean/dedicated runtime and recovery remain unverified. No asset bytes or game definitions changed; earlier intake/optimization evidence retains its original scope.
+
+## Current single-model direction — 2026-10-17
+
+The user's optimization request supersedes component separation for the current crash-site approach: **one static mesh per entire site**, retaining its existing ground/debris. [Completed offline optimization](STATIC_CRASH_MODEL_OPTIMIZATION.md) provides GLB/FBX working exports and editable .blend copies at the current authoring checkpoint. Source copies and the intake manifest below retain their original bytes/checkpoint. This changes the asset representation, not world-placement authorization. The earlier component-specific research remains historical/future scope rather than a requirement for these two static assets.
+
+## Original intake record
+
 Intake: 2026-10-17, authoring checkpoint 0.1.0-dev.4. User supplied four Meshy exports for future helicopter crash sites. **GO for local authoring references; CONDITIONAL for optimization/adaptation; NO-GO for runtime distribution or crash-site placement approval.** Runtime source and the existing selected thumbnail are unchanged. Military Air Support remains the first gameplay-release priority; these assets do not waive the existing crash blockers.
 
 ## Files and observed content
@@ -19,17 +29,17 @@ Each ZIP contains one binary FBX plus base-color, metallic, normal and roughness
 
 A local comparison at `assets/crash-sites/local-previews/model-comparison.png` projects the dense textured GLB vertices from two viewpoints. It is a point-based inspection image, not a surface/PBR render, Blender screenshot or PZ screenshot. [INFERRED: visual] Both appear burned/damaged, with integrated ground/debris: the first is more upright and the second more collapsed. No exact aircraft model, military unit, historical configuration or 1993 authenticity is verified. Do not assign aircraft-specific scenario IDs from appearance alone.
 
-Blender MCP could not connect; no Blender import, topology repair, .blend authoring project, FBX conversion, decimation, rig, animation or game export was performed. No Meshy generation/conversion/paid job was requested or run. These static wreck candidates currently need no rig. Any later rigging/animation must use local Blender workflows under current policy.
+At intake Blender MCP could not connect; no Blender import, topology repair, .blend authoring project, FBX conversion, decimation, rig, animation or game export was performed in that inspection. The subsequent isolated local Blender optimization is recorded separately above. No Meshy generation/conversion/paid job was requested or run. These static wreck candidates need no rig.
 
 Provenance is limited to the user's supplied Meshy exports. Original source images/prompts, account/license terms and redistribution rights were not included or verified. Retaining and inspecting them locally does not establish public/Workshop distribution rights. Preserve originals and obtain the missing provenance before distributing binaries or derivatives. No external mod source or assets were inspected/copied in this intake.
 
-## Bounded next authoring slice
+## Revised authoring contract
 
-Once local Blender tooling is available, import working copies, compare the GLB/FBX counterparts and save separate editable .blend projects. Preserve originals and their hashes. Inspect duplicate/degenerate/hidden faces, disconnected islands, intersecting rotors, cockpit/interior quality, normals and UV seams before changing geometry.
+Working copies have now been imported and optimized with isolated Blender; exact originals remain protected by hashes. GLB and FBX source geometry equivalence was not assumed: the verified GLBs are the optimization inputs, and new FBX files are geometry/UV-checked round trips of those working exports. Editable .blend projects are local outputs.
 
-Prepare independent fuselage, tail, rotor and debris components where the geometry supports a credible split; separate the baked ground patch from reusable aircraft pieces. Rebuild/retopologize and bake to a measured game-appropriate budget. Do not pick a universal triangle count without an actual scene/performance test. The current 0.79-0.94 million-triangle sources are authoring references, not a validated deployable mesh budget. Preserve UVs or rebake and verify every resulting texture. Native shader/material support and packed PBR interpretation remain unverified.
+Keep each entire site as one static mesh/material; do not split fuselage, tail, rotors, ground or debris in this approach. The selected approximately 25k-triangle budget was visually and structurally assessed offline, not validated as a universal PZ performance budget. The 0.79-0.94 million-triangle originals remain authoring references. Original encoded textures and UV presence are retained; native shader/material support and packed PBR interpretation remain unverified. No rig or animated rotor is created.
 
-Set component names, consistent heading, ground-level pivots, verified scale against game tiles/objects, bounds and intended placement footprints. Create lower-detail meshes/collision proxies only after a supported native object/collision contract is established. Mesh shape does not supply world collision or neighboring-square ownership automatically. No collider, attachment, loot container, salvage behavior or persistence identity is inferred from an FBX/GLB.
+The new files have stable site names and ground-level centered pivots; source scale and heading are retained, with axis conversion documented. Physical scale against game tiles/objects, placement footprint and native collision remain unresolved. Mesh shape does not supply world collision or neighboring-square ownership automatically. No collider, attachment, loot container, salvage behavior or persistence identity is inferred from an FBX/GLB.
 
 [VERIFIED: installed source observation only] Build 42.21 `media/scripts/generated/models_isoobject.txt:3-8` defines a static-object model using `mesh`, `texture` and `undoCoreScale`. This is a loader-research lead, not proof these supplied exports load or a request to add definitions. Exact model format, Lua exposure/object creation, texture/shader binding, transforms, multi-tile rendering, collision, save/stream/replication and Linux case behavior must be verified before a later runtime asset slice. No direct GLB-loading API is assumed.
 

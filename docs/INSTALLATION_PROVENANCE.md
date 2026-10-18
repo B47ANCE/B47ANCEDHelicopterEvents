@@ -1,5 +1,9 @@
 # Clean versus patched Build 42.21
 
+## Static model dependency refresh — 2026-10-17
+
+[W01-W31 fingerprints](STATIC_WRECK_SOURCE_INDEX.json) recheck the same packaged JAR and current loose counterparts for this bounded audit. IsoObject, IsoGridSquare, IsoChunk, Model, ModelManager, IsoObjectModelDrawer and GameWindow each have differing loose copies. Model/ModelManager/IsoObjectModelDrawer can affect import/material/render behavior; their responsibilities indicate possible effects, not a patch-body analysis or compatibility result. No loose counterpart was found for the other 24 indexed classes. This does not exhaust nested/other dependencies, media changes, agents or runtime transformations. Native loader findings are conditional on this provenance boundary. Preserve the installed files; no repair, replacement or launch occurred. Independently authenticated clean client and dedicated fixtures remain required.
+
 ## Implementation status - 2026-10-15
 
 Implementation source inspection still targets the same packaged JAR fingerprint; no clean-depot authentication or patched-runtime revalidation was performed. [Current implementation evidence](AUDIO_IMPLEMENTATION_EVIDENCE.md) does not authorize executing, repairing or replacing the installation. Future clean/patched runtime results remain separate.

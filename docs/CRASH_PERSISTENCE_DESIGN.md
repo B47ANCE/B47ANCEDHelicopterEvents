@@ -1,5 +1,11 @@
 # Crash manifest and recovery design — follow-up
 
+Current diagnostic boundary, 2026-10-17: the [decorative probe](DECORATIVE_WRECK_PROBE.md) uses ordinary native chunk persistence and a non-durable per-process attempt latch, with no registry or automatic creation on restart. It cannot regenerate or distribute cargo and does not implement this recovery design. New explicit manual diagnostic intent after restart is not an exactly-once-across-restarts guarantee. The production blockers below remain in force.
+
+2026-10-17 API follow-up: [single static wreck audit](STATIC_WRECK_API_AUDIT.md) verifies ordinary IsoObject model-name serialization and native object/chunk transport at source level. This narrows initial native persistence research; it does not establish a protected site ID, durable tombstone, crash-safe commit or cross-store recovery. Do not regenerate an absent object or trust mutable metadata after ambiguous save/removal. A later decorative diagnostic may test ordinary reload without claiming exactly-once production behavior.
+
+2026-10-17 scope annotation: the current asset approach is [one static mesh per complete crash site](STATIC_CRASH_MODEL_OPTIMIZATION.md). The individual-component manifest/salvage design below is retained as historical or future research, not implemented or required by these two authoring assets. Single-object world identity, saves, streaming and interaction recovery still require their own verified contract; no persistence guarantee is inferred from a single mesh.
+
 Current-policy annotation, 2026-10-14: this remains blocked full-crash research, not a required persistence implementation for the transient [audio candidate](AUDIO_FEASIBILITY.md). No custom Java/bridge/agent/native interception is permitted. Protected native-identity/transaction concepts below are unresolved requirements, not authorization to add an engine hook. Active audio is discarded on restart; no exactly-once world/cargo guarantee is claimed.
 
 Date: 2026-10-09. Project version: ../VERSION. Build: installed JAR 42.21. **Manifest specification: CONDITIONAL design. Exactly-once cargo, durable tombstones and full interruption-safe materialization: NO-GO with the verified primitives so far.** No persistence/gameplay code, save modification or runtime test performed.
