@@ -2,7 +2,7 @@
 
 Project Version: 0.1.0-dev.6
 
-Selected project artwork: [thumbnail.png](thumbnail.png), the supplied helicopter image preserved exactly. The [context-menu contract](docs/CONTEXT_MENU_CONTRACT.md) records the required state-dependent military actions; these menus and support equipment are not implemented.
+Selected project artwork: [thumbnail.png](thumbnail.png), the supplied helicopter image preserved exactly. The mod icon is the [text-free transparent helicopter](assets/branding/B47HE_HELICOPTER_ICON.png), selected separately; see [branding provenance](docs/BRANDING.md). The [context-menu contract](docs/CONTEXT_MENU_CONTRACT.md) records the required state-dependent military actions; these menus and support equipment are not implemented.
 
 Two [optimized static wreck-site models](docs/STATIC_CRASH_MODEL_OPTIMIZATION.md) are available locally as editable Blender sources and GLB/FBX interchange exports, at about 25k triangles each. Each site is one mesh including its existing debris/ground. Originals remain untouched. The upright model now has native definitions and a [bounded decorative diagnostic](docs/DECORATIVE_WRECK_PROBE.md); actual native import/rendering, collision and dedicated behavior remain unverified.
 
@@ -12,7 +12,7 @@ First complete gameplay release direction: **Military Air Support**. Runtime sou
 
 Public source: [B47ANCE/B47ANCEDHelicopterEvents](https://github.com/B47ANCE/B47ANCEDHelicopterEvents). These are **Lua-only, default-disabled development probes**, targeting Build 42.21 dedicated servers. The audio subsystem schedules one transient positional rotor bed, with server-owned configuration and expiring snapshots, and has no world mutation. Only the explicit decorative diagnostic can add its one native object; no destruction, loot, salvage, distress or zombie attraction. Actual dedicated multiplayer remains **NOT TESTED**.
 
-Authoritative source: `src/B47ANCEDHelicopterEvents/42`; Mod ID: `B47ANCEDHelicopterEvents`. Existing approved icon/poster bytes are reused. There are no custom Java/JAR dependencies, new sound assets, crash-recovery ledger, packages or Workshop item. The decorative object uses ordinary native chunk persistence only. SP/host placement is unsupported and refused. Preserve native helicopter behavior. Raw game source, private snapshots and local settings remain excluded from public Git.
+Authoritative source: `src/B47ANCEDHelicopterEvents/42`; Mod ID: `B47ANCEDHelicopterEvents`. The selected helicopter icon is mirrored exactly; existing poster and fallback artwork remain unchanged. There are no custom Java/JAR dependencies, new sound assets, crash-recovery ledger, packages or Workshop item. The decorative object uses ordinary native chunk persistence only. SP/host placement is unsupported and refused. Preserve native helicopter behavior. Raw game source, private snapshots and local settings remain excluded from public Git.
 
 See [implemented behavior, configuration and limitations](docs/AUDIO_PROTOTYPE.md) and [implementation API findings](docs/AUDIO_IMPLEMENTATION_EVIDENCE.md). EnableAudioFlights defaults to false; the server waits a full configured interval after an eligible player is present. Native Lua overloads, looping, stop tails, split-screen listening and packet isolation need actual engine tests. This source is an offline-tested development candidate, not a release or runtime approval.
 

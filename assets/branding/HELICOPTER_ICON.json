@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "selectedDate": "2026-10-18",
+  "role": "mod icon",
+  "provenance": "Built-in image_gen background extraction from the project thumbnail; result explicitly selected by the user. No new generation in this integration.",
+  "sourceThumbnail": {
+    "path": "thumbnail.png",
+    "sha256": "46dd0ab5bc851ca2443a182db3be35eb0c3e3a69a304ec8f2ae27183fd7beb69"
+  },
+  "authoringPath": "assets/branding/B47HE_HELICOPTER_ICON.png",
+  "runtimePath": "src/B47ANCEDHelicopterEvents/42/media/ui/B47HE_HELICOPTER_ICON.png",
+  "sha256": "2066c3aa38000c4c44a769646d04f36c9c9b3854fb9ff47be628be7e5d874135",
+  "bytes": 660804,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alphaRange": [
+    0,
+    255
+  ],
+  "generationPrompt": "Use case: background-extraction. Edit target: the supplied project thumbnail. Create a square transparent PNG icon containing ONLY the helicopter from this image. Remove all B47ANCE'd HELICOPTER EVENTS lettering, the entire dark background, the ground shadow, and every other non-helicopter element. Preserve the olive drab helicopter's distinctive pixel-art style, original three-quarter angle with nose at lower left and tail at upper right, shape, colors, windows, landing skids, main rotor and tail rotor. Isolate and center the complete helicopter with all rotor tips and skids inside the frame, narrow even transparent padding, filling the icon canvas as much as practical. Do not add any text, letters, numbers, badges, borders, scenery, glow, or decorative elements. Preserve real transparent alpha; no checkerboard drawn into the image. This is an extraction of the existing subject, not a redesign.",
+  "limits": "Source selection and offline PNG checks only. Native UI appearance NOT TESTED. Thumbnail, poster and fallback artwork retained unchanged.",
+  "uiSizingEvidence": [
+    {
+      "path": "media/lua/client/OptionScreens/ModSelector/ModSelectorModel.lua",
+      "sha256": "a42f02da40a1f3be4e221b94ef126d38c92e71119472b097a1fdcfa826c7f67e",
+      "lines": [
+        69,
+        69
+      ],
+      "status": "Build 42.21 installed Lua inspection; native UI NOT TESTED"
+    },
+    {
+      "path": "media/lua/client/OptionScreens/ModSelector/ModListBox.lua",
+      "sha256": "53f0de830841eb216ec85a8f8f9c9b3dfc3d8d637bf8f1097d5dcb9c980de670",
+      "lines": [
+        200,
+        203
+      ],
+      "status": "Build 42.21 installed Lua inspection; native UI NOT TESTED"
+    }
+  ]
+}
