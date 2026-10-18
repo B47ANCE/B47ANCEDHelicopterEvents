@@ -1,0 +1,23 @@
+{
+  "authoringVersion": "0.1.0-dev.6",
+  "status": "LOCAL DIAGNOSTIC ASSETS ONLY; native/dedicated NOT TESTED; distribution rights unverified",
+  "input": {
+    "path": "assets/crash-sites/local-optimized/v0.1.0-dev.5/upright/crash_site_upright.glb",
+    "sha256": "a4806ea6230cb25a1e565bd25d08b4ded4c00ddd13b3c97d6e1fb9edf5cacbae"
+  },
+  "baseColorEncodedSha256": "e98c283a7bb01bf9bc5c08e74f82ec31786047d5958f7c0a4a8d987984660ff3",
+  "textureConversion": "Pillow 12.3.0; decoded RGB pixels unchanged, 2048x2048 PNG",
+  "fallback": "src/B47ANCEDHelicopterEvents/42/media/ui/B47_ICON_SMALL.png",
+  "outputs": [
+    {
+      "path": "src/B47ANCEDHelicopterEvents/42/media/models_X/B47HE/wreck_probe_upright.glb",
+      "bytes": 12173832,
+      "sha256": "a4806ea6230cb25a1e565bd25d08b4ded4c00ddd13b3c97d6e1fb9edf5cacbae"
+    },
+    {
+      "path": "src/B47ANCEDHelicopterEvents/42/media/textures/B47HE/wreck_probe_upright.png",
+      "bytes": 3990171,
+      "sha256": "c43afcbd44def1f4ba7d08db926e9799c910677e0a67db45a36c6ec7fa1a69aa"
+    }
+  ]
+}

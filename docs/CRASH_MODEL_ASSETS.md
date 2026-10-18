@@ -1,5 +1,9 @@
 # Helicopter wreck authoring references
 
+Current implementation annotation, 2026-10-17: [one bounded upright decorative probe](DECORATIVE_WRECK_PROBE.md) now has native definitions and locally prepared GLB/base-color assets. These are a source/offline candidate; earlier statements about absent game definitions refer to their dated audit/intake. No native rendering/collision or dedicated result is approved. Original inputs and earlier exports remain unchanged; new binary derivatives remain ignored.
+
+2026-10-17 API follow-up: [native static-wreck loading/placement audit](STATIC_WRECK_API_AUDIT.md) identifies a packaged GLB/static-IsoObject route and preserved model-name serialization. Actual native asset appearance, collision/footprint, streaming, clean/dedicated runtime and recovery remain unverified. No asset bytes or game definitions changed; earlier intake/optimization evidence retains its original scope.
+
 ## Current single-model direction — 2026-10-17
 
 The user's optimization request supersedes component separation for the current crash-site approach: **one static mesh per entire site**, retaining its existing ground/debris. [Completed offline optimization](STATIC_CRASH_MODEL_OPTIMIZATION.md) provides GLB/FBX working exports and editable .blend copies at the current authoring checkpoint. Source copies and the intake manifest below retain their original bytes/checkpoint. This changes the asset representation, not world-placement authorization. The earlier component-specific research remains historical/future scope rather than a requirement for these two static assets.

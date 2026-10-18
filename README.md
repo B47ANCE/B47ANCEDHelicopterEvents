@@ -1,16 +1,18 @@
 # B47ANCE'd Helicopter Events
 
-Project Version: 0.1.0-dev.5
+Project Version: 0.1.0-dev.6
 
 Selected project artwork: [thumbnail.png](thumbnail.png), the supplied helicopter image preserved exactly. The [context-menu contract](docs/CONTEXT_MENU_CONTRACT.md) records the required state-dependent military actions; these menus and support equipment are not implemented.
 
-Two [optimized static wreck-site models](docs/STATIC_CRASH_MODEL_OPTIMIZATION.md) are available locally as editable Blender sources and GLB/FBX interchange exports, at about 25k triangles each. Each site is one mesh including its existing debris/ground. Originals remain untouched. These are offline authoring assets: no game model definition, collision, placement or runtime compatibility is implemented/verified.
+Two [optimized static wreck-site models](docs/STATIC_CRASH_MODEL_OPTIMIZATION.md) are available locally as editable Blender sources and GLB/FBX interchange exports, at about 25k triangles each. Each site is one mesh including its existing debris/ground. Originals remain untouched. The upright model now has native definitions and a [bounded decorative diagnostic](docs/DECORATIVE_WRECK_PROBE.md); actual native import/rendering, collision and dedicated behavior remain unverified.
 
-First complete gameplay release direction: **Military Air Support**. Current runtime source contains the experimental rotor prototype and a [read-only radio preflight probe](docs/SUPPORT_PREFLIGHT_PROBE.md), independently disabled by default. The probe reports server-resolved device state only; support equipment, authorization, menus, loot and combat are not implemented. The [targeted support API audit](docs/MILITARY_SUPPORT_API_AUDIT.md) records current NO-GO contracts. Crash/wreck/destruction features remain deferred and blocked independently.
+The [single-object Build 42.21 API audit](docs/STATIC_WRECK_API_AUDIT.md) identifies native GLB loading, exposed SpriteModel selection and ordinary server object replication/save paths. The separately authorized diagnostic is default off, requires an explicit server-validated admin request, checks the fixed outdoor test area at **8871,8253,0**, and attempts one decorative upright object per server process. No startup spawning, automatic retry/regeneration, loot, destruction or collision promise. Dynamic unseen crashes and protected durable recovery remain NO-GO. Local derived binaries stay ignored pending distribution provenance; use the preparation recipe in the diagnostic docs before any separately authorized fixture installation.
 
-Public source: [B47ANCE/B47ANCEDHelicopterEvents](https://github.com/B47ANCE/B47ANCEDHelicopterEvents). These are **Lua-only, default-disabled development probes**, targeting Build 42.21 dedicated servers. The audio subsystem schedules one transient positional rotor bed, with server-owned configuration and expiring snapshots. No wrecks, destruction, loot, salvage, distress, world mutations or zombie attraction. Actual dedicated multiplayer remains **NOT TESTED**.
+First complete gameplay release direction: **Military Air Support**. Runtime source contains the rotor prototype, [read-only radio preflight](docs/SUPPORT_PREFLIGHT_PROBE.md), and decorative wreck diagnostic, each independently disabled by default. Support equipment, authorization, menus, loot and combat are not implemented. The [targeted support API audit](docs/MILITARY_SUPPORT_API_AUDIT.md) records current NO-GO contracts. Full crash/wreck/destruction gameplay remains deferred and blocked independently.
 
-Authoritative source: `src/B47ANCEDHelicopterEvents/42`; Mod ID: `B47ANCEDHelicopterEvents`. Existing approved icon/poster bytes are reused. There are no custom Java/JAR dependencies, new sound assets, crash persistence, packages or Workshop item. SP/host modes are unsupported and silent. Preserve native helicopter behavior. Raw game source, private snapshots and local settings remain excluded from public Git.
+Public source: [B47ANCE/B47ANCEDHelicopterEvents](https://github.com/B47ANCE/B47ANCEDHelicopterEvents). These are **Lua-only, default-disabled development probes**, targeting Build 42.21 dedicated servers. The audio subsystem schedules one transient positional rotor bed, with server-owned configuration and expiring snapshots, and has no world mutation. Only the explicit decorative diagnostic can add its one native object; no destruction, loot, salvage, distress or zombie attraction. Actual dedicated multiplayer remains **NOT TESTED**.
+
+Authoritative source: `src/B47ANCEDHelicopterEvents/42`; Mod ID: `B47ANCEDHelicopterEvents`. Existing approved icon/poster bytes are reused. There are no custom Java/JAR dependencies, new sound assets, crash-recovery ledger, packages or Workshop item. The decorative object uses ordinary native chunk persistence only. SP/host placement is unsupported and refused. Preserve native helicopter behavior. Raw game source, private snapshots and local settings remain excluded from public Git.
 
 See [implemented behavior, configuration and limitations](docs/AUDIO_PROTOTYPE.md) and [implementation API findings](docs/AUDIO_IMPLEMENTATION_EVIDENCE.md). EnableAudioFlights defaults to false; the server waits a full configured interval after an eligible player is present. Native Lua overloads, looping, stop tails, split-screen listening and packet isolation need actual engine tests. This source is an offline-tested development candidate, not a release or runtime approval.
 
@@ -22,6 +24,9 @@ python -B scripts/validate_phase0_docs.py
 python -B scripts/validate_audio_sources.py
 python -B scripts/test_audio.py
 python -B scripts/test_support_probe.py
+python -B scripts/test_wreck_probe.py
+python -B scripts/test_wreck_asset_preparation.py
+python -B scripts/validate_wreck_probe.py --require-local-assets
 git diff --check
 ```
 

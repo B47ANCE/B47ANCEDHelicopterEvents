@@ -1,0 +1,291 @@
+{
+  "auditDate": "2026-10-17",
+  "gameBuildTarget": "42.21",
+  "steamBuild": "25485521",
+  "baselineCommit": "def69a4e999382ecb8427b2c588cf15cbc98b2a8",
+  "projectVersionAtAudit": "0.1.0-dev.5",
+  "runtime": "NOT TESTED",
+  "jarSha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "scope": "Read-only packaged-bytecode and installed vanilla-text inspection; no game classes loaded, invoked, replaced or shipped. Hashes identify local inputs, not clean-depot authenticity. Exact signatures/instruction offsets and qualified findings are in STATIC_WRECK_API_AUDIT.md. Raw dumps remain ignored.",
+  "native": [
+    {
+      "id": "W01",
+      "member": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W02",
+      "member": "se/krka/kahlua/integration/expose/LuaJavaClassExposer.class",
+      "sha256": "4c8dc24c94de2cb814741f135d7d9baf8bc09062dd821d3c56cc4b09f322c0bd",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W03",
+      "member": "zombie/iso/IsoObject.class",
+      "sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "looseSha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "W04",
+      "member": "zombie/iso/IsoGridSquare.class",
+      "sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "looseSha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "W05",
+      "member": "zombie/iso/IsoCell.class",
+      "sha256": "5e9a88e1cd9a3f370e31ae0152c9de381d649caea7cab750ebc82a91b4e1f767",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W06",
+      "member": "zombie/iso/SpriteModel.class",
+      "sha256": "966da22e6d5e7cd34e2acfe0151312e162a74073205306e6776ede4415de482b",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W07",
+      "member": "zombie/scripting/objects/ModelScript.class",
+      "sha256": "495f4305d8074b63643a8c7234d4d707cf44a49efc88073a4b695b9f74bfc567",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W08",
+      "member": "zombie/scripting/ScriptManager.class",
+      "sha256": "8aee81a03fb7c09a9e9844ba9388a943aef9b313ea00017b8f2a33f16f4f0f99",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W09",
+      "member": "zombie/scripting/objects/ScriptModule.class",
+      "sha256": "10606317c7d84eb1b5c0df06a27687803aaefbc13e7d7148e99c6d9074442856",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W10",
+      "member": "zombie/scripting/objects/ScriptModule$13.class",
+      "sha256": "4397e3a85ebaf773395084b88e378f469cbd41d5e7fd403fde7675fb1947fb63",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W11",
+      "member": "zombie/scripting/ScriptBucket.class",
+      "sha256": "dc7a234f0d1fb162ef6b6ce316f16d13d87a52a93d863016abc7a7b9ba41d4dc",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W12",
+      "member": "zombie/scripting/ScriptType.class",
+      "sha256": "ed05efd72d87dbfa5e8bfc5831121290a0b377acdbb1cb694eb2d8f8e4b2bfdd",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W13",
+      "member": "zombie/core/skinnedmodel/model/FileTask_AbstractLoadModel.class",
+      "sha256": "a58f90cfcaae255179b80dc971f71a967addf53ef66a12333cc4629bb200890c",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W14",
+      "member": "zombie/core/skinnedmodel/model/FileTask_LoadMesh.class",
+      "sha256": "5f2a1c580a01064c80c0c9f9f3c868df5125e26e0716add46a060a6aafbee77d",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W15",
+      "member": "zombie/core/skinnedmodel/model/MeshAssetManager.class",
+      "sha256": "9f2e985cecfce5c93e65cbda53d6956449944ebace475f338a2f5fd14fe95c3b",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W16",
+      "member": "zombie/core/skinnedmodel/model/Model.class",
+      "sha256": "3dd5e7b618cecf3c27e216a386e07937b1be694a7fc083b1bc2f7c993cbee3d9",
+      "looseSha256": "9f444cf28ddcd0436b02b9e1d2a4053181c08cb7867f2522a72f0ed9d4cc8309",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "W17",
+      "member": "zombie/core/skinnedmodel/model/IsoObjectModelDrawer.class",
+      "sha256": "704c0941facaf589475540b9c91c2ddab9dc95d49a4634496cabe1ca3e16b1a2",
+      "looseSha256": "abcdbc814748907d2f5695ca4034642deeae8391b01151acf17dd4997c4ee6c6",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "W18",
+      "member": "zombie/network/packets/AddItemToMapPacket.class",
+      "sha256": "bd27fa5f01bb071122156d1b915cd8d75e9de62404b68175b83dd9614e58463d",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W19",
+      "member": "zombie/network/packets/INetworkPacket.class",
+      "sha256": "616a8d2e86a03952e16c45e756dae12910f637716568a74571defdc1884ce7e9",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W20",
+      "member": "zombie/iso/IsoChunk.class",
+      "sha256": "5048becc3f46f746686513d4dcadb137e6e11bfd44617075f41923b3db11650a",
+      "looseSha256": "9bc4b8d2410bff226989736c167c731fda0c9f4382332a9b72db56489a28bea5",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "W21",
+      "member": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W22",
+      "member": "zombie/network/ServerChunkLoader$SaveChunkThread.class",
+      "sha256": "0e5fc386370d3b949a6c5941be8a9b0de516924041dbfbaadfff09aa1e3ac7c9",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W23",
+      "member": "zombie/network/PlayerDownloadServer$WorkerThread.class",
+      "sha256": "59e6088810c1683c8985d0c3a0834124cc2dc29fe8a216f391f545f8982eddfe",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W24",
+      "member": "zombie/network/packets/ObjectModDataPacket.class",
+      "sha256": "1d6f806ee95bf6d22f5a69d0535b375a60085039311697eecd6b85dff8e9d9c2",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W25",
+      "member": "zombie/spriteModel/SpriteModelManager.class",
+      "sha256": "5afad62d7e5a415d8f3e7289df209d6607aa7d224c6fa714bebb99693bd78fc6",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W26",
+      "member": "zombie/iso/SpriteModels.class",
+      "sha256": "905b61df42712ffd12561b4cbc8b55879a11f5da25889cb73ab93545616081fe",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W27",
+      "member": "zombie/GameWindow.class",
+      "sha256": "c3a3583923191b6aea23a74e6b05e2b53302bbcded7f89cae930e364a409dfb2",
+      "looseSha256": "83426d04937b9f4284c515d79068fddc501a7ca7f2798735f95a5c35b8317f6b",
+      "looseMatchesJar": false
+    },
+    {
+      "id": "W28",
+      "member": "zombie/scripting/objects/PhysicsShapeScript.class",
+      "sha256": "665042a88338e132a5206bb275b25b82cc81120550bf54855e5fb69ef6c919ab",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W29",
+      "member": "zombie/core/physics/PhysicsShapeAssetManager.class",
+      "sha256": "b4035c366d4ab4fa3a6e580061d181c212e557a721f4dd56aa590bb861d2200b",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W30",
+      "member": "zombie/core/physics/Bullet.class",
+      "sha256": "918622eddad21725fd321dd0f6ec6542059fcbbb0c5c08c76eba6c68fa4e6234",
+      "looseSha256": null,
+      "looseMatchesJar": null
+    },
+    {
+      "id": "W31",
+      "member": "zombie/core/skinnedmodel/ModelManager.class",
+      "sha256": "9bd955ded08c284dd1e1a5f39c84dd8576e7a46186b3c6fdf69ef4b12d8709e5",
+      "looseSha256": "550c91d6900ae33608605dbdc2f1cd797b92a80857af3c1bd8485abbece8c985",
+      "looseMatchesJar": false
+    }
+  ],
+  "text": [
+    {
+      "id": "WT01",
+      "path": "media/scripts/generated/models_isoobject.txt",
+      "sha256": "ca87ec2b7154ead64d9ebde8880a341f433df66681e6426f0087097c8bc77b1e",
+      "lines": [
+        1,
+        8
+      ],
+      "cleanDepotProvenance": "UNKNOWN"
+    },
+    {
+      "id": "WT02",
+      "path": "media/spriteModels.txt",
+      "sha256": "9239fdb66565dc30184f5599c2658b6e7789942e92d4666f02b8e883dc2244b6",
+      "lines": [
+        1,
+        16
+      ],
+      "cleanDepotProvenance": "UNKNOWN"
+    },
+    {
+      "id": "WT03",
+      "path": "media/lua/server/Camping/SCampfireGlobalObject.lua",
+      "sha256": "033c34cc892e3837ce328650070dbceb9b1a7b6741e39221fb338310c94d3e5f",
+      "lines": [
+        69,
+        77
+      ],
+      "cleanDepotProvenance": "UNKNOWN"
+    },
+    {
+      "id": "WT04",
+      "path": "media/lua/server/Farming/SPlantGlobalObject.lua",
+      "sha256": "0db75ed607f5c2bc82ebeaf7b52d5965241077e184e52f1a6cf88762c916b2f7",
+      "lines": [
+        200,
+        225
+      ],
+      "cleanDepotProvenance": "UNKNOWN"
+    },
+    {
+      "id": "WT05",
+      "path": "media/scripts/generated/models_isoobject_physicsShape.txt",
+      "sha256": "73caf803c543f02867e2b8b10feab47b0e60bc1f2623133b831ff0840e9e36c7",
+      "lines": [
+        1,
+        8
+      ],
+      "cleanDepotProvenance": "UNKNOWN"
+    },
+    {
+      "id": "WT06",
+      "path": "media/lua/client/DebugUIs/TileGeometryEditor/TileGeometryEditor_EditMode.lua",
+      "sha256": "6214fedc284b32c3f6602e72ef5ea080b808760a39e731685dbc6851a1370510",
+      "lines": [
+        1506,
+        1511
+      ],
+      "cleanDepotProvenance": "UNKNOWN"
+    }
+  ]
+}
