@@ -1,6 +1,7 @@
 # Changelog
 
 ## [0.1.0-dev.4]
+- 2026-10-17: retain two user-supplied GLBs and two FBX/texture archives locally as deferred wreck authoring references; add public hashes/structure/provenance assessment and a reviewed project overview. No binary sources/derivatives distributed, game export or runtime change. Version unchanged; crash and release blockers remain.
 - 2026-10-16: begin the handoffs' documented smallest safe prototype: independently default-disabled, server-resolved read-only Base.WalkieTalkie5 preflight, bounded requests and expiring client observations. No item/card/authorization/save writes, support menus, missions, following, loot, attraction or combat. Existing rotor behavior and artwork retained.
 - Add server sandbox toggle, English labels, offline Lua tests and dedicated probe acceptance plan. This is an additive development checkpoint within the pending initial 0.1.0 feature line; no breaking API/config/save change. Native/dedicated execution NOT TESTED; G7 and stable-release G8 blocked.
 

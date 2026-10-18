@@ -1,0 +1,259 @@
+{
+  "schema": 1,
+  "intakeDate": "2026-10-17",
+  "projectVersionAtIntake": "0.1.0-dev.4",
+  "status": "AUTHORING REFERENCES ONLY; PZ runtime NOT TESTED",
+  "provenance": "User-supplied Meshy exports. Original generation inputs, account/license terms and release redistribution rights not supplied/verified.",
+  "runtimeExport": false,
+  "blenderImport": "NOT TESTED: Blender MCP unavailable; no .blend or engine export created.",
+  "files": [
+    {
+      "name": "Meshy_AI_Heli_1018042915_texture.glb",
+      "localPath": "assets/crash-sites/local-source/Meshy_AI_Heli_1018042915_texture.glb",
+      "bytes": 40356636,
+      "sha256": "fd636569611c4799adc3ee01fb91ebc4183d20dfe639bc60b5cfbd5a8e5962c3",
+      "meshes": 1,
+      "nodes": 1,
+      "materials": 1,
+      "skins": 0,
+      "animations": 0,
+      "images": [
+        {
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "sha256": "e98c283a7bb01bf9bc5c08e74f82ec31786047d5958f7c0a4a8d987984660ff3"
+        },
+        {
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "sha256": "188d8982fa410448dadb6723e5f9371e124baaca92170afc7b2483a6f54691a2"
+        },
+        {
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "sha256": "ea31c99dfce1f7aa98c59c82674079159294df7f81e2c905f1aeee262584cc3d"
+        }
+      ],
+      "primitives": [
+        {
+          "vertices": 561767,
+          "triangles": 942658,
+          "boundsMin": [
+            -0.9190059900283813,
+            -0.3343159854412079,
+            -0.7631970047950745
+          ],
+          "boundsMax": [
+            0.9367989897727966,
+            0.33578601479530334,
+            0.7248420119285583
+          ],
+          "dimensionsSourceUnits": [
+            1.8558049201965332,
+            0.6701020002365112,
+            1.4880390167236328
+          ],
+          "hasUV": true,
+          "hasNormals": true
+        }
+      ]
+    },
+    {
+      "name": "Meshy_AI_Heli_1018043917_texture_fbx.zip",
+      "localPath": "assets/crash-sites/local-source/Meshy_AI_Heli_1018043917_texture_fbx.zip",
+      "bytes": 56813178,
+      "sha256": "dd850258662d21d6b1506f033f02bb9ab51ed6fab81f2ed6133f56728c3c946b",
+      "members": [
+        {
+          "name": "Meshy_AI_Heli_1018043917_texture_fbx/Meshy_AI_Heli_1018043917_texture.fbx",
+          "bytes": 43605628,
+          "sha256": "45b7e7b6d67b86b3a50bd479c560bb579a5668811491e1fb41759b1d18efd7da",
+          "fbxVersion": 7400
+        },
+        {
+          "name": "Meshy_AI_Heli_1018043917_texture_fbx/Meshy_AI_Heli_1018043917_texture.png",
+          "bytes": 4193233,
+          "sha256": "eb93ac06f7b64ad45c503ce4efe8e05225b18af504adf236c7cc58e86d0840aa",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Meshy_AI_Heli_1018043917_texture_fbx/Meshy_AI_Heli_1018043917_texture_metallic.png",
+          "bytes": 1553816,
+          "sha256": "6366911a4453e48ff0722c22949505010bdfec5947767937bbc7e54f0065e0c1",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Meshy_AI_Heli_1018043917_texture_fbx/Meshy_AI_Heli_1018043917_texture_normal.png",
+          "bytes": 5911849,
+          "sha256": "a151f92844c71ce117aafcd090e73987192d0b78b3518dff33b5005b0e5bf766",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Meshy_AI_Heli_1018043917_texture_fbx/Meshy_AI_Heli_1018043917_texture_roughness.png",
+          "bytes": 1547468,
+          "sha256": "b4b054bbdbb476dc22c2de1180e4befeb7ed5ae1d1173cbf6d24421b42dcf55c",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "archiveChecks": "PASS: CRC, path safety, case uniqueness, bounded members/size"
+    },
+    {
+      "name": "Meshy_AI_Heli_1018043921_texture.glb",
+      "localPath": "assets/crash-sites/local-source/Meshy_AI_Heli_1018043921_texture.glb",
+      "bytes": 35188660,
+      "sha256": "5409c238dc05c82ee564e6be39615c0e8e8d69faea2d256b102fe1a3193fa275",
+      "meshes": 1,
+      "nodes": 1,
+      "materials": 1,
+      "skins": 0,
+      "animations": 0,
+      "images": [
+        {
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "sha256": "066724fc5ae1a6d8a388b29ec42628a9bac69cf2db140dc84c9fe074476afda4"
+        },
+        {
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "sha256": "c6733355094e6a5c0350e4720edefeeb208f8af8328e0fccc59b8bf85c147199"
+        },
+        {
+          "mimeType": "image/jpeg",
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "sha256": "b42eab61c839f2a3cb0538174e568025056664e3f0a7d4f8b03b5e09e806caf1"
+        }
+      ],
+      "primitives": [
+        {
+          "vertices": 456936,
+          "triangles": 785434,
+          "boundsMin": [
+            -0.9510200023651123,
+            -0.339709997177124,
+            -0.8955600261688232
+          ],
+          "boundsMax": [
+            0.9684119820594788,
+            0.32330599427223206,
+            0.8860359787940979
+          ],
+          "dimensionsSourceUnits": [
+            1.9194319248199463,
+            0.6630159616470337,
+            1.7815959453582764
+          ],
+          "hasUV": true,
+          "hasNormals": true
+        }
+      ]
+    },
+    {
+      "name": "Meshy_AI_Heli_1018042910_texture_fbx.zip",
+      "localPath": "assets/crash-sites/local-source/Meshy_AI_Heli_1018042910_texture_fbx.zip",
+      "bytes": 60847737,
+      "sha256": "49e7fb8a2f536b8afda2c5a4f1d60237bbb78d8bb0b73ecdd9b6ee532ed1b0a3",
+      "members": [
+        {
+          "name": "Meshy_AI_Heli_1018042910_texture_fbx/Meshy_AI_Heli_1018042910_texture.fbx",
+          "bytes": 48391964,
+          "sha256": "2db0e7472980675124a0b06469ba3c1bfbde8ec38f0c8942d65ea71f96dddfc0",
+          "fbxVersion": 7400
+        },
+        {
+          "name": "Meshy_AI_Heli_1018042910_texture_fbx/Meshy_AI_Heli_1018042910_texture.png",
+          "bytes": 3547042,
+          "sha256": "c1877c8822e1f1e9bca46cd1d1b770c7a5fc16e29b73932b3c427d878921858a",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Meshy_AI_Heli_1018042910_texture_fbx/Meshy_AI_Heli_1018042910_texture_metallic.png",
+          "bytes": 1366646,
+          "sha256": "5a1f48e78e0a512542a2ce4d7fbd8baafb5af246692ff6fd20ae5cb4d3f9f7fd",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Meshy_AI_Heli_1018042910_texture_fbx/Meshy_AI_Heli_1018042910_texture_normal.png",
+          "bytes": 6200185,
+          "sha256": "5b72f68ad6342ccc6179245bd141b1c1567aaf36dc1d996a730ebebaeaa40f73",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Meshy_AI_Heli_1018042910_texture_fbx/Meshy_AI_Heli_1018042910_texture_roughness.png",
+          "bytes": 1340716,
+          "sha256": "871c2a5f374100c5fd686b22335604c9afa438ae1d68e1cf72b1b1e5eb9afb4f",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "archiveChecks": "PASS: CRC, path safety, case uniqueness, bounded members/size"
+    }
+  ],
+  "texturePairingEvidence": [
+    {
+      "glb": "Meshy_AI_Heli_1018042915_texture.glb",
+      "fbxArchive": "Meshy_AI_Heli_1018043917_texture_fbx.zip",
+      "baseColor128pxRMSE": 53.78,
+      "classification": "INFERRED texture correspondence only; FBX geometry not imported/verified"
+    },
+    {
+      "glb": "Meshy_AI_Heli_1018042915_texture.glb",
+      "fbxArchive": "Meshy_AI_Heli_1018042910_texture_fbx.zip",
+      "baseColor128pxRMSE": 0.465,
+      "classification": "INFERRED texture correspondence only; FBX geometry not imported/verified"
+    },
+    {
+      "glb": "Meshy_AI_Heli_1018043921_texture.glb",
+      "fbxArchive": "Meshy_AI_Heli_1018043917_texture_fbx.zip",
+      "baseColor128pxRMSE": 0.44,
+      "classification": "INFERRED texture correspondence only; FBX geometry not imported/verified"
+    },
+    {
+      "glb": "Meshy_AI_Heli_1018043921_texture.glb",
+      "fbxArchive": "Meshy_AI_Heli_1018042910_texture_fbx.zip",
+      "baseColor128pxRMSE": 53.733,
+      "classification": "INFERRED texture correspondence only; FBX geometry not imported/verified"
+    }
+  ]
+}

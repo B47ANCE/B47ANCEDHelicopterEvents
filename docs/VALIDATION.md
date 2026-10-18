@@ -1,5 +1,29 @@
 # Phase 0 validation records
 
+## Deferred wreck-model intake — 2026-10-17
+
+Baseline main f9c55d7911bda580c0cdc21b55a4776e2a52345b; named branch assets/crash-model-intake. Earlier PRs #4/#5/#6 were merged; old feature source tree was identical, and no user files were reconciled/reset. Root version remains 0.1.0-dev.4: asset-reference/documentation work only, no new runtime/export/API/config/save checkpoint. [CRASH_MODEL_ASSETS.md](CRASH_MODEL_ASSETS.md) records the source/preview limitations and pending adaptation. [Manifest](../assets/crash-sites/MANIFEST.json) pins four supplied sources and archive/image/mesh observations. Sources/previews are locally retained and ignored, never claimed as public backups. No original Download was modified.
+
+Exact offline commands (bundled Python, NumPy/Pillow for local file inspection):
+
+```text
+python -B .tmp-model-intake/inspect.py
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+python <installed-hub>/tools/mod_overview.py --describe-repository <repository> --project-id heli
+python -B .tmp-model-intake/verify.py
+git diff f9c55d7911bda580c0cdc21b55a4776e2a52345b -- src tests scripts VERSION thumbnail.png assets/branding
+git diff --check
+git diff --cached --check
+```
+
+[TESTED: offline] Version consistency PASS before/after; document links/gates and unchanged runtime source checks STATIC PASS. Private inspection validates exact byte copies/hashes for four files, GLB headers/chunk/accessor/index bounds, finite position/normal/UV data and counts, identity nodes, texture decoding/dimensions, ZIP path/case uniqueness/expanded-size bounds and CRC. An initial preview guard correctly stopped on explicit identity matrices; it was narrowed to permit verified identity matrices and the complete inspection then passed. Textured vertex projections were visually inspected; they are not surface/PBR or game renders. Base-color similarity supports only inferred GLB/FBX pairings. FBX geometry import/triangulation and model topology were not validated.
+
+Blender MCP status reported no connection; no live scene could be inspected or changed. No paid Meshy call, .blend, rig, conversion or game export. No gameplay regression suites rerun because src/tests/scripts are byte-unchanged from baseline; earlier tests retain their original environments. First project-owned MOD_OVERVIEW descriptor adopts catalog ID heli, binds existing version/runtime-source digest and separates foundations/planned/blocked work; adding its version mirror does not alter canonical VERSION. Its digest excludes local authoring binaries and is not a model integrity proof. No dependency/integration was invented. Public staged/tracked review excludes binary models/derivatives, source snapshots, logs, credentials and local settings. Commit/remote/PR status is reported separately.
+
+Native SP/dedicated, Blender import and engine asset/placement/collision/streaming/persistence NOT TESTED. Crash NO-GO findings unchanged; project G7 BLOCKED / NOT TESTED, stable-release G8 BLOCKED. No game/server launch, installed-file edit, packaging, deployment or Workshop publication.
+
 ## Read-only support preflight implementation — 2026-10-16
 
 Baseline 6eb56fa011f43ab2ac9acebdfe67ad7bf5e348d7; feature/support-preflight-probe branches from the existing audit PR. Canonical version advances from 0.1.0-dev.3 to 0.1.0-dev.4 with all declared mirrors synchronized. This is an additive diagnostic checkpoint within the pending initial 0.1.0 feature line, no incompatible API/config/save change. The [implementation contract/evidence](SUPPORT_PREFLIGHT_PROBE.md) documents the source-only native boundary and the restricted manual API. This change introduces no support gameplay, military equipment, context menus, persistent authorization, missions, following, loot, attraction or combat. Rotor Lua modules and artwork are byte-unchanged; historical evidence retains its original checkpoint.

@@ -2,6 +2,7 @@
   "schema": 1,
   "canonical": "VERSION",
   "mirrors": [
+    {"path": "docs/MOD_OVERVIEW.json", "pattern": "^  \"version\": \"(?P<version>[^\"]+)\",$"},
     {"path": "README.md", "pattern": "^Project Version: (?P<version>\\S+)$"},
     {"path": "docs/VALIDATION_STATUS.json", "pattern": "^  \"projectVersion\": \"(?P<version>[^\"]+)\",$"},
     {"path": "src/B47ANCEDHelicopterEvents/42/mod.info", "pattern": "^modversion=(?P<version>\\S+)$"},
@@ -19,6 +20,7 @@
     {"category": "framework", "reference": "docs/VERSION_POLICY.md", "reason": "Copied framework policy, not project version"}
   ],
   "historical": [
+    {"reference": "assets/crash-sites/MANIFEST.json: projectVersionAtIntake", "reason": "Dated authoring inspection checkpoint; not a current runtime version mirror or game validation"},
     {"reference": "docs/OFFLINE_VALIDATION.json and docs/evidence-followup/environment.json", "reason": "Actual earlier local validation/provenance, ignored and preserved rather than maintained as current public mirrors"},
     {"reference": "docs/evidence/", "reason": "Immutable initial dated source inspection snapshots, never relabeled as runtime proof"},
     {"reference": "docs/history/phase0-accepted/", "reason": "Accepted first audit and actual initial offline validation; preserve original observed checkpoint"},
