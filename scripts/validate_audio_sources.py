@@ -69,7 +69,7 @@ for name, body in options:
     keys.update({'Sandbox_' + token, 'Sandbox_' + token + '_tooltip'})
 assert set(translation) == keys and all(translation.values())
 for asset, slot, dimensions in (
-    ('B47_ICON_SMALL.png', info['icon'], (64,64)),
+    ('B47_ICON_SMALL.png', 'media/ui/B47_ICON_SMALL.png', (64,64)),
     ('B47_ICON.png', info['poster'], (128,128)),
 ):
     original = (ROOT / 'assets/branding' / asset).read_bytes()
@@ -77,6 +77,19 @@ for asset, slot, dimensions in (
     assert original[:8] == b'\x89PNG\r\n\x1a\n'
     assert struct.unpack('>II', original[16:24]) == dimensions
     print(f'Exact existing branding: {asset} SHA256 {hashlib.sha256(original).hexdigest()}')
+# Selected mod icon is independent of the preserved wreck fallback marker/poster.
+icon = json.loads((ROOT / 'assets/branding/HELICOPTER_ICON.json').read_text())
+assert icon['authoringPath'] == 'assets/branding/B47HE_HELICOPTER_ICON.png'
+assert icon['runtimePath'] == 'src/B47ANCEDHelicopterEvents/42/media/ui/B47HE_HELICOPTER_ICON.png'
+assert info['icon'] == 'media/ui/B47HE_HELICOPTER_ICON.png'
+selected = (ROOT / icon['authoringPath']).read_bytes()
+assert (ROOT / icon['runtimePath']).read_bytes() == selected
+assert hashlib.sha256(selected).hexdigest() == icon['sha256'] and len(selected) == icon['bytes']
+assert selected[:8] == b'\x89PNG\r\n\x1a\n'
+assert struct.unpack('>II', selected[16:24]) == tuple(icon['dimensions']) == (1254,1254)
+assert selected[24:26] == bytes((8,6)), 'Expected 8-bit RGBA icon'
+assert hashlib.sha256((ROOT / 'thumbnail.png').read_bytes()).hexdigest() == icon['sourceThumbnail']['sha256']
+print('STATIC PASS: selected RGBA mod icon mirror/hash/header and unchanged thumbnail; native UI NOT TESTED.')
 assert 24 * (64 + 64 + 32) + 32 < 4096
 print('STATIC PASS: bounded source surface, Lua-only guard, require case, metadata, translations, existing artwork bytes and scalar-size ceiling.')
 print('NOT TESTED: native loader, localization fallback, Linux, Lua overloads, audio, packets, SP/host/dedicated MP.')

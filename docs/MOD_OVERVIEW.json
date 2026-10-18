@@ -3,7 +3,7 @@
   "id": "heli",
   "name": "Helicopter Events",
   "version": "0.1.0-dev.6",
-  "source_digest": "949e572603d81bfe030bf132e5fe01341f47eca8ee2cc5bd77e5a924daf61070",
+  "source_digest": "3a67c314a8a73aafaea2c7e44ee22fb01cc282390944ee8fc63114f59eea7b22",
   "reviewed": true,
   "features": [
     {
@@ -25,6 +25,10 @@
     {
       "status": "Blocked",
       "text": "Dynamic crash materialization, structural destruction and durable crash-site recovery retain their Lua-only NO-GO contracts."
+    },
+    {
+      "status": "Source",
+      "text": "User-selected transparent helicopter mod icon; original project thumbnail and fallback/poster art preserved. Offline PNG checks only; native UI appearance NOT TESTED."
     }
   ],
   "limits": "Source/offline review only. Native GLB/materials, physical scale, large-mesh culling, Linux/headless delivery/save/restart and dedicated correctness NOT TESTED. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No military support gameplay or SP/host placement. No Workshop item. Supplied and prepared wreck binaries stay local/ignored pending distribution provenance; public recipe/receipts are not binary backups. Probe has no durable identity, recovery ledger or exactly-once-across-restarts guarantee.",
@@ -41,7 +45,9 @@
     "docs/ENGINE_BLOCKERS.md",
     "docs/DECORATIVE_WRECK_PROBE.md",
     "docs/WRECK_PROBE_SOURCE_INDEX.json",
-    "assets/crash-sites/WRECK_PROBE_ASSETS.json"
+    "assets/crash-sites/WRECK_PROBE_ASSETS.json",
+    "docs/BRANDING.md",
+    "assets/branding/HELICOPTER_ICON.json"
   ],
   "relations": []
 }

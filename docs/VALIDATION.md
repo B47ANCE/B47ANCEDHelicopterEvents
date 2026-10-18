@@ -1,5 +1,29 @@
 # Phase 0 validation records
 
+## Selected mod icon — 2026-10-18
+
+Baseline `2a1f6e01e65acf7c06e60666d8df5b407ad7a5cb` (merged main); feature branch `feature/helicopter-mod-icon` in a separate worktree. The prior merged probe checkout was preserved. Startup freshness PASS: exact origin/main, clean, zero divergence and no unfinished operations. Current/target version stays **0.1.0-dev.6**: compatible artwork refinement within the unreleased checkpoint; no gameplay/API/config/save/protocol change or new stable-release claim. [Artwork provenance](BRANDING.md) and [selection receipt](../assets/branding/HELICOPTER_ICON.json).
+
+The selected built-in image_gen output is copied byte-for-byte into authoring/source and selected by mod.info. No image generation, resizing or re-encoding in this integration. Thumbnail, poster and fallback art remain exact; the wreck fallback marker still uses its original file. All runtime Lua, sandbox/model definitions, tests and canonical VERSION are unchanged from baseline. Existing artwork checks now validate the selected icon independently of fallback art.
+
+Actual offline commands, from this worktree (bundled CPython executable denoted `$auditPython`):
+
+```powershell
+& $auditPython -B scripts/check_versions.py --root .
+& $auditPython -B scripts/validate_phase0_docs.py
+& $auditPython -B scripts/validate_audio_sources.py
+& $auditPython -B scripts/validate_wreck_probe.py
+& $auditPython "$env:USERPROFILE/.codex/b47anced-team/tools/mod_overview.py" --describe-repository . --project-id heli
+git diff --check
+git diff --cached --check
+```
+
+[TESTED: offline] PASS: canonical mirrors, document links/gates, selected icon hash/header/authoring-source equality, Lua-only/case/English/source/artwork checks, unchanged thumbnail and fallback/poster integrity, overview version/digest and whitespace. A read-only Pillow/hashlib/git check separately decodes both 1254x1254 RGBA PNG copies, verifies genuine alpha range 0..255 and exact approved bytes, and checks protected files/runtime Lua against baseline. Installed Build 42.21 mod-menu Lua scaling references and fingerprints are recorded in the receipt; source inspection is not native UI execution. The initial image inspection was interrupted; its final verification uses separate PNG integrity and decoded-alpha reads and passes. No artwork bytes were modified by verification.
+
+The isolated worktree deliberately has no ignored supplied wreck binaries: wreck static checks PASS and report local assets NOT PREPARED; no local-asset/native placement PASS is inferred. No unchanged gameplay/fake-Lua suites rerun for this artwork-only change. Public staged/tracked review excludes private snapshots, machine settings, diagnostic logs, credentials and generated/model outputs; the two approved mod-icon PNGs are intentional public artwork. Previous test evidence keeps its original scope/environment.
+
+**Actual mod-menu icon loading/appearance NOT TESTED. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.** No game/server launch, installed-file edit, asset conversion, package, deployment or Workshop publication. Commit/push/PR status is reported separately; this icon request does not authorize a merge into main.
+
 ## PR #9 review — 2026-10-17
 
 Reviewed head `abb7c5130adeb19dd47a290504f8e4a7ce0f90d7` against `assets/static-crash-models` at `def69a4e999382ecb8427b2c588cf15cbc98b2a8`. Review scope: Lua-only runtime, server ownership, bounded default-disabled manual placement and evidence accuracy. No blocking runtime-code finding; native behavior remains untested. The connection-to-player command routing, role checks, script type/exposure and ordinary object save path were rechecked in private packaged-source inspection, not invoked as engine APIs. No clean-install or dedicated claim follows from this inspection.
