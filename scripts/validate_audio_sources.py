@@ -13,6 +13,8 @@ expected = {
     'server/B47HEAudio/Director.lua', 'client/B47HEAudio/Playback.lua',
     'shared/B47HESupportProbe/Protocol.lua', 'server/B47HESupportProbe/Preflight.lua',
     'client/B47HESupportProbe/Client.lua',
+    'shared/B47HEWreckProbe/Protocol.lua', 'server/B47HEWreckProbe/Probe.lua',
+    'client/B47HEWreckProbe/Client.lua',
 }
 assert {p.relative_to(LUA).as_posix() for p in LUA.rglob('*.lua')} == expected
 seen = set()
@@ -21,18 +23,31 @@ for path in MOD.rglob('*'):
     assert name.lower() not in seen, f'Case collision: {name}'
     seen.add(name.lower())
     if path.is_file():
-        assert path.suffix in {'.lua', '.json', '.txt', '.info', '.png'}, name
+        assert path.suffix in {'.lua', '.json', '.txt', '.info', '.png', '.glb'}, name
+        if path.suffix == '.glb':
+            assert name == 'media/models_X/B47HE/wreck_probe_upright.glb', name
 for path in LUA.rglob('*.lua'):
     text = path.read_text()
     for module in re.findall(r'require\s*["\x27]([^"\x27]+)', text):
         assert any(side + '/' + module + '.lua' in expected
                    for side in ('shared', 'client', 'server')), (path, module)
-    # No game-mod imports, native wrappers, world/AI/persistence writes, or ordinary playback.
+    wreck = 'B47HEWreckProbe' in path.parts
+    # The existing audio/read-only probes retain their original no-world-write boundary.
+    # Wreck mutation is allowed only in its server adapter, checked independently below.
     for banned in ('luajava', 'requireJava', 'loadstring', 'getCell(', 'getGridSquare(',
                    'getModData(', 'ModData.', 'addSound(', 'playWorldSound',
                    ':playSound(', ':playSoundLooped(', ':stopSound(', 'setServerTimeShift',
                    'createZombie', 'addItem(', 'IsoObject.new', 'Helicopter.'):
-        assert banned not in text, (path, banned)
+        if wreck and banned in ('getCell(', 'getGridSquare(', 'IsoObject.new') and banned in text:
+            assert 'server' in path.parts, (path, banned)
+        else:
+            assert banned not in text, (path, banned)
+    if wreck:
+        for banned in ('getModData(', 'ModData.', 'loadGridSquare', 'transmitRemove',
+                       'RemoveTileObject', 'setSpriteFromName', 'PhysicsMesh', 'OnLoadGridSquare'):
+            assert banned not in text, (path, banned)
+        if 'server' not in path.parts:
+            assert not re.search(r'AddTileObject|setSpriteModelName|transmitCompleteItem', text), path
     if 'client' not in path.parts:
         assert not re.search(r'getFreeEmitter|playSoundImpl|takeOwnershipOfEmitter', text), path
     if 'B47HESupportProbe' in path.parts:
@@ -44,10 +59,10 @@ assert info['modversion'] == (ROOT / 'VERSION').read_text().strip()
 assert not any(key in info for key in ('require', 'pack', 'tiledef'))
 settings = (MOD / 'media/sandbox-options.txt').read_text()
 options = re.findall(r'option B47HE\.(\w+)\s*\{([^}]+)\}', settings)
-assert {name for name, _ in options} == {'EnableAudioFlights','FlightIntervalDays','FlightDurationSeconds','EnableSupportPreflightProbe'}
-assert len(options) == 4
+assert {name for name, _ in options} == {'EnableAudioFlights','FlightIntervalDays','FlightDurationSeconds','EnableSupportPreflightProbe','EnableDecorativeWreckProbe'}
+assert len(options) == 5
 translation = json.loads((LUA / 'shared/Translate/EN/Sandbox.json').read_text())
-keys = {'Sandbox_B47HE', 'Sandbox_B47HESupport'}
+keys = {'Sandbox_B47HE', 'Sandbox_B47HESupport', 'Sandbox_B47HEWreckProbe'}
 for name, body in options:
     token = re.search(r'translation\s*=\s*(\w+)', body)[1]
     assert token == 'B47HE_' + name

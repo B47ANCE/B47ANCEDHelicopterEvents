@@ -1,0 +1,18 @@
+module B47HE
+{
+    model WreckProbeUpright
+    {
+        mesh = B47HE/wreck_probe_upright.glb,
+        texture = media/textures/B47HE/wreck_probe_upright.png,
+        static = true,
+        scale = 6.0,
+        undoCoreScale = true,
+    }
+    spriteModel WreckProbeUprightPlacement
+    {
+        modelScript = B47HE.WreckProbeUpright,
+        translate = 0.0 0.0 0.0,
+        rotate = 0.0 0.0 0.0,
+        scale = 1.0,
+    }
+}

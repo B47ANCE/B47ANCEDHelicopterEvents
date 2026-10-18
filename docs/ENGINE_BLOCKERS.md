@@ -1,5 +1,13 @@
 # Engine blockers
 
+## Decorative diagnostic implementation — 2026-10-17
+
+[Bounded probe](DECORATIVE_WRECK_PROBE.md) exists as default-off source/offline candidate: explicit admin request, fixed site, one server object, no automatic placement/retry/recovery. Local definitions/assets do not prove native import, full-size appearance, headless/Linux behavior or synchronized save/streaming. The process latch is not durable; no protected identity, tombstone, collision or observer-safe commit is claimed. Production dynamic crashes/recovery remain NO-GO. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No launch/deploy/publication.
+
+## Static wreck loader/placement follow-up — 2026-10-17
+
+[The focused audit](STATIC_WRECK_API_AUDIT.md) narrows native loading/initial replication research: packaged Build 42.21 has GLB static import, exposed model-name selection and normal object save/complete-object transport. A later decorative diagnostic is CONDITIONAL for review only. The previous blanket “loader unverified” now means actual supplied-file import/material/headless/runtime behavior, not absence of a native format path. Full-size anchor-based culling/streaming, physical scale, matching collision/navigation, clean provenance, protected identity and interruption recovery remain unresolved. A separate native PhysicsMesh path exists but is not verified as a complete one-anchor wreck collision contract. Strict unseen placement remains NO-GO; one object does not fence observers/chunk downloads or make GlobalModData/chunk writes atomic. W-R01..12 NOT TESTED; G7/G8 unchanged. No gameplay/definitions implemented.
+
 ## Single static site authoring — 2026-10-17
 
 The user selected one static model per crash site. [Optimized offline exports](STATIC_CRASH_MODEL_OPTIMIZATION.md) now exist, keeping site debris/ground in one mesh/material. Component separation is superseded for this approach. This narrows the art-authoring gap only: native model loading, scale, collision/footprints, observer-safe world placement and single-object persistence remain unverified. Original per-component research is historical/future scope; no crash/world-mutation blocker or dedicated/runtime gate is cleared. No gameplay code changed.

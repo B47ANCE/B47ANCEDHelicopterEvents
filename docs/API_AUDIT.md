@@ -1,5 +1,13 @@
 # Phase 0 API audit
 
+## Bounded decorative implementation — 2026-10-17
+
+The user separately authorized the [default-off diagnostic](DECORATIVE_WRECK_PROBE.md) at fixed ground square 8871,8253,0. It adds only server-validated manual admin intent, native static model definitions, bounded square inspection, one process-latched insertion/publication and local client status. [WP source fingerprints](WRECK_PROBE_SOURCE_INDEX.json) extend binding/file/role/fallback evidence. Native/Kahlua import, rendering, streaming and save behavior remain NOT TESTED. This bounded visible diagnostic is not a production GO, a collision contract or authorization for any dynamic crash/recovery implementation.
+
+## Single static wreck route — 2026-10-17
+
+[Focused Build 42.21 audit](STATIC_WRECK_API_AUDIT.md) identifies native GLB/static mesh import, named SpriteModel selection on an exposed IsoObject, serialized model-name state and vanilla server insertion/complete-object transport. Verdict: CONDITIONAL for a separately reviewed decorative diagnostic, not a production GO. Actual optimized-file import, materials, full-size culling, Linux/headless behavior and dedicated delivery/restart remain NOT TESTED. Mesh selection supplies no automatic collision footprint, strict off-screen commit or protected/durable identity. Dynamic crashes and ambiguous recovery remain NO-GO. Documentation only at the existing version; no definitions or runtime code added.
+
 ## Read-only support preflight — 2026-10-16
 
 [Implemented diagnostic](SUPPORT_PREFLIGHT_PROBE.md): source/offline candidate only, with exact direct inventory/type/container checks and server-owned enablement. No custody, SPENT state, mission or combat mutation. Native lookup evidence is narrowed to the own-list getItemWithID path; this supplies no stable identity/save fence. MS01-MS06 and all crash blockers remain unchanged. Dedicated G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.

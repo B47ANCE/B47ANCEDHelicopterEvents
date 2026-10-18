@@ -2,30 +2,126 @@
   "schema": 1,
   "canonical": "VERSION",
   "mirrors": [
-    {"path": "docs/MOD_OVERVIEW.json", "pattern": "^  \"version\": \"(?P<version>[^\"]+)\",$"},
-    {"path": "README.md", "pattern": "^Project Version: (?P<version>\\S+)$"},
-    {"path": "docs/VALIDATION_STATUS.json", "pattern": "^  \"projectVersion\": \"(?P<version>[^\"]+)\",$"},
-    {"path": "src/B47ANCEDHelicopterEvents/42/mod.info", "pattern": "^modversion=(?P<version>\\S+)$"},
-    {"path": "docs/BRANDING.md", "pattern": "^Current authoring version: (?P<version>\\S+)$"}
+    {
+      "path": "docs/DECORATIVE_WRECK_PROBE.md",
+      "pattern": "^Current implementation checkpoint: (?P<version>[^,]+),"
+    },
+    {
+      "path": "docs/MOD_OVERVIEW.json",
+      "pattern": "^  \"version\": \"(?P<version>[^\"]+)\",$"
+    },
+    {
+      "path": "README.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/VALIDATION_STATUS.json",
+      "pattern": "^  \"projectVersion\": \"(?P<version>[^\"]+)\",$"
+    },
+    {
+      "path": "src/B47ANCEDHelicopterEvents/42/mod.info",
+      "pattern": "^modversion=(?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/BRANDING.md",
+      "pattern": "^Current authoring version: (?P<version>\\S+)$"
+    }
   ],
-  "changelog": {"path": "docs/CHANGELOG.md", "pattern": "^## \\[(?P<version>[^\\]]+)\\][^\\n]*$"},
-  "packaging": {"artifacts": [{"glob": "dist/current/*.zip", "pattern": "B47ANCEDHelicopterEvents-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip"}]},
+  "changelog": {
+    "path": "docs/CHANGELOG.md",
+    "pattern": "^## \\[(?P<version>[^\\]]+)\\][^\\n]*$"
+  },
+  "packaging": {
+    "artifacts": [
+      {
+        "glob": "dist/current/*.zip",
+        "pattern": "B47ANCEDHelicopterEvents-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip"
+      }
+    ]
+  },
   "other_versions": [
-    {"category": "dependency", "reference": "assets/crash-sites/OPTIMIZATION_REPORT.json: toolchain", "reason": "Isolated Blender/CPython authoring versions and hashes, never runtime mod dependencies"},
-    {"category": "compatibility", "reference": "src/B47ANCEDHelicopterEvents/42/media/lua/shared/B47HESupportProbe/Protocol.lua: version=1", "reason": "Read-only diagnostic wire protocol, independent of canonical project SemVer"},
-    {"category": "compatibility", "reference": "src/B47ANCEDHelicopterEvents/42/media/lua/shared/B47HEAudio/Protocol.lua: version=1", "reason": "Existing rotor snapshot wire protocol, unchanged and independent of project SemVer"},
-    {"category": "compatibility", "reference": "src/B47ANCEDHelicopterEvents/42/media/sandbox-options.txt: VERSION = 1", "reason": "Native custom-sandbox file format, not project version"},
-    {"category": "pz", "reference": "docs/API_AUDIT.md: Build 42.21", "reason": "Observed game build, independent of project version"},
-    {"category": "dependency", "reference": "docs/evidence/environment.json", "reason": "Steam build ID and CFR tool version/hash are provenance, not project versions"},
-    {"category": "inventory-schema", "reference": "version-inventory.json: schema", "reason": "Version checker schema"},
-    {"category": "framework", "reference": "docs/VERSION_POLICY.md", "reason": "Copied framework policy, not project version"}
+    {
+      "category": "compatibility",
+      "reference": "src/B47ANCEDHelicopterEvents/42/media/lua/shared/B47HEWreckProbe/Protocol.lua: version=1",
+      "reason": "Manual diagnostic intent/status schema, independent of canonical project SemVer"
+    },
+    {
+      "category": "dependency",
+      "reference": "assets/crash-sites/OPTIMIZATION_REPORT.json: toolchain",
+      "reason": "Isolated Blender/CPython authoring versions and hashes, never runtime mod dependencies"
+    },
+    {
+      "category": "compatibility",
+      "reference": "src/B47ANCEDHelicopterEvents/42/media/lua/shared/B47HESupportProbe/Protocol.lua: version=1",
+      "reason": "Read-only diagnostic wire protocol, independent of canonical project SemVer"
+    },
+    {
+      "category": "compatibility",
+      "reference": "src/B47ANCEDHelicopterEvents/42/media/lua/shared/B47HEAudio/Protocol.lua: version=1",
+      "reason": "Existing rotor snapshot wire protocol, unchanged and independent of project SemVer"
+    },
+    {
+      "category": "compatibility",
+      "reference": "src/B47ANCEDHelicopterEvents/42/media/sandbox-options.txt: VERSION = 1",
+      "reason": "Native custom-sandbox file format, not project version"
+    },
+    {
+      "category": "pz",
+      "reference": "docs/API_AUDIT.md: Build 42.21",
+      "reason": "Observed game build, independent of project version"
+    },
+    {
+      "category": "dependency",
+      "reference": "docs/evidence/environment.json",
+      "reason": "Steam build ID and CFR tool version/hash are provenance, not project versions"
+    },
+    {
+      "category": "inventory-schema",
+      "reference": "version-inventory.json: schema",
+      "reason": "Version checker schema"
+    },
+    {
+      "category": "framework",
+      "reference": "docs/VERSION_POLICY.md",
+      "reason": "Copied framework policy, not project version"
+    }
   ],
   "historical": [
-    {"reference": "assets/crash-sites/OPTIMIZATION_REPORT.json: authoringVersion", "reason": "Exact optimized-asset build checkpoint and output hashes; not a current runtime version mirror"},
-    {"reference": "assets/crash-sites/MANIFEST.json: projectVersionAtIntake", "reason": "Dated authoring inspection checkpoint; not a current runtime version mirror or game validation"},
-    {"reference": "docs/OFFLINE_VALIDATION.json and docs/evidence-followup/environment.json", "reason": "Actual earlier local validation/provenance, ignored and preserved rather than maintained as current public mirrors"},
-    {"reference": "docs/evidence/", "reason": "Immutable initial dated source inspection snapshots, never relabeled as runtime proof"},
-    {"reference": "docs/history/phase0-accepted/", "reason": "Accepted first audit and actual initial offline validation; preserve original observed checkpoint"},
-    {"reference": "docs/CHANGELOG.md: older entries", "reason": "Historical development checkpoints below newest entry"}
+    {
+      "reference": "docs/WRECK_PROBE_SOURCE_INDEX.json: projectVersionAtInspection",
+      "reason": "Dated packaged-input inspection, never relabeled as a native/runtime pass"
+    },
+    {
+      "reference": "assets/crash-sites/WRECK_PROBE_ASSETS.json: authoringVersion",
+      "reason": "Exact local GLB/PNG preparation checkpoint and fingerprints, not a current runtime mirror"
+    },
+    {
+      "reference": "docs/STATIC_WRECK_SOURCE_INDEX.json: projectVersionAtAudit",
+      "reason": "Dated source-audit checkpoint, not a current runtime version mirror or executed engine validation"
+    },
+    {
+      "reference": "assets/crash-sites/OPTIMIZATION_REPORT.json: authoringVersion",
+      "reason": "Exact optimized-asset build checkpoint and output hashes; not a current runtime version mirror"
+    },
+    {
+      "reference": "assets/crash-sites/MANIFEST.json: projectVersionAtIntake",
+      "reason": "Dated authoring inspection checkpoint; not a current runtime version mirror or game validation"
+    },
+    {
+      "reference": "docs/OFFLINE_VALIDATION.json and docs/evidence-followup/environment.json",
+      "reason": "Actual earlier local validation/provenance, ignored and preserved rather than maintained as current public mirrors"
+    },
+    {
+      "reference": "docs/evidence/",
+      "reason": "Immutable initial dated source inspection snapshots, never relabeled as runtime proof"
+    },
+    {
+      "reference": "docs/history/phase0-accepted/",
+      "reason": "Accepted first audit and actual initial offline validation; preserve original observed checkpoint"
+    },
+    {
+      "reference": "docs/CHANGELOG.md: older entries",
+      "reason": "Historical development checkpoints below newest entry"
+    }
   ]
 }

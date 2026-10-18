@@ -2,17 +2,46 @@
   "schema": 1,
   "id": "heli",
   "name": "Helicopter Events",
-  "version": "0.1.0-dev.5",
-  "source_digest": "a838da8748a0af5329038c358b1ff1782a9f7a991b00acc4bae6ec88d3b4dbe4",
+  "version": "0.1.0-dev.6",
+  "source_digest": "d8bf9a213a29a8d7242847b7453beb2a6c7c52adf86619337f546b0b92849945",
   "reviewed": true,
   "features": [
-    {"status": "Foundation", "text": "Default-disabled dedicated-only rotor audio probe with expiring server snapshots; offline-tested, native runtime NOT TESTED."},
-    {"status": "Foundation", "text": "Default-disabled, server-resolved read-only Army Walkie Talkie preflight diagnostic; no authorization or inventory mutation."},
-    {"status": "Planned", "text": "Military Air Support equipment, original-card custody, single-use authorization, following, officer loot and combat; not implemented."},
-    {"status": "Foundation", "text": "Two locally optimized wreck-site assets, one static mesh/material per site at about 25k triangles. Blender export/readback and sampled visual QA pass; physical scale, collision, PZ loader/world placement and runtime performance remain unverified."},
-    {"status": "Blocked", "text": "Dynamic crash materialization, structural destruction and durable crash-site recovery retain their Lua-only NO-GO contracts."}
+    {
+      "status": "Foundation",
+      "text": "Default-disabled dedicated-only rotor audio probe with expiring server snapshots; offline-tested, native runtime NOT TESTED."
+    },
+    {
+      "status": "Foundation",
+      "text": "Default-disabled, server-resolved read-only Army Walkie Talkie preflight diagnostic; no authorization or inventory mutation."
+    },
+    {
+      "status": "Planned",
+      "text": "Military Air Support equipment, original-card custody, single-use authorization, following, officer loot and combat; not implemented."
+    },
+    {
+      "status": "Foundation",
+      "text": "Two locally optimized wreck-site assets, one static mesh/material per site. Default-disabled decorative upright probe at fixed ground 8871,8253,0 uses explicit server-validated admin intent, one native object and a per-process attempt latch; offline-tested only. No automatic spawning/regeneration, loot, destruction or collision promise."
+    },
+    {
+      "status": "Blocked",
+      "text": "Dynamic crash materialization, structural destruction and durable crash-site recovery retain their Lua-only NO-GO contracts."
+    }
   ],
-  "limits": "Source/offline authoring review only, not SP/dedicated runtime proof. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. Probes do not implement gameplay and do not support SP/host. No Workshop item assigned. Wreck binaries/previews stay local and ignored; distribution provenance, physical/game scale and native PZ asset behavior remain unresolved. FBX metallic/roughness requires consumer binding; GLB/BLEND preserve the full source material.",
-  "evidence": ["README.md", "VERSION", "docs/SUPPORT_PREFLIGHT_PROBE.md", "docs/CRASH_MODEL_ASSETS.md", "docs/STATIC_CRASH_MODEL_OPTIMIZATION.md", "assets/crash-sites/OPTIMIZATION_REPORT.json", "assets/crash-sites/MANIFEST.json", "docs/ENGINE_BLOCKERS.md"],
+  "limits": "Source/offline review only. Native GLB/materials, physical scale, large-mesh culling, Linux/headless delivery/save/restart and dedicated correctness NOT TESTED. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No military support gameplay or SP/host placement. No Workshop item. Supplied and prepared wreck binaries stay local/ignored pending distribution provenance; public recipe/receipts are not binary backups. Probe has no durable identity, recovery ledger or exactly-once-across-restarts guarantee.",
+  "evidence": [
+    "README.md",
+    "VERSION",
+    "docs/SUPPORT_PREFLIGHT_PROBE.md",
+    "docs/CRASH_MODEL_ASSETS.md",
+    "docs/STATIC_CRASH_MODEL_OPTIMIZATION.md",
+    "assets/crash-sites/OPTIMIZATION_REPORT.json",
+    "assets/crash-sites/MANIFEST.json",
+    "docs/STATIC_WRECK_API_AUDIT.md",
+    "docs/STATIC_WRECK_SOURCE_INDEX.json",
+    "docs/ENGINE_BLOCKERS.md",
+    "docs/DECORATIVE_WRECK_PROBE.md",
+    "docs/WRECK_PROBE_SOURCE_INDEX.json",
+    "assets/crash-sites/WRECK_PROBE_ASSETS.json"
+  ],
   "relations": []
 }

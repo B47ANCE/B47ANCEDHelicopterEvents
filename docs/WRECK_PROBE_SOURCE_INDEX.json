@@ -1,0 +1,101 @@
+{
+  "auditDate": "2026-10-17",
+  "projectVersionAtInspection": "0.1.0-dev.6",
+  "gameBuildTarget": "42.21",
+  "steamBuild": "25485521",
+  "jarSha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "runtime": "NOT TESTED",
+  "scope": "Packaged static bindings and signatures used by the decorative diagnostic; no class loading/native invocation or clean-depot authentication. Detailed observations in DECORATIVE_WRECK_PROBE.md. Raw dumps excluded.",
+  "native": [
+    {
+      "id": "WP01",
+      "member": "zombie/characters/IsoPlayer.class",
+      "sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "looseSha256": "80ace57ecff39cd926e69b7fad38cf7f3d923584b89b1e558dde7073c5baab56"
+    },
+    {
+      "id": "WP02",
+      "member": "zombie/characters/Role.class",
+      "sha256": "4d8c6e8e69133b721ac35c3b37a22d83ed19a83eb230c32a2f887f711716c011",
+      "looseSha256": null
+    },
+    {
+      "id": "WP03",
+      "member": "zombie/iso/sprite/IsoSpriteManager.class",
+      "sha256": "2b2a7b9de0ebd5fb4e346a998a1618503422ddffb8098caa365e8b626054e14a",
+      "looseSha256": null
+    },
+    {
+      "id": "WP04",
+      "member": "zombie/iso/sprite/IsoSprite.class",
+      "sha256": "68c01e6b1c914f662621743e09c8dd8a62c0258392ce1a75654a713e1034067f",
+      "looseSha256": "b096996bf29387be71f507975437dee8ed75df3ed52871d66db9f7fba09a1871"
+    },
+    {
+      "id": "WP05",
+      "member": "zombie/iso/IsoObject.class",
+      "sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "looseSha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4"
+    },
+    {
+      "id": "WP06",
+      "member": "zombie/iso/IsoGridSquare.class",
+      "sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "looseSha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6"
+    },
+    {
+      "id": "WP07",
+      "member": "zombie/iso/IsoCell.class",
+      "sha256": "5e9a88e1cd9a3f370e31ae0152c9de381d649caea7cab750ebc82a91b4e1f767",
+      "looseSha256": null
+    },
+    {
+      "id": "WP08",
+      "member": "zombie/network/ServerMap.class",
+      "sha256": "5a3e449c6b7f3ea237939502c5b43ab0dd490a3752fd675611aade7ae79c548d",
+      "looseSha256": null
+    },
+    {
+      "id": "WP09",
+      "member": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "looseSha256": null
+    },
+    {
+      "id": "WP10",
+      "member": "zombie/iso/SpriteModel.class",
+      "sha256": "966da22e6d5e7cd34e2acfe0151312e162a74073205306e6776ede4415de482b",
+      "looseSha256": null
+    },
+    {
+      "id": "WP11",
+      "member": "zombie/scripting/objects/ModelScript.class",
+      "sha256": "495f4305d8074b63643a8c7234d4d707cf44a49efc88073a4b695b9f74bfc567",
+      "looseSha256": null
+    },
+    {
+      "id": "WP12",
+      "member": "zombie/scripting/ScriptManager.class",
+      "sha256": "8aee81a03fb7c09a9e9844ba9388a943aef9b313ea00017b8f2a33f16f4f0f99",
+      "looseSha256": null
+    },
+    {
+      "id": "WP13",
+      "member": "zombie/GameTime.class",
+      "sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+      "looseSha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837"
+    },
+    {
+      "id": "WP14",
+      "member": "zombie/core/Core.class",
+      "sha256": "8f5c69740c8bf2181123a831ab68d1dfb047453687cca6dc62c77816d76ab360",
+      "looseSha256": null
+    },
+    {
+      "id": "WP15",
+      "member": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "looseSha256": null
+    }
+  ]
+}

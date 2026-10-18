@@ -1,6 +1,6 @@
 # Fallback artwork
 
-Current authoring version: 0.1.0-dev.5
+Current authoring version: 0.1.0-dev.6
 
 ## Selected project thumbnail — 2026-10-15
 
