@@ -25,6 +25,7 @@ python -B scripts/validate_audio_sources.py
 python -B scripts/test_audio.py
 python -B scripts/test_support_probe.py
 python -B scripts/test_wreck_probe.py
+python -B scripts/test_wreck_asset_preparation.py
 python -B scripts/validate_wreck_probe.py --require-local-assets
 git diff --check
 ```

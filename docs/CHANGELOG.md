@@ -1,6 +1,7 @@
 # Changelog
 
 ## [0.1.0-dev.6]
+- PR #9 review: preserve equivalent CRLF JSON receipts during local asset preparation while retaining exact binary/provenance checks; add four isolated file-behavior regression cases. Authoring-tool correction within the same unreleased checkpoint; runtime Lua, assets, configuration and save behavior unchanged.
 - Add a separately default-disabled, dedicated-only decorative wreck diagnostic at the operator-selected fixed ground square (8871,8253,0). An explicit server-validated admin request may attempt one static upright wreck per server process; startup/rejoin/chunk loading never creates or restores it. This is an additive development slice within the pending initial 0.1.0 line, with no stable API or save migration claim.
 - Add native model/SpriteModel definitions, exact local GLB copy and separately bound base-color derivative, conservative bounded footprint checks, a pre-mutation session latch and Lua 5.1 fake-boundary checks. No loot, destruction, collision guarantee, durable identity, automatic regeneration or clean/dedicated runtime approval. Originals preserved; derived asset binaries remain local/ignored pending distribution provenance.
 

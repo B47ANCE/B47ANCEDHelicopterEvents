@@ -10,5 +10,6 @@
   "offlineSupportProbe": "Read-only protocol/ownership/expiry and fake event adapter checks; not native or dedicated evidence",
   "offlineCrashModels": "Single static site exports optimized/read back in isolated Blender 4.5.3; original/texture hashes and sampled render QA pass. Not PZ/runtime evidence.",
   "staticWreckApiAudit": "Read-only 42.21 packaged source/binding inspection; native GLB/static-IsoObject candidate CONDITIONAL. Actual import, full-size rendering/collision, dedicated streaming/restart and recovery NOT TESTED; production unseen placement remains NO-GO.",
-  "offlineWreckProbe": "20 Lua 5.1 fake-boundary scenarios and 5 event adapter cases, plus static/source/local asset integrity checks. Native import, rendering, replication, save and dedicated MP NOT TESTED."
+  "offlineWreckProbe": "20 Lua 5.1 fake-boundary scenarios and 5 event adapter cases, plus static/source/local asset integrity checks. Native import, rendering, replication, save and dedicated MP NOT TESTED.",
+  "offlineWreckAssetPreparation": "4 isolated file-behavior cases: idempotence, equivalent CRLF receipt preservation, changed-provenance refusal and differing-binary refusal. Approved-input stubs; not codec/native/MP evidence."
 }

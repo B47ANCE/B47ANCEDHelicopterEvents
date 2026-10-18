@@ -67,7 +67,9 @@ def main():
                'outputs': [{'path': p.relative_to(ROOT).as_posix(), 'bytes': len(b), 'sha256': sha(b)}
                            for p, b in outputs]}
     receipt_bytes = (json.dumps(receipt, indent=2)+'\n').encode()
-    assert not RECEIPT.exists() or RECEIPT.read_bytes() == receipt_bytes, 'Preserve existing asset receipt'
+    # Git may check this text receipt out with CRLF. Preserve its bytes while
+    # requiring the same JSON content; binary outputs still require exact bytes.
+    assert not RECEIPT.exists() or json.loads(RECEIPT.read_text(encoding='utf-8-sig')) == receipt, 'Preserve existing asset receipt'
     for path, data in outputs:
         path.parent.mkdir(parents=True, exist_ok=True)
         if not path.exists():

@@ -34,6 +34,8 @@ The source definition `media/scripts/B47HE_WreckProbe.txt` contains exactly one 
 
 The fallback path is the existing, unchanged `media/ui/B47_ICON_SMALL.png`. The constructor uses the engine's named-sprite lookup, which can create an ordinary texture-backed sprite for that path. It is a recognizable fallback marker, not a 2D helicopter or proof of 3D rendering. No tile flags, furniture identity, PhysicsMesh or vanilla sprite mapping is copied into it. Shader/FBO failures can still leave this marker or delayed rendering; verify native behavior before expanding scope.
 
+PR review follow-up: preparation compares an existing text receipt by JSON content so a Windows CRLF checkout can be used without rewriting the receipt. Source and destination binaries still require exact bytes; differing provenance or destinations are refused before output writes. Four isolated preparation regressions cover idempotence, CRLF preservation and refusal behavior. They use stub input bytes and do not establish image-codec or native compatibility.
+
 Configuration assessment: enablement is meaningful shared behavior and therefore a localized server sandbox setting. The user-selected coordinates, one fixed variant/transform, ground level, conservative scan bound, request size/rate/expiry limits and session latch are internal diagnostic-fixture/safety constants. Exposing them as general crash balance/placement options would expand this bounded slice. No option disables authority, inspection or exception handling.
 
 ## Source bindings used
