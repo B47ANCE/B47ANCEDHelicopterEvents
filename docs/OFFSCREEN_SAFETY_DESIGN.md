@@ -1,5 +1,7 @@
 # Off-screen materialization contract — follow-up
 
+2026-10-17: [single static wreck audit](STATIC_WRECK_API_AUDIT.md) identifies one native object insertion/publication path. It removes the need to assemble individual visible components for these two assets, but does not fence connected observers, pending chunk downloads or asynchronous model rendering. Strict unseen dynamic placement remains NO-GO. Explicitly visible disposable diagnostic placement would require its own reviewed scope and authorization, not an exception to this contract.
+
 Current-policy annotation, 2026-10-14: runtime mods are Lua-only. All earlier engine/Java bridge speculation is historical and unavailable as a remedy. The [audio-only candidate](AUDIO_FEASIBILITY.md) creates no wreck/world mutations and does not meet or waive the crash-site contract below.
 
 Date: 2026-10-09 (America/Phoenix). Project version: ../VERSION. Installed JAR target: Build 42.21. Authorization: source investigation/design only. **Verdict: NO-GO for materialization with connected clients under the required strict guarantee.** No gameplay or runtime experiment performed.

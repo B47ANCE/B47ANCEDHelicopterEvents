@@ -1,5 +1,13 @@
 # Multiplayer authority proposal
 
+## Implemented decorative boundary — 2026-10-17
+
+The [wreck diagnostic](DECORATIVE_WRECK_PROBE.md) accepts only version/nonce/short-lived timestamp; connection-associated native player role, live state, proximity, settings, fixed coordinates, definitions, square lists and mutation outcome are independently checked on the dedicated server. A consumed process latch prevents duplicate/reentrant mutation and publication after any attempted construction, including exceptions. Client Lua only sends manual intent and holds expiring status; native object/chunk transport handles world state. Startup/rejoin/reload never requests/spawns or restores anything. No GlobalModData or trusted object metadata is introduced. Existing objects block a fresh explicit request after restart; absence never triggers automatic regeneration. No durable exactly-once or hostile-native-packet protection inferred. G7/G8 unchanged.
+
+## One native wreck object — 2026-10-17 research
+
+[Static wreck audit](STATIC_WRECK_API_AUDIT.md): the candidate server chooses an immutable namespaced SpriteModel variant and validates an already loaded square/footprint, initializes an ordinary IsoObject before AddTileObject, then publishes it once through native transmitCompleteItemToClients. Clients render locally installed definitions/assets from native replicated state. This is a source-supported design, not implemented or runtime approved. Relevant-client broadcast is not a join/chunk-snapshot fence; late joins/reloads must use and validate native chunk reconstruction, not repeated custom client spawn commands. getModData/model name/list index are not protected site IDs. No inferred multi-tile collision or automatic recovery after uncertain removal/save; quarantine instead of replay. Future shared eligibility/scheduling options must be server sandbox settings. No new setting or state introduced. W-R01..12 and G7 remain NOT TESTED/BLOCKED; strict off-screen and durable-identity contracts remain NO-GO.
+
 ## Read-only radio diagnostic — 2026-10-16
 
 The [implemented preflight probe](SUPPORT_PREFLIGHT_PROBE.md) resolves only the OnClientCommand connection-associated player's directly carried Base.WalkieTalkie5, validates a bounded item-ID hint, uses the server sandbox toggle and returns a nonce-correlated expiring observation to that connection. It accepts no card/authorization/mission state, makes no shared gameplay/inventory/save writes and cannot dispatch support. Rechecking ownership is observation hygiene, not a native transfer/save fence. Restart/reconnect preserve no diagnostic state; native routing and split-screen delivery remain NOT TESTED. Existing custody/durability/combat blockers and G7/G8 remain unchanged.
