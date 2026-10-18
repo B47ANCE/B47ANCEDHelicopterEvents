@@ -1,5 +1,40 @@
 # Phase 0 validation records
 
+## Single static wreck optimization — 2026-10-17
+
+Baseline 8dc59c44e3bd645b0f9ba5625af3628d28ae5769; feature branch assets/static-crash-models builds on the intake PR. Canonical version/mirrors advance to 0.1.0-dev.5 as an authoring checkpoint in the pending initial 0.1.0 line; no runtime behavior, public Lua API, settings or save change. User direction supersedes component separation for current crash-site artwork: one static mesh/site. [Optimization assessment](STATIC_CRASH_MODEL_OPTIMIZATION.md) and [receipt](../assets/crash-sites/OPTIMIZATION_REPORT.json) distinguish actual local Blender work from still-unverified PZ behavior. Originals and the intake manifest are byte-unchanged.
+
+Exact commands, from repository root (ordinary Python is the bundled 3.12 interpreter; the isolated executable below is CPython 3.11.9 with bpy 4.5.3):
+
+```powershell
+& ./.tmp-model-optimization/python311/python.exe -B scripts/optimize_crash_models.py --site upright --targets 25000 50000 --output .tmp-model-optimization/upright-r2
+& ./.tmp-model-optimization/python311/python.exe -B scripts/optimize_crash_models.py --site collapsed --targets 25000 50000 --output .tmp-model-optimization/collapsed-r2
+& ./.tmp-model-optimization/python311/python.exe -B scripts/optimize_crash_models.py --site upright --targets 25000 --output .tmp-model-optimization/upright-approved
+& ./.tmp-model-optimization/python311/python.exe -B scripts/optimize_crash_models.py --site collapsed --targets 25000 --output .tmp-model-optimization/collapsed-approved
+& ./.tmp-model-optimization/python311/python.exe -B scripts/finalize_crash_models.py --site upright --candidate .tmp-model-optimization/upright-approved/crash_site_upright_25000.blend --output assets/crash-sites/local-optimized/v0.1.0-dev.5/upright
+& ./.tmp-model-optimization/python311/python.exe -B scripts/finalize_crash_models.py --site collapsed --candidate .tmp-model-optimization/collapsed-approved/crash_site_collapsed_25000.blend --output assets/crash-sites/local-optimized/v0.1.0-dev.5/collapsed
+& ./.tmp-model-optimization/python311/python.exe -B scripts/check_crash_model_readback.py --site upright --folder assets/crash-sites/local-optimized/v0.1.0-dev.5/upright --reference-report .tmp-model-optimization/upright-approved/report.json
+& ./.tmp-model-optimization/python311/python.exe -B scripts/check_crash_model_readback.py --site collapsed --folder assets/crash-sites/local-optimized/v0.1.0-dev.5/collapsed --reference-report .tmp-model-optimization/collapsed-approved/report.json
+python -B scripts/validate_crash_models.py --folder assets/crash-sites/local-optimized/v0.1.0-dev.5
+python -B .tmp-model-optimization/receipt.py
+python -B .tmp-model-optimization/verify_iteration.py
+python -B scripts/check_versions.py --root .
+python -B scripts/validate_phase0_docs.py
+python -B scripts/validate_audio_sources.py
+git diff --check
+git diff --cached --check
+```
+
+[TESTED: offline] Two 25k and two 50k Blender collapse candidates were visually compared; 25k was selected. Final GLBs contain 24,969/24,986 triangles after export cleanup, 97.351%/96.819% lower than source. GLB byte sizes fall 69.834%/65.527%; three source 2048px JPEG maps remain encoded byte-for-byte unchanged. All eight source fingerprints (four retained copies/four original Downloads files) match intake; output/source folders are distinct and only generated files were written. Final .blend/GLB/FBX each independently reopen as one nonanimated mesh/material with one UV layer, matching triangle count and bounds/ground pivot within 1e-5 source units. FBX's two bound images do not preserve the packed metallic/roughness input; all maps are supplied separately, GLB/.blend preserve all three. FBX PBR equivalence/native compatibility is not claimed.
+
+[TESTED: offline render QA] Four source-fixed Cycles CPU renders of independently re-imported final GLBs pass sampled art criteria: silhouette IoU 0.98486-0.99384 (minimum 0.98) and foreground RGB NRMSE 0.06036-0.07165 (maximum 0.10). Visual comparison reviewed. These are 512px/two-view authoring checks, not full-angle geometry, actual PZ fidelity or performance proof. Final output hashes and preview hash are recorded; binary outputs and local private helpers remain ignored.
+
+Tooling: live Blender MCP remained disconnected. Official portable download endpoints returned 403, so no portable executable was installed/run. The official bpy 4.5.3 wheel was installed into an isolated ignored target; its SHA matched PyPI metadata. The isolated CPython executable signature was Valid/Python Software Foundation. No Meshy/paid service, live Blender scene or saved preferences were used. Native tool libraries are authoring-only, outside runtime source. Tool hashes are in the receipt; no dependency was added to the mod.
+
+Development corrections: the first guard stopped on a dynamic glTF enum whose RNA list was empty; the recipe now validates its registered callback metadata. Early r2 GLBs used keep-original-images with packed inputs and omitted textures; those GLBs were rejected. Approved candidates/final exports use packed-image export and require all three source texture hashes. Embedded Python's isolated path needed explicit sibling-script imports. Readback now requires exact final export triangle counts within the selected budget, rather than assuming cleanup leaves precisely 25,000. All accepted outputs passed the corrected independent checks. Earlier failed intermediates remain private, never presented as accepted exports.
+
+Version consistency PASS before/after; documentation/source/localization/case checks STATIC PASS. Current overview/version/source digest and recipe/output fingerprints verified. Runtime Lua and tests are byte-unchanged; only mod.info's canonical version mirror changes. No gameplay suite rerun was justified for unchanged Lua. Public staged/tracked review excludes all binary models/previews/toolchains, native/third-party source, secrets, logs and local settings. Existing CI/runtime evidence is not promoted; commit/push/PR status is reported separately. Physical scale, native loader/materials, collision, culling/streaming, world placement and persistence remain NOT TESTED/blocked as applicable. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No game/server launch, game-install modification, release package, deployment or publication.
+
 ## Deferred wreck-model intake — 2026-10-17
 
 Baseline main f9c55d7911bda580c0cdc21b55a4776e2a52345b; named branch assets/crash-model-intake. Earlier PRs #4/#5/#6 were merged; old feature source tree was identical, and no user files were reconciled/reset. Root version remains 0.1.0-dev.4: asset-reference/documentation work only, no new runtime/export/API/config/save checkpoint. [CRASH_MODEL_ASSETS.md](CRASH_MODEL_ASSETS.md) records the source/preview limitations and pending adaptation. [Manifest](../assets/crash-sites/MANIFEST.json) pins four supplied sources and archive/image/mesh observations. Sources/previews are locally retained and ignored, never claimed as public backups. No original Download was modified.

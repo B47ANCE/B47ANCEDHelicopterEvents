@@ -1,10 +1,10 @@
 # B47ANCE'd Helicopter Events
 
-Project Version: 0.1.0-dev.4
+Project Version: 0.1.0-dev.5
 
 Selected project artwork: [thumbnail.png](thumbnail.png), the supplied helicopter image preserved exactly. The [context-menu contract](docs/CONTEXT_MENU_CONTRACT.md) records the required state-dependent military actions; these menus and support equipment are not implemented.
 
-Two [user-supplied wreck-model references](docs/CRASH_MODEL_ASSETS.md) are inventoried for deferred crash-site authoring. Originals/previews stay local; no optimized game export or crash placement is implemented.
+Two [optimized static wreck-site models](docs/STATIC_CRASH_MODEL_OPTIMIZATION.md) are available locally as editable Blender sources and GLB/FBX interchange exports, at about 25k triangles each. Each site is one mesh including its existing debris/ground. Originals remain untouched. These are offline authoring assets: no game model definition, collision, placement or runtime compatibility is implemented/verified.
 
 First complete gameplay release direction: **Military Air Support**. Current runtime source contains the experimental rotor prototype and a [read-only radio preflight probe](docs/SUPPORT_PREFLIGHT_PROBE.md), independently disabled by default. The probe reports server-resolved device state only; support equipment, authorization, menus, loot and combat are not implemented. The [targeted support API audit](docs/MILITARY_SUPPORT_API_AUDIT.md) records current NO-GO contracts. Crash/wreck/destruction features remain deferred and blocked independently.
 

@@ -1,5 +1,9 @@
 # Engine blockers
 
+## Single static site authoring — 2026-10-17
+
+The user selected one static model per crash site. [Optimized offline exports](STATIC_CRASH_MODEL_OPTIMIZATION.md) now exist, keeping site debris/ground in one mesh/material. Component separation is superseded for this approach. This narrows the art-authoring gap only: native model loading, scale, collision/footprints, observer-safe world placement and single-object persistence remain unverified. Original per-component research is historical/future scope; no crash/world-mutation blocker or dedicated/runtime gate is cleared. No gameplay code changed.
+
 ## Read-only implementation checkpoint — 2026-10-16
 
 The [radio preflight probe](SUPPORT_PREFLIGHT_PROBE.md) now implements the audit's smallest non-mutating diagnostic. It does not clear MS01-MS06, approve an armed/combat probe or satisfy any runtime gate. No real credentials, military item mutations, support dispatch or save writes are implemented. Earlier "no support implementation" statements describe their dated audit baselines; the new diagnostic is source/offline work only. G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.

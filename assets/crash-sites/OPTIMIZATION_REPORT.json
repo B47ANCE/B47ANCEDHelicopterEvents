@@ -1,0 +1,422 @@
+{
+  "schema": 1,
+  "authoringVersion": "0.1.0-dev.5",
+  "date": "2026-10-17",
+  "contract": "One static mesh per crash site including its existing ground/debris; no component separation or animated parts.",
+  "runtime": "NOT TESTED; no PZ object definition, collision, placement, loot, persistence, deployment or publication.",
+  "toolchain": {
+    "blender": "4.5.3 LTS",
+    "bpyWheelSha256": "843b4d853c11636592f97521b6e82740799712078cca84555f47389aaffd25f4",
+    "cpython": "3.11.9 embedded, Python Software Foundation executable Authenticode Valid",
+    "cpythonZipSha256": "009d6bf7e3b2ddca3d784fa09f90fe54336d5b60f0e0f305c37f400bf83cfd3b",
+    "execution": "Isolated local bpy module; no live Blender scene/user settings or Meshy calls."
+  },
+  "originals": [
+    {
+      "name": "Meshy_AI_Heli_1018042915_texture.glb",
+      "sha256": "fd636569611c4799adc3ee01fb91ebc4183d20dfe639bc60b5cfbd5a8e5962c3",
+      "localCopyAndDownloadUnchanged": true
+    },
+    {
+      "name": "Meshy_AI_Heli_1018043917_texture_fbx.zip",
+      "sha256": "dd850258662d21d6b1506f033f02bb9ab51ed6fab81f2ed6133f56728c3c946b",
+      "localCopyAndDownloadUnchanged": true
+    },
+    {
+      "name": "Meshy_AI_Heli_1018043921_texture.glb",
+      "sha256": "5409c238dc05c82ee564e6be39615c0e8e8d69faea2d256b102fe1a3193fa275",
+      "localCopyAndDownloadUnchanged": true
+    },
+    {
+      "name": "Meshy_AI_Heli_1018042910_texture_fbx.zip",
+      "sha256": "49e7fb8a2f536b8afda2c5a4f1d60237bbb78d8bb0b73ecdd9b6ee532ed1b0a3",
+      "localCopyAndDownloadUnchanged": true
+    }
+  ],
+  "selection": "25k collapse candidates selected after visual comparison against source and 50k alternatives. Export cleanup yields counts slightly below 25k.",
+  "renderQA": {
+    "environment": "Blender Cycles CPU, fixed source camera/framing/lighting, 16 samples, 512px, two opposite views per asset.",
+    "criteria": "Art QA only: silhouette IoU >= 0.98, foreground RGB NRMSE <= 0.10; not PZ performance/runtime approval.",
+    "previewPath": "assets/crash-sites/local-previews/optimized-static-comparison.png",
+    "previewSha256": "67b436c9921460f47a3afe7c9808b597ff60324b9a4bbfa469ac656a64b116e4"
+  },
+  "assets": [
+    {
+      "site": "upright",
+      "sourceFile": "Meshy_AI_Heli_1018042915_texture.glb",
+      "sourceTriangles": 942658,
+      "optimizedTriangles": 24969,
+      "triangleReductionPercent": 97.351,
+      "sourceGLBBytes": 40356636,
+      "optimizedGLBBytes": 12173832,
+      "glbSizeReductionPercent": 69.834,
+      "directory": "assets/crash-sites/local-optimized/v0.1.0-dev.5/upright",
+      "outputs": [
+        {
+          "name": "crash_site_upright.glb",
+          "bytes": 12173832,
+          "sha256": "a4806ea6230cb25a1e565bd25d08b4ded4c00ddd13b3c97d6e1fb9edf5cacbae"
+        },
+        {
+          "name": "crash_site_upright.fbx",
+          "bytes": 8969404,
+          "sha256": "4a62144b673a776fe71254c236dc1b754feac63a6689cae90192f34d8ccaf13d"
+        },
+        {
+          "name": "crash_site_upright.blend",
+          "bytes": 12140397,
+          "sha256": "b123b13e5b2c8a668f1d29a3d4f127ad35e4fd601e9e35830c5658f764205fc5"
+        }
+      ],
+      "retainedOriginalTextures": [
+        {
+          "name": "textures/crash_site_upright_0.jpg",
+          "sha256": "e98c283a7bb01bf9bc5c08e74f82ec31786047d5958f7c0a4a8d987984660ff3",
+          "bytes": 2823408,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "colorspace": "sRGB"
+        },
+        {
+          "name": "textures/crash_site_upright_1.jpg",
+          "sha256": "188d8982fa410448dadb6723e5f9371e124baaca92170afc7b2483a6f54691a2",
+          "bytes": 3154798,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "colorspace": "Non-Color"
+        },
+        {
+          "name": "textures/crash_site_upright_2.jpg",
+          "sha256": "ea31c99dfce1f7aa98c59c82674079159294df7f81e2c905f1aeee262584cc3d",
+          "bytes": 5087669,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "colorspace": "Non-Color"
+        }
+      ],
+      "blenderReadback": {
+        "blend": {
+          "meshCount": 1,
+          "statsBlenderAxes": {
+            "vertices": 11625,
+            "triangles": 24969,
+            "uvLayers": 1,
+            "materials": 1,
+            "boundsMin": [
+              -0.9280070662498474,
+              -0.7445516586303711,
+              0.0
+            ],
+            "boundsMax": [
+              0.9280070662498474,
+              0.7445516586303711,
+              0.6706277132034302
+            ]
+          },
+          "boundMaterialImages": 3,
+          "imageSizes": [
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ]
+          ],
+          "packedImages": 3
+        },
+        "glb": {
+          "meshCount": 1,
+          "statsBlenderAxes": {
+            "vertices": 12241,
+            "triangles": 24969,
+            "uvLayers": 1,
+            "materials": 1,
+            "boundsMin": [
+              -0.9280070662498474,
+              -0.7445516586303711,
+              0.0
+            ],
+            "boundsMax": [
+              0.9280070662498474,
+              0.7445516586303711,
+              0.6706277132034302
+            ]
+          },
+          "boundMaterialImages": 3,
+          "imageSizes": [
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ]
+          ],
+          "packedImages": 3
+        },
+        "fbx": {
+          "meshCount": 1,
+          "statsBlenderAxes": {
+            "vertices": 11625,
+            "triangles": 24969,
+            "uvLayers": 1,
+            "materials": 1,
+            "boundsMin": [
+              -0.9280070662498474,
+              -0.7445516586303711,
+              -1.2130286108913424e-07
+            ],
+            "boundsMax": [
+              0.9280070662498474,
+              0.7445517778396606,
+              0.6706278324127197
+            ]
+          },
+          "boundMaterialImages": 2,
+          "imageSizes": [
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ]
+          ],
+          "packedImages": 2
+        }
+      },
+      "renderComparison": [
+        {
+          "view": 0,
+          "silhouetteIoU": 0.9890767230169051,
+          "foregroundRGB_NRMSE": 0.06163927414690045,
+          "offlineArtCriteria": "PASS"
+        },
+        {
+          "view": 1,
+          "silhouetteIoU": 0.9848628513376227,
+          "foregroundRGB_NRMSE": 0.06472073071631954,
+          "offlineArtCriteria": "PASS"
+        }
+      ],
+      "transform": "Centered horizontal origin, minimum Z at ground in Blender; GLB Y up. Source units retained, real-world scale uncalibrated.",
+      "fbxMaterialLimit": "Geometry/UV/material count and base/normal images read back. FBX does not bind the packed metallic/roughness map; original map is supplied in textures. GLB/BLEND preserve all three images and bindings."
+    },
+    {
+      "site": "collapsed",
+      "sourceFile": "Meshy_AI_Heli_1018043921_texture.glb",
+      "sourceTriangles": 785434,
+      "optimizedTriangles": 24986,
+      "triangleReductionPercent": 96.819,
+      "sourceGLBBytes": 35188660,
+      "optimizedGLBBytes": 12130536,
+      "glbSizeReductionPercent": 65.527,
+      "directory": "assets/crash-sites/local-optimized/v0.1.0-dev.5/collapsed",
+      "outputs": [
+        {
+          "name": "crash_site_collapsed.glb",
+          "bytes": 12130536,
+          "sha256": "1e0b1c65482bae609c64f9c2e1e4af82fee5e3a1a440a91c27f138a10ff70fec"
+        },
+        {
+          "name": "crash_site_collapsed.fbx",
+          "bytes": 8879148,
+          "sha256": "f5ca227d0ff51d6ad3813b89ed137410cef341048f88e2315553f4bf142dccb1"
+        },
+        {
+          "name": "crash_site_collapsed.blend",
+          "bytes": 12183509,
+          "sha256": "1f53c2ca1c18f9f72d74dccc8488f207c138194f4acc1f82cc626aba06b6909d"
+        }
+      ],
+      "retainedOriginalTextures": [
+        {
+          "name": "textures/crash_site_collapsed_0.jpg",
+          "sha256": "066724fc5ae1a6d8a388b29ec42628a9bac69cf2db140dc84c9fe074476afda4",
+          "bytes": 3225261,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "colorspace": "sRGB"
+        },
+        {
+          "name": "textures/crash_site_collapsed_1.jpg",
+          "sha256": "c6733355094e6a5c0350e4720edefeeb208f8af8328e0fccc59b8bf85c147199",
+          "bytes": 3289758,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "colorspace": "Non-Color"
+        },
+        {
+          "name": "textures/crash_site_collapsed_2.jpg",
+          "sha256": "b42eab61c839f2a3cb0538174e568025056664e3f0a7d4f8b03b5e09e806caf1",
+          "bytes": 4624132,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "colorspace": "Non-Color"
+        }
+      ],
+      "blenderReadback": {
+        "blend": {
+          "meshCount": 1,
+          "statsBlenderAxes": {
+            "vertices": 12024,
+            "triangles": 24986,
+            "uvLayers": 1,
+            "materials": 1,
+            "boundsMin": [
+              -0.9589895009994507,
+              -0.8910408020019531,
+              0.0
+            ],
+            "boundsMax": [
+              0.9589895009994507,
+              0.8910408020019531,
+              0.6625689268112183
+            ]
+          },
+          "boundMaterialImages": 3,
+          "imageSizes": [
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ]
+          ],
+          "packedImages": 3
+        },
+        "glb": {
+          "meshCount": 1,
+          "statsBlenderAxes": {
+            "vertices": 12446,
+            "triangles": 24986,
+            "uvLayers": 1,
+            "materials": 1,
+            "boundsMin": [
+              -0.9589895009994507,
+              -0.8910408020019531,
+              0.0
+            ],
+            "boundsMax": [
+              0.9589895009994507,
+              0.8910408020019531,
+              0.6625689268112183
+            ]
+          },
+          "boundMaterialImages": 3,
+          "imageSizes": [
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ]
+          ],
+          "packedImages": 3
+        },
+        "fbx": {
+          "meshCount": 1,
+          "statsBlenderAxes": {
+            "vertices": 12024,
+            "triangles": 24986,
+            "uvLayers": 1,
+            "materials": 1,
+            "boundsMin": [
+              -0.9589895009994507,
+              -0.8910408020019531,
+              -1.451689684017765e-07
+            ],
+            "boundsMax": [
+              0.9589895009994507,
+              0.8910409212112427,
+              0.6625690460205078
+            ]
+          },
+          "boundMaterialImages": 2,
+          "imageSizes": [
+            [
+              2048,
+              2048
+            ],
+            [
+              2048,
+              2048
+            ]
+          ],
+          "packedImages": 2
+        }
+      },
+      "renderComparison": [
+        {
+          "view": 0,
+          "silhouetteIoU": 0.993844610614627,
+          "foregroundRGB_NRMSE": 0.0603601997214667,
+          "offlineArtCriteria": "PASS"
+        },
+        {
+          "view": 1,
+          "silhouetteIoU": 0.9897152260364767,
+          "foregroundRGB_NRMSE": 0.07165239635183536,
+          "offlineArtCriteria": "PASS"
+        }
+      ],
+      "transform": "Centered horizontal origin, minimum Z at ground in Blender; GLB Y up. Source units retained, real-world scale uncalibrated.",
+      "fbxMaterialLimit": "Geometry/UV/material count and base/normal images read back. FBX does not bind the packed metallic/roughness map; original map is supplied in textures. GLB/BLEND preserve all three images and bindings."
+    }
+  ],
+  "recipeFiles": [
+    {
+      "path": "scripts/optimize_crash_models.py",
+      "sha256": "e7c318b5016e98a883212e2d3273f848d3ecb0422ed5a8d905413be894e9cd4d"
+    },
+    {
+      "path": "scripts/finalize_crash_models.py",
+      "sha256": "a530dd5aca27f66f5a1b586c77fa5cac9604f9334de89b5c8369c941c6a2a564"
+    },
+    {
+      "path": "scripts/check_crash_model_readback.py",
+      "sha256": "cef3ad202e52dbcbd43b9fdcd56d52b3d111572e7c0638db4590edcdb7c8398f"
+    },
+    {
+      "path": "scripts/validate_crash_models.py",
+      "sha256": "799a1504fd1e9ca8a2f94853938d4a2ec06f27fc04cff0141838bf9a188ff28c"
+    }
+  ],
+  "binaryBackup": "All original and derivative binaries/previews stay local/ignored; Git contains scripts and metadata only."
+}

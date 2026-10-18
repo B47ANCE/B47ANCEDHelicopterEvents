@@ -1,5 +1,7 @@
 # Crash manifest and recovery design — follow-up
 
+2026-10-17 scope annotation: the current asset approach is [one static mesh per complete crash site](STATIC_CRASH_MODEL_OPTIMIZATION.md). The individual-component manifest/salvage design below is retained as historical or future research, not implemented or required by these two authoring assets. Single-object world identity, saves, streaming and interaction recovery still require their own verified contract; no persistence guarantee is inferred from a single mesh.
+
 Current-policy annotation, 2026-10-14: this remains blocked full-crash research, not a required persistence implementation for the transient [audio candidate](AUDIO_FEASIBILITY.md). No custom Java/bridge/agent/native interception is permitted. Protected native-identity/transaction concepts below are unresolved requirements, not authorization to add an engine hook. Active audio is discarded on restart; no exactly-once world/cargo guarantee is claimed.
 
 Date: 2026-10-09. Project version: ../VERSION. Build: installed JAR 42.21. **Manifest specification: CONDITIONAL design. Exactly-once cargo, durable tombstones and full interruption-safe materialization: NO-GO with the verified primitives so far.** No persistence/gameplay code, save modification or runtime test performed.

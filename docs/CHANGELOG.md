@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.0-dev.5]
+- Optimize working copies of the supplied wrecks as one static mesh per crash site; original source files remain untouched. Local Blender processing and offline comparison only; no new runtime behavior or native compatibility claim. This is an authoring checkpoint within the initial 0.1.0 development line, with no breaking runtime/API/config/save change.
+- Deliver local GLB/FBX/.blend exports at 24,969 and 24,986 triangles (97.351%/96.819% reductions), centered ground pivots and exact original encoded textures. Independent Blender readback and four source-framed render comparisons pass offline criteria. FBX packed metallic/roughness binding is not equivalent; full source maps are supplied and GLB/.blend preserve the material.
+- Record original/output/toolchain fingerprints, add offline authoring/validation recipes and update the reviewed overview. Binary originals/derivatives stay local/ignored; no game/server launch, deployment or publication. G7/stable-release G8 remain blocked.
+
 ## [0.1.0-dev.4]
 - 2026-10-17: retain two user-supplied GLBs and two FBX/texture archives locally as deferred wreck authoring references; add public hashes/structure/provenance assessment and a reviewed project overview. No binary sources/derivatives distributed, game export or runtime change. Version unchanged; crash and release blockers remain.
 - 2026-10-16: begin the handoffs' documented smallest safe prototype: independently default-disabled, server-resolved read-only Base.WalkieTalkie5 preflight, bounded requests and expiring client observations. No item/card/authorization/save writes, support menus, missions, following, loot, attraction or combat. Existing rotor behavior and artwork retained.

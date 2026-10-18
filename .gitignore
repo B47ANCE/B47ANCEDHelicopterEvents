@@ -30,3 +30,4 @@ local.settings.json
 # Public intake manifest records hashes; these are not runtime distribution assets.
 /assets/crash-sites/local-source/
 /assets/crash-sites/local-previews/
+/assets/crash-sites/local-optimized/

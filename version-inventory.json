@@ -11,6 +11,7 @@
   "changelog": {"path": "docs/CHANGELOG.md", "pattern": "^## \\[(?P<version>[^\\]]+)\\][^\\n]*$"},
   "packaging": {"artifacts": [{"glob": "dist/current/*.zip", "pattern": "B47ANCEDHelicopterEvents-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip"}]},
   "other_versions": [
+    {"category": "dependency", "reference": "assets/crash-sites/OPTIMIZATION_REPORT.json: toolchain", "reason": "Isolated Blender/CPython authoring versions and hashes, never runtime mod dependencies"},
     {"category": "compatibility", "reference": "src/B47ANCEDHelicopterEvents/42/media/lua/shared/B47HESupportProbe/Protocol.lua: version=1", "reason": "Read-only diagnostic wire protocol, independent of canonical project SemVer"},
     {"category": "compatibility", "reference": "src/B47ANCEDHelicopterEvents/42/media/lua/shared/B47HEAudio/Protocol.lua: version=1", "reason": "Existing rotor snapshot wire protocol, unchanged and independent of project SemVer"},
     {"category": "compatibility", "reference": "src/B47ANCEDHelicopterEvents/42/media/sandbox-options.txt: VERSION = 1", "reason": "Native custom-sandbox file format, not project version"},
@@ -20,6 +21,7 @@
     {"category": "framework", "reference": "docs/VERSION_POLICY.md", "reason": "Copied framework policy, not project version"}
   ],
   "historical": [
+    {"reference": "assets/crash-sites/OPTIMIZATION_REPORT.json: authoringVersion", "reason": "Exact optimized-asset build checkpoint and output hashes; not a current runtime version mirror"},
     {"reference": "assets/crash-sites/MANIFEST.json: projectVersionAtIntake", "reason": "Dated authoring inspection checkpoint; not a current runtime version mirror or game validation"},
     {"reference": "docs/OFFLINE_VALIDATION.json and docs/evidence-followup/environment.json", "reason": "Actual earlier local validation/provenance, ignored and preserved rather than maintained as current public mirrors"},
     {"reference": "docs/evidence/", "reason": "Immutable initial dated source inspection snapshots, never relabeled as runtime proof"},
